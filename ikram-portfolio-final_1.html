@@ -1,0 +1,951 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ikram Ullah - Amazon PPC & SEO Specialist</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Georgia', 'Times New Roman', serif;
+            line-height: 1.7;
+            color: #2C3E50;
+            background: linear-gradient(135deg, #F5F1E8 0%, #E8E4D9 100%);
+            font-size: 16px;
+        }
+        
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+        
+        /* Hero Section - Premium */
+        .hero {
+            background: linear-gradient(135deg, #0A1828 0%, #1A2F4A 100%);
+            color: #F5F1E8;
+            padding: 70px 50px;
+            border-radius: 16px;
+            margin-bottom: 50px;
+            box-shadow: 0 20px 60px rgba(10, 24, 40, 0.3);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 400px;
+            height: 400px;
+            background: radial-gradient(circle, rgba(212, 175, 55, 0.1) 0%, transparent 70%);
+            border-radius: 50%;
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            display: grid;
+            grid-template-columns: 200px 1fr;
+            gap: 40px;
+            align-items: center;
+        }
+        
+        .profile-photo {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            border: 5px solid #D4AF37;
+            box-shadow: 0 10px 40px rgba(212, 175, 55, 0.3);
+            object-fit: cover;
+            background: #1A2F4A;
+        }
+        
+        .hero-text h1 {
+            font-size: 3em;
+            margin-bottom: 15px;
+            font-weight: 600;
+            color: #D4AF37;
+            font-family: 'Arial', sans-serif;
+            letter-spacing: -1px;
+        }
+        
+        .hero-text .subtitle {
+            font-size: 1.4em;
+            margin-bottom: 20px;
+            color: #F5F1E8;
+            font-weight: 300;
+        }
+        
+        .hero-text p {
+            font-size: 1.1em;
+            line-height: 1.6;
+            color: #E8E4D9;
+            margin-bottom: 25px;
+        }
+        
+        .credentials {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-top: 30px;
+        }
+        
+        .credential-badge {
+            background: rgba(212, 175, 55, 0.15);
+            padding: 12px 24px;
+            border-radius: 30px;
+            font-size: 0.95em;
+            border: 1px solid rgba(212, 175, 55, 0.3);
+            color: #D4AF37;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+        
+        .credential-badge:hover {
+            background: rgba(212, 175, 55, 0.25);
+            border-color: #D4AF37;
+        }
+        
+        /* Section Styling - Premium */
+        .section {
+            background: white;
+            padding: 50px;
+            margin-bottom: 35px;
+            border-radius: 16px;
+            box-shadow: 0 4px 20px rgba(10, 24, 40, 0.08);
+            border-top: 4px solid #D4AF37;
+        }
+        
+        .section h2 {
+            color: #0A1828;
+            font-size: 2.4em;
+            margin-bottom: 30px;
+            font-weight: 600;
+            font-family: 'Arial', sans-serif;
+            position: relative;
+            display: inline-block;
+        }
+        
+        .section h2::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            width: 60px;
+            height: 3px;
+            background: #D4AF37;
+        }
+        
+        .section h3 {
+            color: #0A1828;
+            font-size: 1.6em;
+            margin-top: 30px;
+            margin-bottom: 18px;
+            font-weight: 600;
+        }
+        
+        .section p {
+            color: #4A5568;
+            font-size: 1.05em;
+            line-height: 1.8;
+        }
+        
+        /* About Section */
+        .about-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 30px;
+            margin-top: 35px;
+        }
+        
+        .about-item {
+            padding: 30px;
+            background: linear-gradient(135deg, #F5F1E8 0%, #FAF8F3 100%);
+            border-radius: 12px;
+            border-left: 4px solid #D4AF37;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .about-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(10, 24, 40, 0.1);
+        }
+        
+        .about-item strong {
+            display: block;
+            color: #0A1828;
+            margin-bottom: 12px;
+            font-size: 1.2em;
+            font-weight: 600;
+        }
+        
+        .about-item p {
+            font-size: 1em;
+            color: #4A5568;
+        }
+        
+        /* Services Grid */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 35px;
+        }
+        
+        .service-card {
+            padding: 35px;
+            background: white;
+            border-radius: 12px;
+            border: 2px solid #E8E4D9;
+            transition: all 0.3s ease;
+        }
+        
+        .service-card:hover {
+            border-color: #D4AF37;
+            box-shadow: 0 10px 30px rgba(212, 175, 55, 0.15);
+            transform: translateY(-5px);
+        }
+        
+        .service-card h4 {
+            color: #0A1828;
+            margin-bottom: 18px;
+            font-size: 1.4em;
+            font-weight: 600;
+        }
+        
+        .service-card ul {
+            list-style: none;
+            padding-left: 0;
+        }
+        
+        .service-card li {
+            padding: 8px 0;
+            padding-left: 28px;
+            position: relative;
+            color: #4A5568;
+            font-size: 1em;
+        }
+        
+        .service-card li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #D4AF37;
+            font-weight: bold;
+            font-size: 1.2em;
+        }
+        
+        /* Differentiators */
+        .differentiator-list {
+            display: grid;
+            gap: 25px;
+            margin-top: 35px;
+        }
+        
+        .differentiator {
+            display: flex;
+            align-items: start;
+            gap: 20px;
+            padding: 30px;
+            background: linear-gradient(135deg, #F5F1E8 0%, white 100%);
+            border-radius: 12px;
+            border-left: 4px solid #D4AF37;
+            transition: all 0.3s ease;
+        }
+        
+        .differentiator:hover {
+            box-shadow: 0 10px 30px rgba(10, 24, 40, 0.1);
+            transform: translateX(5px);
+        }
+        
+        .differentiator-icon {
+            font-size: 2.5em;
+            min-width: 60px;
+        }
+        
+        .differentiator-content h4 {
+            color: #0A1828;
+            margin-bottom: 10px;
+            font-size: 1.3em;
+            font-weight: 600;
+        }
+        
+        .differentiator-content p {
+            color: #4A5568;
+            line-height: 1.7;
+        }
+        
+        /* Case Studies */
+        .case-study {
+            padding: 35px;
+            background: linear-gradient(135deg, #0A1828 0%, #1A2F4A 100%);
+            border-radius: 12px;
+            margin-bottom: 25px;
+            border-left: 6px solid #D4AF37;
+            box-shadow: 0 10px 30px rgba(10, 24, 40, 0.2);
+            color: #F5F1E8;
+        }
+        
+        .case-study h4 {
+            color: #D4AF37;
+            font-size: 1.5em;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+        
+        .case-study p {
+            color: #E8E4D9;
+            margin-bottom: 12px;
+            font-size: 1.05em;
+        }
+        
+        .case-study strong {
+            color: #D4AF37;
+        }
+        
+        .metrics {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 25px;
+            margin-top: 25px;
+        }
+        
+        .metric {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 25px 30px;
+            border-radius: 10px;
+            text-align: center;
+            min-width: 140px;
+            border: 1px solid rgba(212, 175, 55, 0.3);
+            transition: all 0.3s ease;
+        }
+        
+        .metric:hover {
+            background: rgba(255, 255, 255, 0.15);
+            border-color: #D4AF37;
+            transform: scale(1.05);
+        }
+        
+        .metric-value {
+            display: block;
+            font-size: 2.2em;
+            font-weight: bold;
+            color: #D4AF37;
+        }
+        
+        .metric-label {
+            display: block;
+            font-size: 0.95em;
+            color: #E8E4D9;
+            margin-top: 8px;
+        }
+        
+        .case-study-placeholder {
+            padding: 50px;
+            text-align: center;
+            background: linear-gradient(135deg, #F5F1E8 0%, white 100%);
+            border-radius: 12px;
+            border: 3px dashed #D4AF37;
+        }
+        
+        .case-study-placeholder h3 {
+            color: #0A1828;
+            margin-bottom: 15px;
+        }
+        
+        .case-study-placeholder p {
+            color: #4A5568;
+            font-style: italic;
+            font-size: 1.05em;
+        }
+        
+        /* Ideal Client Section */
+        .ideal-client-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin-top: 30px;
+        }
+        
+        .fit-box {
+            padding: 30px;
+            border-radius: 12px;
+        }
+        
+        .fit-box.good-fit {
+            background: linear-gradient(135deg, #F5F1E8 0%, white 100%);
+            border: 2px solid #D4AF37;
+        }
+        
+        .fit-box.not-fit {
+            background: linear-gradient(135deg, #F5F1E8 0%, #E8E4D9 100%);
+            border: 2px solid #CBD5E0;
+        }
+        
+        .fit-box h3 {
+            margin-top: 0;
+            margin-bottom: 20px;
+        }
+        
+        .fit-box ul {
+            list-style: none;
+            padding-left: 0;
+        }
+        
+        .fit-box li {
+            padding: 10px 0;
+            padding-left: 30px;
+            position: relative;
+            color: #4A5568;
+        }
+        
+        .good-fit li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #D4AF37;
+            font-weight: bold;
+            font-size: 1.3em;
+        }
+        
+        .not-fit li:before {
+            content: "✗";
+            position: absolute;
+            left: 0;
+            color: #A0AEC0;
+            font-weight: bold;
+            font-size: 1.3em;
+        }
+        
+        /* CTA Section */
+        .cta-section {
+            background: linear-gradient(135deg, #0A1828 0%, #1A2F4A 100%);
+            color: #F5F1E8;
+            padding: 60px 50px;
+            border-radius: 16px;
+            text-align: center;
+            box-shadow: 0 20px 60px rgba(10, 24, 40, 0.3);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .cta-section::before {
+            content: '';
+            position: absolute;
+            bottom: -100px;
+            left: -100px;
+            width: 300px;
+            height: 300px;
+            background: radial-gradient(circle, rgba(212, 175, 55, 0.1) 0%, transparent 70%);
+            border-radius: 50%;
+        }
+        
+        .cta-section h2 {
+            color: #D4AF37;
+            border: none;
+            margin-bottom: 20px;
+            position: relative;
+        }
+        
+        .cta-section h2::after {
+            display: none;
+        }
+        
+        .cta-section > p {
+            color: #E8E4D9;
+        }
+        
+        .cta-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            flex-wrap: wrap;
+            margin-top: 35px;
+        }
+        
+        .btn {
+            padding: 18px 45px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            display: inline-block;
+            font-size: 1.05em;
+            letter-spacing: 0.5px;
+        }
+        
+        .btn-primary {
+            background: #D4AF37;
+            color: #0A1828;
+            box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
+        }
+        
+        .btn-secondary {
+            background: transparent;
+            color: #D4AF37;
+            border: 2px solid #D4AF37;
+        }
+        
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(212, 175, 55, 0.4);
+        }
+        
+        .btn-primary:hover {
+            background: #E6C558;
+        }
+        
+        .btn-secondary:hover {
+            background: rgba(212, 175, 55, 0.1);
+        }
+        
+        /* Footer */
+        .footer {
+            text-align: center;
+            padding: 40px;
+            color: #4A5568;
+            font-size: 0.95em;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+                gap: 30px;
+            }
+            
+            .profile-photo {
+                margin: 0 auto;
+            }
+            
+            .hero-text h1 {
+                font-size: 2em;
+            }
+            
+            .hero-text .subtitle {
+                font-size: 1.2em;
+            }
+            
+            .section {
+                padding: 30px 25px;
+            }
+            
+            .section h2 {
+                font-size: 1.8em;
+            }
+            
+            .credentials {
+                justify-content: center;
+            }
+            
+            .ideal-client-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Hero Section with Photo -->
+        <div class="hero">
+            <div class="hero-content">
+                <img src="profile-photo.jpg" alt="Ikram Ullah" class="profile-photo">
+                
+                <div class="hero-text">
+                    <h1>Ikram Ullah</h1>
+                    <p class="subtitle">Amazon Advertising Strategist | Profitable Scale Specialist</p>
+                    <p>I architect profitable advertising systems for established Amazon brands—combining deep marketplace expertise with rigorous financial discipline to deliver sustainable, margin-intelligent growth.</p>
+                    
+                    <div class="credentials">
+                        <div class="credential-badge">⭐ Top Rated Plus</div>
+                        <div class="credential-badge">🏆 LinkedIn Top Voice — PPC</div>
+                        <div class="credential-badge">📊 5+ Years Agency Leadership</div>
+                        <div class="credential-badge">🌐 17,000+ Professional Network</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- About Section -->
+        <div class="section">
+            <h2>Professional Background</h2>
+            <p>Over five years architecting and executing Amazon advertising strategies for premier agency portfolios, I specialize in constructing profit-optimized growth systems for established brands operating at scale. My methodology integrates institutional rigor with entrepreneurial agility—delivering performance that compounds over time. Academic foundation in business administration complements applied marketplace expertise.</p>
+            
+            <div class="about-grid">
+                <div class="about-item">
+                    <strong>Academic Foundation</strong>
+                    <p>Bachelor of Business Administration, providing systematic frameworks in financial analysis, strategic management, and organizational behavior that inform advertising strategy</p>
+                </div>
+                <div class="about-item">
+                    <strong>Agency Pedigree</strong>
+                    <p>Five years directing campaigns across US, UK, and EU marketplaces for leading Amazon agencies, managing diverse portfolios at varying scales and competitive intensities</p>
+                </div>
+                <div class="about-item">
+                    <strong>Core Competency</strong>
+                    <p>Margin-intelligent scaling—engineering revenue growth that strengthens unit economics rather than diluting them, a discipline most practitioners overlook</p>
+                </div>
+                <div class="about-item">
+                    <strong>Platform Recognition</strong>
+                    <p>Top Rated Plus status on Upwork with $30,000+ earned exclusively through extended partnerships averaging 10+ months, reflecting consistent value delivery</p>
+                </div>
+                <div class="about-item">
+                    <strong>Industry Authority</strong>
+                    <p>Former LinkedIn Top Voice in PPC with 17,000+ following—recognized for strategic insights and analytical depth in Amazon advertising</p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Services Section -->
+        <div class="section">
+            <h2>Service Capabilities</h2>
+            
+            <div class="services-grid">
+                <div class="service-card">
+                    <h4>Advertising Strategy & Execution</h4>
+                    <ul>
+                        <li>Campaign architecture engineered for scale efficiency</li>
+                        <li>Full-spectrum ad deployment: Sponsored Products, Brands, Display</li>
+                        <li>Algorithmic bid optimization calibrated to margin targets</li>
+                        <li>Strategic keyword expansion and competitive positioning</li>
+                        <li>Systematic negative keyword cultivation</li>
+                    </ul>
+                </div>
+                
+                <div class="service-card">
+                    <h4>Listing Optimization & SEO</h4>
+                    <ul>
+                        <li>Conversion-optimized product detail page architecture</li>
+                        <li>Strategic backend indexing for visibility maximization</li>
+                        <li>Premium A+ Content development and testing</li>
+                        <li>Competitive landscape analysis and differentiation</li>
+                        <li>Systematic conversion rate enhancement</li>
+                    </ul>
+                </div>
+                
+                <div class="service-card">
+                    <h4>Analytics & Strategic Intelligence</h4>
+                    <ul>
+                        <li>Executive-level performance reporting and insights</li>
+                        <li>Predictive analytics for opportunity identification</li>
+                        <li>ROI modeling and revenue forecasting</li>
+                        <li>Portfolio-level optimization across product lines</li>
+                        <li>Quarterly strategic planning and roadmapping</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Why Work With Me Section -->
+        <div class="section">
+            <h2>The Standard I Deliver</h2>
+            
+            <div class="differentiator-list">
+                <div class="differentiator">
+                    <div class="differentiator-icon">💎</div>
+                    <div class="differentiator-content">
+                        <h4>Margin-Intelligent Growth</h4>
+                        <p>Revenue without profitability is a vanity metric. My strategies are engineered for margin preservation at scale—every campaign structure, bid adjustment, and targeting decision is evaluated through the lens of sustainable unit economics.</p>
+                    </div>
+                </div>
+                
+                <div class="differentiator">
+                    <div class="differentiator-icon">⚡</div>
+                    <div class="differentiator-content">
+                        <h4>Institutional-Grade Execution</h4>
+                        <p>Access to a specialized team means institutional execution velocity without institutional overhead. Strategic direction, campaign optimization, performance analytics, and reporting—delivered with the precision brands at scale demand.</p>
+                    </div>
+                </div>
+                
+                <div class="differentiator">
+                    <div class="differentiator-icon">📊</div>
+                    <div class="differentiator-content">
+                        <h4>Framework-Driven Methodology</h4>
+                        <p>Half a decade managing agency portfolios across hundreds of brands has crystallized what works. Recommendations are rooted in empirical data and battle-tested frameworks, not theoretical best practices or platform hype cycles.</p>
+                    </div>
+                </div>
+                
+                <div class="differentiator">
+                    <div class="differentiator-icon">🎯</div>
+                    <div class="differentiator-content">
+                        <h4>Strategic Partnership Architecture</h4>
+                        <p>The average engagement extends beyond 10 months because clients recognize value compounds over time. This isn't transactional campaign management—it's strategic partnership focused on building durable competitive advantages in your category.</p>
+                    </div>
+                </div>
+                
+                <div class="differentiator">
+                    <div class="differentiator-icon">🌐</div>
+                    <div class="differentiator-content">
+                        <h4>Cross-Border Proficiency</h4>
+                        <p>Extensive experience orchestrating campaigns across US, UK, and EU marketplaces. International expansion requires understanding regulatory nuances, competitive dynamics, and consumer behavior variations—capabilities most specialists lack.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Beyond Amazon PPC Section -->
+        <div class="section" style="background: linear-gradient(135deg, #F5F1E8 0%, #FAF8F3 100%); border-top: 4px solid #0A1828;">
+            <h2 style="color: #0A1828;">Additional Disciplines</h2>
+            <p style="color: #4A5568; font-size: 1.1em; margin-bottom: 35px;">Outside marketplace optimization, I maintain active engagement in complementary fields that inform strategic thinking and analytical precision.</p>
+            
+            <div class="about-grid">
+                <div class="about-item" style="background: white; border-left-color: #0A1828;">
+                    <strong style="color: #0A1828;">💊 Nutritional Science</strong>
+                    <p>Extensive research into nutritional biochemistry and performance optimization, complemented by applied personal experimentation with a structured 10-supplement daily regimen. This technical foundation—both theoretical and experiential—provides material advantages when engaging supplement and health brands. I comprehend the science underlying product claims, ingredient synergies, and authentic consumer motivations because I inhabit this category as both analyst and practitioner.</p>
+                </div>
+                
+                <div class="about-item" style="background: white; border-left-color: #0A1828;">
+                    <strong style="color: #0A1828;">💪 Performance Training</strong>
+                    <p>Certified fitness professional with client-facing experience in behavioral change and goal achievement. This background delivers authentic insights into wellness buyer psychology—understanding what drives conversion because I've guided those transformations firsthand.</p>
+                </div>
+                
+                <div class="about-item" style="background: white; border-left-color: #0A1828;">
+                    <strong style="color: #0A1828;">📈 Financial Markets & Portfolio Strategy</strong>
+                    <p>Active participation in financial markets with emphasis on analytical rigor and capital allocation efficiency. I apply identical frameworks to advertising budgets—optimizing for risk-adjusted returns, not superficial growth metrics.</p>
+                </div>
+            </div>
+            
+            <p style="color: #4A5568; font-size: 1.05em; margin-top: 30px; font-style: italic;">These cross-disciplinary competencies inform strategic perspective, consumer behavioral analysis, and systematic optimization methodology. They represent why outcomes differ from conventional campaign management.</p>
+        </div>
+        
+        <!-- Case Studies Section -->
+        <div class="section">
+            <h2>Performance Evidence</h2>
+            <p style="margin-bottom: 30px;">Quantifiable outcomes from brands under management:</p>
+            
+            <!-- Case Study 1: 88% YoY Growth -->
+            <div class="case-study">
+                <h4>E-commerce Brand — From $353K to $671K Annual Revenue</h4>
+                <h4 style="color: #E8E4D9; font-size: 1.2em; font-weight: 400; margin-top: 10px; margin-bottom: 25px;">88% Year-Over-Year Growth While Slashing TACoS</h4>
+                
+                <p><strong>Client Objective:</strong> Achieve 50% revenue growth year-over-year with $500,000 annual revenue target.</p>
+                
+                <p><strong>The Challenge:</strong> Client was stuck at ~$350K annual revenue with inconsistent TACoS fluctuating between 4-10%. Needed aggressive scaling without sacrificing profitability or burning through margin with inefficient ad spend.</p>
+                
+                <!-- Visual Proof Section -->
+                <div style="margin: 35px 0; padding: 30px; background: rgba(255,255,255,0.03); border-radius: 12px; border: 2px solid rgba(212, 175, 55, 0.4);">
+                    <p style="color: #D4AF37; font-size: 1.3em; font-weight: 600; text-align: center; margin-bottom: 25px;">📊 Verified Amazon Seller Central Data</p>
+                    
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 25px; margin-bottom: 25px;">
+                        <!-- 2024 Data -->
+                        <div style="position: relative;">
+                            <div style="background: rgba(212, 175, 55, 0.15); padding: 12px; border-radius: 8px 8px 0 0; border-bottom: 2px solid #D4AF37;">
+                                <p style="color: #D4AF37; font-weight: 700; text-align: center; font-size: 1.1em; margin: 0;">2024 BASELINE</p>
+                                <p style="color: #E8E4D9; text-align: center; font-size: 0.9em; margin: 5px 0 0 0;">January 5 - December 31, 2024</p>
+                            </div>
+                            <img src="2024-sales-data.png" alt="2024 Sales Data" style="width: 100%; border-radius: 0 0 8px 8px; border: 1px solid rgba(212, 175, 55, 0.3);">
+                            <div style="position: absolute; bottom: 15px; left: 50%; transform: translateX(-50%); background: rgba(10, 24, 40, 0.95); padding: 15px 25px; border-radius: 8px; border: 2px solid #D4AF37;">
+                                <p style="color: #D4AF37; font-weight: 700; font-size: 1.4em; margin: 0; text-align: center;">$352,742</p>
+                                <p style="color: #E8E4D9; font-size: 0.85em; margin: 5px 0 0 0; text-align: center;">Annual Revenue</p>
+                            </div>
+                        </div>
+                        
+                        <!-- 2025 Data -->
+                        <div style="position: relative;">
+                            <div style="background: linear-gradient(135deg, rgba(212, 175, 55, 0.3), rgba(212, 175, 55, 0.15)); padding: 12px; border-radius: 8px 8px 0 0; border-bottom: 3px solid #D4AF37; box-shadow: 0 0 20px rgba(212, 175, 55, 0.3);">
+                                <p style="color: #D4AF37; font-weight: 700; text-align: center; font-size: 1.1em; margin: 0;">2025 RESULTS ⚡</p>
+                                <p style="color: #E8E4D9; text-align: center; font-size: 0.9em; margin: 5px 0 0 0;">January 1 - December 31, 2025</p>
+                            </div>
+                            <img src="2025-sales-data.png" alt="2025 Sales Data" style="width: 100%; border-radius: 0 0 8px 8px; border: 2px solid #D4AF37; box-shadow: 0 0 15px rgba(212, 175, 55, 0.2);">
+                            <div style="position: absolute; bottom: 15px; left: 50%; transform: translateX(-50%); background: linear-gradient(135deg, #D4AF37, #C09A2E); padding: 15px 25px; border-radius: 8px; border: 2px solid #E8E4D9; box-shadow: 0 0 25px rgba(212, 175, 55, 0.5);">
+                                <p style="color: #0A1828; font-weight: 700; font-size: 1.4em; margin: 0; text-align: center;">$670,287</p>
+                                <p style="color: #0A1828; font-size: 0.85em; margin: 5px 0 0 0; text-align: center; font-weight: 600;">Annual Revenue</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Growth Arrow Indicator -->
+                    <div style="text-align: center; margin: 30px 0 20px 0;">
+                        <div style="display: inline-block; background: linear-gradient(135deg, #D4AF37, #C09A2E); padding: 20px 40px; border-radius: 50px; box-shadow: 0 10px 30px rgba(212, 175, 55, 0.4);">
+                            <p style="color: #0A1828; font-weight: 700; font-size: 2em; margin: 0; letter-spacing: 1px;">↑ +$317,545</p>
+                            <p style="color: #0A1828; font-weight: 600; font-size: 1.2em; margin: 5px 0 0 0;">88% Revenue Increase</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Key Metrics Comparison -->
+                    <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 15px; margin-top: 25px;">
+                        <div style="background: rgba(212, 175, 55, 0.1); padding: 15px; border-radius: 8px; border-left: 4px solid #D4AF37; text-align: center;">
+                            <p style="color: #E8E4D9; font-size: 0.85em; margin: 0 0 8px 0;">Units Ordered</p>
+                            <p style="color: #D4AF37; font-weight: 700; font-size: 1.3em; margin: 0;">7,146 → 13,079</p>
+                            <p style="color: #E8E4D9; font-size: 0.8em; margin: 5px 0 0 0;">+83% Growth</p>
+                        </div>
+                        <div style="background: rgba(212, 175, 55, 0.1); padding: 15px; border-radius: 8px; border-left: 4px solid #D4AF37; text-align: center;">
+                            <p style="color: #E8E4D9; font-size: 0.85em; margin: 0 0 8px 0;">Total Orders</p>
+                            <p style="color: #D4AF37; font-weight: 700; font-size: 1.3em; margin: 0;">6,678 → 12,312</p>
+                            <p style="color: #E8E4D9; font-size: 0.8em; margin: 5px 0 0 0;">+84% Growth</p>
+                        </div>
+                        <div style="background: rgba(212, 175, 55, 0.1); padding: 15px; border-radius: 8px; border-left: 4px solid #D4AF37; text-align: center;">
+                            <p style="color: #E8E4D9; font-size: 0.85em; margin: 0 0 8px 0;">Avg. Order Value</p>
+                            <p style="color: #D4AF37; font-weight: 700; font-size: 1.3em; margin: 0;">$52.82 → $54.44</p>
+                            <p style="color: #E8E4D9; font-size: 0.8em; margin: 5px 0 0 0;">+3% Improvement</p>
+                        </div>
+                    </div>
+                    
+                    <p style="color: #E8E4D9; font-size: 0.9em; text-align: center; margin: 20px 0 0 0; font-style: italic;">Data source: Amazon Seller Central verified snapshots (January 4, 2026)</p>
+                </div>
+                
+                <p><strong>What We Did:</strong></p>
+                <ul style="color: #E8E4D9; margin-left: 25px; margin-bottom: 20px; line-height: 1.8;">
+                    <li>Rebuilt campaign architecture from ground up for scalable traffic acquisition</li>
+                    <li>Deployed precision bid algorithms optimizing for conversion quality over volume</li>
+                    <li>Systematic listing optimization absorbing 72% more sessions with higher CVR</li>
+                    <li>Strategic budget reallocation prioritizing profitable ASINs and keywords</li>
+                    <li>Continuous A/B testing maintaining conversion rates under increased traffic pressure</li>
+                </ul>
+                
+                <p><strong>The Results:</strong></p>
+                
+                <div class="metrics">
+                    <div class="metric">
+                        <span class="metric-value">88%</span>
+                        <span class="metric-label">Revenue Growth YoY</span>
+                    </div>
+                    <div class="metric">
+                        <span class="metric-value">$671K</span>
+                        <span class="metric-label">2025 Annual Revenue</span>
+                    </div>
+                    <div class="metric">
+                        <span class="metric-value">$318K</span>
+                        <span class="metric-label">Revenue Added</span>
+                    </div>
+                    <div class="metric">
+                        <span class="metric-value">34%</span>
+                        <span class="metric-label">Above $500K Goal</span>
+                    </div>
+                </div>
+                
+                <div style="margin-top: 30px; padding: 25px; background: rgba(255,255,255,0.05); border-radius: 10px; border: 1px solid rgba(212, 175, 55, 0.3);">
+                    <p style="color: #D4AF37; font-size: 1.15em; font-weight: 600; margin-bottom: 15px;">📊 Month-by-Month Performance Transformation</p>
+                    
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 20px;">
+                        <div>
+                            <p style="color: #E8E4D9; font-weight: 600; margin-bottom: 10px;">January Performance:</p>
+                            <p style="color: #E8E4D9; font-size: 0.95em; line-height: 1.6;">
+                                <strong style="color: #D4AF37;">2024:</strong> $5,649 revenue, 10.06% TACoS<br>
+                                <strong style="color: #D4AF37;">2025:</strong> $45,561 revenue, 5.43% TACoS<br>
+                                <strong style="color: #D4AF37;">Impact:</strong> 707% revenue growth, 46% TACoS reduction
+                            </p>
+                        </div>
+                        
+                        <div>
+                            <p style="color: #E8E4D9; font-weight: 600; margin-bottom: 10px;">December Performance:</p>
+                            <p style="color: #E8E4D9; font-size: 0.95em; line-height: 1.6;">
+                                <strong style="color: #D4AF37;">2024:</strong> $41,638 revenue, 4.61% TACoS<br>
+                                <strong style="color: #D4AF37;">2025:</strong> $72,115 revenue, 6.97% TACoS<br>
+                                <strong style="color: #D4AF37;">Impact:</strong> 73% revenue growth, strong margin preservation
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div style="margin-top: 25px; padding-top: 20px; border-top: 1px solid rgba(212, 175, 55, 0.2);">
+                        <p style="color: #E8E4D9; font-size: 0.95em; line-height: 1.7;">
+                            <strong style="color: #D4AF37;">Peak Performance (October 2025):</strong> $83,017 in single-month revenue—demonstrating scalability at pace. Sessions increased 72% YoY while conversion rates improved, proving traffic quality enhancement alongside volume expansion.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="metrics" style="margin-top: 25px;">
+                    <div class="metric">
+                        <span class="metric-value">72%+</span>
+                        <span class="metric-label">Session Growth YoY</span>
+                    </div>
+                    <div class="metric">
+                        <span class="metric-value">↑ CVR</span>
+                        <span class="metric-label">Conversion Improved</span>
+                    </div>
+                    <div class="metric">
+                        <span class="metric-value">Q4</span>
+                        <span class="metric-label">$500K Goal Crushed</span>
+                    </div>
+                    <div class="metric">
+                        <span class="metric-value">5.43%</span>
+                        <span class="metric-label">Avg TACoS (vs 10%+ prior)</span>
+                    </div>
+                </div>
+                
+                <p style="margin-top: 30px; padding-top: 25px; border-top: 1px solid rgba(212, 175, 55, 0.3);"><strong>The Paradox Achieved:</strong> Client wanted 50% growth ($175K additional revenue)—we delivered 88% growth ($318K additional revenue). Target was $500K annually—achieved $671K, crushing goal by $171K. Most critically: accomplished this while <em>improving</em> Total Advertising Cost of Sale, not degrading it.</p>
+                
+                <p style="margin-top: 15px; font-style: italic; color: #D4AF37;"><strong>Why This Matters:</strong> Conventional wisdom says you sacrifice margin to scale aggressively. This engagement proves margin-intelligent growth is achievable when strategy is rigorous. The brand didn't just grow—it grew profitably, sustainably, and dramatically exceeded expectations. Goal slammed at end of Q4.</p>
+            </div>
+            
+            <!-- Placeholder for additional case studies -->
+            <div style="margin-top: 30px; padding: 35px; background: rgba(212, 175, 55, 0.05); border-radius: 12px; border: 1px dashed rgba(212, 175, 55, 0.3); text-align: center;">
+                <p style="color: #0A1828; font-size: 1.05em; font-weight: 600; margin-bottom: 10px;">Additional Performance Documentation</p>
+                <p style="color: #4A5568; font-size: 0.95em; font-style: italic;">Portfolio case studies across diverse categories and competitive landscapes available during consultation.</p>
+            </div>
+            
+            <!-- TEMPLATE FOR ADDITIONAL CASE STUDIES:
+            
+            <div class="case-study">
+                <h4>[Category] Brand: [Key Achievement Headline]</h4>
+                <p><strong>Client Objective:</strong> [What they wanted to achieve]</p>
+                <p><strong>Strategic Intervention:</strong> [Your approach and methodology]</p>
+                <p><strong>Measured Outcomes:</strong></p>
+                <div class="metrics">
+                    <div class="metric">
+                        <span class="metric-value">[Number]</span>
+                        <span class="metric-label">[Metric Label]</span>
+                    </div>
+                </div>
+            </div>
+            
+            -->
+        </div>
+        
+        <!-- Ideal Client Section -->
+        <div class="section">
+            <h2>Engagement Criteria</h2>
+            
+            <div class="ideal-client-grid">
+                <div class="fit-box good-fit">
+                    <h3>✓ Strong Alignment</h3>
+                    <ul>
+                        <li>Monthly revenue exceeding $20,000 on Amazon</li>
+                        <li>Commitment to margin-intelligent scaling, not volume chasing</li>
+                        <li>Appreciation for empirical methodology over intuition</li>
+                        <li>Seeking strategic partnership, not tactical execution</li>
+                        <li>Investment orientation toward sustainable competitive advantage</li>
+                        <li>Value transparent communication and performance accountability</li>
+                    </ul>
+                </div>
+                
+                <div class="fit-box not-fit">
+                    <h3>✗ Limited Alignment</h3>
+                    <ul>
+                        <li>Pre-launch or sub-$15k monthly revenue stage</li>
+                        <li>Seeking tactical ad management without strategic input</li>
+                        <li>Primary selection criteria is lowest available rate</li>
+                        <li>Preference for granular daily oversight and control</li>
+                        <li>Expectations of immediate transformation without testing cycles</li>
+                        <li>Hesitation to invest appropriately in advertising excellence</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <!-- CTA Section -->
+        <div class="cta-section">
+            <h2>Discuss Your Growth Objectives</h2>
+            <p style="font-size: 1.2em; margin-bottom: 15px;">If your brand meets the engagement criteria and you're seeking a strategic partner for profitable Amazon expansion, let's explore alignment.</p>
+            
+            <div class="cta-buttons">
+                <a href="https://www.upwork.com/freelancers/~01b5433f91682047d5" class="btn btn-primary" target="_blank">View Upwork Portfolio</a>
+                <a href="https://www.linkedin.com/in/ikram-ullah-9a42b3210" class="btn btn-secondary" target="_blank">Connect on LinkedIn</a>
+            </div>
+        </div>
+        
+        <!-- Footer -->
+        <div class="footer">
+            <p style="font-weight: 600; color: #0A1828; font-size: 1.05em;">Ikram Ullah — Amazon Advertising Strategist</p>
+            <p style="margin-top: 12px;">Upwork Top Rated Plus | LinkedIn Top Voice (PPC) | 17,000+ Professional Network</p>
+        </div>
+    </div>
+</body>
+</html>
