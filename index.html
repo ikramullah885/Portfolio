@@ -1003,59 +1003,77 @@
             overflow: hidden;
         }
 
-        /* Dashboard/Analytics visual overlay */
+        /* Dashboard/Analytics visual overlay - MORE VISIBLE */
         .case-studies-section .dashboard-bg {
             position: absolute;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
-            opacity: 0.08;
-            z-index: 0;
+            opacity: 0.15;
+            z-index: 1;
             pointer-events: none;
             background-image:
-                /* Vertical bar charts */
-                linear-gradient(to top, rgba(99, 102, 241, 0.6) 0%, rgba(99, 102, 241, 0.6) 40%, transparent 40%),
-                linear-gradient(to top, rgba(139, 92, 246, 0.6) 0%, rgba(139, 92, 246, 0.6) 60%, transparent 60%),
-                linear-gradient(to top, rgba(236, 72, 153, 0.6) 0%, rgba(236, 72, 153, 0.6) 35%, transparent 35%),
-                linear-gradient(to top, rgba(59, 130, 246, 0.6) 0%, rgba(59, 130, 246, 0.6) 75%, transparent 75%),
-                linear-gradient(to top, rgba(6, 182, 212, 0.6) 0%, rgba(6, 182, 212, 0.6) 50%, transparent 50%),
-                /* Line chart effect */
-                linear-gradient(135deg, transparent 48%, rgba(99, 102, 241, 0.4) 49%, rgba(99, 102, 241, 0.4) 51%, transparent 52%),
-                /* Grid lines */
-                repeating-linear-gradient(0deg, transparent, transparent 80px, rgba(255, 255, 255, 0.03) 80px, rgba(255, 255, 255, 0.03) 81px),
-                repeating-linear-gradient(90deg, transparent, transparent 80px, rgba(255, 255, 255, 0.03) 80px, rgba(255, 255, 255, 0.03) 81px);
+                /* Larger vertical bar charts with growth pattern */
+                linear-gradient(to top, rgba(99, 102, 241, 0.7) 0%, rgba(99, 102, 241, 0.7) 45%, transparent 45%),
+                linear-gradient(to top, rgba(139, 92, 246, 0.7) 0%, rgba(139, 92, 246, 0.7) 65%, transparent 65%),
+                linear-gradient(to top, rgba(236, 72, 153, 0.7) 0%, rgba(236, 72, 153, 0.7) 55%, transparent 55%),
+                linear-gradient(to top, rgba(59, 130, 246, 0.7) 0%, rgba(59, 130, 246, 0.7) 80%, transparent 80%),
+                linear-gradient(to top, rgba(6, 182, 212, 0.7) 0%, rgba(6, 182, 212, 0.7) 70%, transparent 70%),
+                linear-gradient(to top, rgba(168, 85, 247, 0.7) 0%, rgba(168, 85, 247, 0.7) 85%, transparent 85%),
+                /* Multiple trend lines */
+                linear-gradient(135deg, transparent 46%, rgba(99, 102, 241, 0.5) 48%, rgba(99, 102, 241, 0.5) 52%, transparent 54%),
+                linear-gradient(120deg, transparent 48%, rgba(139, 92, 246, 0.4) 49%, rgba(139, 92, 246, 0.4) 51%, transparent 52%),
+                /* Data points/dots pattern */
+                radial-gradient(circle, rgba(255, 255, 255, 0.4) 2px, transparent 2px),
+                /* Grid lines - more prominent */
+                repeating-linear-gradient(0deg, transparent, transparent 60px, rgba(255, 255, 255, 0.06) 60px, rgba(255, 255, 255, 0.06) 61px),
+                repeating-linear-gradient(90deg, transparent, transparent 60px, rgba(255, 255, 255, 0.06) 60px, rgba(255, 255, 255, 0.06) 61px);
             background-size:
-                60px 200px,
-                60px 200px,
-                60px 200px,
-                60px 200px,
-                60px 200px,
+                70px 300px,
+                70px 300px,
+                70px 300px,
+                70px 300px,
+                70px 300px,
+                70px 300px,
                 100% 100%,
+                100% 100%,
+                30px 30px,
                 100% 100%,
                 100% 100%;
             background-position:
-                5% 80%,
-                15% 80%,
-                25% 80%,
-                35% 80%,
-                45% 80%,
+                8% 70%,
+                18% 70%,
+                28% 70%,
+                38% 70%,
+                48% 70%,
+                58% 70%,
+                0 0,
+                0 0,
                 0 0,
                 0 0,
                 0 0;
-            background-repeat: no-repeat, no-repeat, no-repeat, no-repeat, no-repeat, no-repeat, repeat, repeat;
-            filter: blur(1px);
-            animation: dashboardPulse 6s ease-in-out infinite;
+            background-repeat: no-repeat, no-repeat, no-repeat, no-repeat, no-repeat, no-repeat, no-repeat, no-repeat, repeat, repeat, repeat;
+            filter: blur(0.5px);
+            animation: dashboardPulse 8s ease-in-out infinite;
         }
 
         @keyframes dashboardPulse {
             0%, 100% {
-                opacity: 0.08;
+                opacity: 0.12;
                 transform: scale(1);
             }
             50% {
-                opacity: 0.12;
-                transform: scale(1.02);
+                opacity: 0.18;
+                transform: scale(1.01);
+            }
+        }
+
+        /* Hide dashboard on mobile for performance */
+        @media (max-width: 768px) {
+            .case-studies-section .dashboard-bg {
+                opacity: 0.08;
+                filter: blur(2px);
             }
         }
 
@@ -2413,26 +2431,59 @@
                 animation: mobileFloat 8s ease-in-out infinite !important;
                 transform-origin: center;
                 transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+                border: 3px solid transparent !important;
+                background-clip: padding-box;
             }
 
             /* Stagger floating animations on mobile */
-            .case-card:nth-child(1) { animation-delay: 0s !important; }
-            .case-card:nth-child(2) { animation-delay: 1s !important; }
-            .case-card:nth-child(3) { animation-delay: 2s !important; }
-            .case-card:nth-child(4) { animation-delay: 3s !important; }
-            .case-card:nth-child(5) { animation-delay: 4s !important; }
-            .case-card:nth-child(6) { animation-delay: 5s !important; }
+            .case-card:nth-child(1) {
+                animation-delay: 0s !important;
+                border-color: rgba(99, 102, 241, 0.5) !important;
+                box-shadow: 0 0 30px rgba(99, 102, 241, 0.3), inset 0 0 20px rgba(99, 102, 241, 0.1) !important;
+            }
+            .case-card:nth-child(2) {
+                animation-delay: 1s !important;
+                border-color: rgba(236, 72, 153, 0.5) !important;
+                box-shadow: 0 0 30px rgba(236, 72, 153, 0.3), inset 0 0 20px rgba(236, 72, 153, 0.1) !important;
+            }
+            .case-card:nth-child(3) {
+                animation-delay: 2s !important;
+                border-color: rgba(59, 130, 246, 0.5) !important;
+                box-shadow: 0 0 30px rgba(59, 130, 246, 0.3), inset 0 0 20px rgba(59, 130, 246, 0.1) !important;
+            }
+            .case-card:nth-child(4) {
+                animation-delay: 3s !important;
+                border-color: rgba(139, 92, 246, 0.5) !important;
+                box-shadow: 0 0 30px rgba(139, 92, 246, 0.3), inset 0 0 20px rgba(139, 92, 246, 0.1) !important;
+            }
+            .case-card:nth-child(5) {
+                animation-delay: 4s !important;
+                border-color: rgba(6, 182, 212, 0.5) !important;
+                box-shadow: 0 0 30px rgba(6, 182, 212, 0.3), inset 0 0 20px rgba(6, 182, 212, 0.1) !important;
+            }
+            .case-card:nth-child(6) {
+                animation-delay: 5s !important;
+                border-color: rgba(168, 85, 247, 0.5) !important;
+                box-shadow: 0 0 30px rgba(168, 85, 247, 0.3), inset 0 0 20px rgba(168, 85, 247, 0.1) !important;
+            }
 
             @keyframes mobileFloat {
-                0%, 100% { transform: translateY(0px) scale(1); }
-                50% { transform: translateY(-12px) scale(1.02); }
+                0%, 100% {
+                    transform: translateY(0px) scale(1);
+                    box-shadow: 0 0 30px rgba(99, 102, 241, 0.3), inset 0 0 20px rgba(99, 102, 241, 0.1);
+                }
+                50% {
+                    transform: translateY(-15px) scale(1.03);
+                    box-shadow: 0 0 50px rgba(99, 102, 241, 0.6), inset 0 0 30px rgba(99, 102, 241, 0.2), 0 20px 40px rgba(0, 0, 0, 0.3);
+                }
             }
 
             /* Tap feedback - when user taps card */
             .case-card:active {
-                transform: scale(0.98) !important;
+                transform: scale(0.96) !important;
                 box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3) !important;
                 animation: none !important;
+                filter: brightness(1.2);
             }
 
             .case-card h3 {
@@ -2460,33 +2511,62 @@
                 /* Keep pulsing animation on mobile */
             }
 
-            /* Show quick preview text on mobile tap */
+            /* Show quick preview text on mobile tap - MORE PROMINENT */
             .case-card::after {
-                content: '👆 Tap to view full details';
+                content: '👆 TAP FOR DETAILS';
                 position: absolute;
-                bottom: 20px;
+                bottom: 15px;
                 left: 50%;
                 transform: translateX(-50%);
-                background: rgba(99, 102, 241, 0.95);
+                background: linear-gradient(135deg, #6366f1, #8b5cf6);
                 color: white;
-                padding: 8px 16px;
-                border-radius: 20px;
-                font-size: 11px;
-                font-weight: 600;
-                opacity: 0.8;
-                animation: tapPulse 2s ease-in-out infinite;
+                padding: 10px 20px;
+                border-radius: 25px;
+                font-size: 12px;
+                font-weight: 800;
+                opacity: 0.95;
+                animation: tapPulseStrong 1.5s ease-in-out infinite;
                 pointer-events: none;
+                box-shadow: 0 5px 20px rgba(99, 102, 241, 0.5);
+                text-transform: uppercase;
+                letter-spacing: 0.5px;
+                border: 2px solid rgba(255, 255, 255, 0.3);
             }
 
-            @keyframes tapPulse {
+            @keyframes tapPulseStrong {
                 0%, 100% {
-                    opacity: 0.8;
+                    opacity: 0.9;
                     transform: translateX(-50%) scale(1);
+                    box-shadow: 0 5px 20px rgba(99, 102, 241, 0.5);
                 }
                 50% {
                     opacity: 1;
-                    transform: translateX(-50%) scale(1.05);
+                    transform: translateX(-50%) scale(1.1);
+                    box-shadow: 0 8px 35px rgba(99, 102, 241, 0.8), 0 0 0 4px rgba(99, 102, 241, 0.3);
                 }
+            }
+
+            /* Add urgency indicators to mobile cards */
+            .case-card-tag {
+                animation: tagShine 2s ease-in-out infinite, tagFloat 3s ease-in-out infinite !important;
+            }
+
+            @keyframes tagFloat {
+                0%, 100% { transform: translateY(0px); }
+                50% { transform: translateY(-3px); }
+            }
+
+            /* Mobile progress bar at top */
+            .mobile-progress-bar {
+                position: fixed;
+                top: 0;
+                left: 0;
+                height: 4px;
+                background: linear-gradient(90deg, #6366f1, #8b5cf6, #ec4899);
+                width: 0%;
+                z-index: 9999;
+                transition: width 0.2s ease;
+                box-shadow: 0 2px 10px rgba(99, 102, 241, 0.5);
             }
 
             .case-card-metrics {
@@ -2499,7 +2579,31 @@
             }
 
             .case-card-metric-value {
-                font-size: 24px;
+                font-size: 26px;
+                animation: metricCountUp 0.8s ease-out, metricPulse 3s ease-in-out infinite 1s !important;
+                text-shadow: 0 2px 10px rgba(99, 102, 241, 0.4);
+            }
+
+            @keyframes metricCountUp {
+                from {
+                    opacity: 0;
+                    transform: translateY(20px) scale(0.5);
+                }
+                to {
+                    opacity: 1;
+                    transform: translateY(0) scale(1);
+                }
+            }
+
+            @keyframes metricPulse {
+                0%, 100% {
+                    transform: scale(1);
+                    text-shadow: 0 2px 10px rgba(99, 102, 241, 0.4);
+                }
+                50% {
+                    transform: scale(1.08);
+                    text-shadow: 0 4px 20px rgba(99, 102, 241, 0.8);
+                }
             }
 
             .case-card-metric-label {
@@ -2507,9 +2611,21 @@
             }
 
             .case-card-cta {
-                font-size: 14px;
-                padding: 12px 24px;
+                font-size: 15px;
+                padding: 14px 28px;
                 margin-top: 20px;
+                background: linear-gradient(135deg, #6366f1, #8b5cf6) !important;
+                border: 2px solid rgba(255, 255, 255, 0.2) !important;
+                animation: ctaGlow 2s ease-in-out infinite;
+            }
+
+            @keyframes ctaGlow {
+                0%, 100% {
+                    box-shadow: 0 5px 15px rgba(99, 102, 241, 0.4);
+                }
+                50% {
+                    box-shadow: 0 8px 30px rgba(99, 102, 241, 0.8), 0 0 0 3px rgba(99, 102, 241, 0.2);
+                }
             }
 
             .metrics-grid {
@@ -4745,14 +4861,53 @@
         });
     </script>
 
+    <!-- Mobile Progress Bar -->
+    <div class="mobile-progress-bar"></div>
+
     <!-- Mobile Sticky CTA (only visible on mobile) -->
     <a href="mailto:myppcg@gmail.com?subject=Amazon PPC Partnership Inquiry&body=Hi Ikram,%0D%0A%0D%0AI'm interested in discussing how you can help scale my Amazon business.%0D%0A%0D%0A" class="sticky-mobile-cta">
         <i class="fas fa-envelope"></i>
         <span>Get In Touch</span>
+        <span class="cta-pulse-dot"></span>
     </a>
 
     <!-- Mobile tap indicator (auto-hides after a few seconds) -->
     <div class="mobile-tap-indicator">👆 Scroll to see results</div>
+
+    <style>
+        /* Pulsing dot on CTA for extra attention */
+        .cta-pulse-dot {
+            position: absolute;
+            top: -5px;
+            right: -5px;
+            width: 12px;
+            height: 12px;
+            background: #ef4444;
+            border-radius: 50%;
+            animation: dotPulse 1.5s ease-in-out infinite;
+            box-shadow: 0 0 10px rgba(239, 68, 68, 0.8);
+        }
+
+        @keyframes dotPulse {
+            0%, 100% {
+                transform: scale(1);
+                opacity: 1;
+            }
+            50% {
+                transform: scale(1.3);
+                opacity: 0.7;
+            }
+        }
+
+        /* Desktop: hide mobile-only elements */
+        @media (min-width: 769px) {
+            .sticky-mobile-cta,
+            .mobile-tap-indicator,
+            .mobile-progress-bar {
+                display: none !important;
+            }
+        }
+    </style>
 
     <script>
         // Hide mobile tap indicator after 5 seconds
@@ -4769,7 +4924,9 @@
         }, 5000);
 
         // Show/hide sticky CTA based on scroll (hide when at contact section)
+        // ALSO update progress bar
         window.addEventListener('scroll', function() {
+            // Sticky CTA visibility
             var stickyBtn = document.querySelector('.sticky-mobile-cta');
             var contactSection = document.getElementById('contact');
             if (stickyBtn && contactSection) {
@@ -4784,7 +4941,55 @@
                     stickyBtn.style.pointerEvents = 'auto';
                 }
             }
+
+            // Mobile progress bar
+            var progressBar = document.querySelector('.mobile-progress-bar');
+            if (progressBar && window.innerWidth <= 768) {
+                var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+                var docHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+                var scrollPercent = (scrollTop / docHeight) * 100;
+                progressBar.style.width = scrollPercent + '%';
+            }
         });
+
+        // Vibrate on mobile CTA tap (if supported)
+        var mobileCta = document.querySelector('.sticky-mobile-cta');
+        if (mobileCta && 'vibrate' in navigator) {
+            mobileCta.addEventListener('click', function() {
+                navigator.vibrate(50); // Short vibration feedback
+            });
+        }
+
+        // Count-up animation for metrics when they come into view
+        function animateValue(element, start, end, duration) {
+            var range = end - start;
+            var current = start;
+            var increment = end > start ? 1 : -1;
+            var stepTime = Math.abs(Math.floor(duration / range));
+            var timer = setInterval(function() {
+                current += increment;
+                element.textContent = current + (element.textContent.includes('%') ? '%' : (element.textContent.includes('M') ? 'M' : 'K'));
+                if (current == end) {
+                    clearInterval(timer);
+                }
+            }, stepTime);
+        }
+
+        // Observe metrics for count-up animation
+        if ('IntersectionObserver' in window && window.innerWidth <= 768) {
+            var metricObserver = new IntersectionObserver(function(entries) {
+                entries.forEach(function(entry) {
+                    if (entry.isIntersecting) {
+                        entry.target.style.animation = 'metricCountUp 0.8s ease-out, metricPulse 3s ease-in-out infinite 1s';
+                        metricObserver.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.5 });
+
+            document.querySelectorAll('.case-card-metric-value').forEach(function(metric) {
+                metricObserver.observe(metric);
+            });
+        }
     </script>
 </body>
 </html>
