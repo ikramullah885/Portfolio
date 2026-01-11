@@ -169,28 +169,71 @@
             transform: translateY(-2px);
         }
 
-        /* Hero Section - Modern Dark Design */
+        /* Hero Section - Premium Dark Design */
         .hero {
             background: #0f172a;
             margin: 0;
             padding: 100px 60px 120px;
             position: relative;
-            overflow: visible;
+            overflow: hidden;
             min-height: 90vh;
             display: flex;
             align-items: center;
         }
 
+        /* Animated mesh gradient background */
         .hero::before {
             content: '';
             position: absolute;
-            top: 10%;
-            right: 5%;
-            width: 600px;
-            height: 600px;
-            background: radial-gradient(circle, rgba(99, 102, 241, 0.15) 0%, transparent 70%);
-            border-radius: 50%;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background:
+                radial-gradient(circle at 20% 30%, rgba(99, 102, 241, 0.25) 0%, transparent 40%),
+                radial-gradient(circle at 80% 70%, rgba(139, 92, 246, 0.2) 0%, transparent 40%),
+                radial-gradient(circle at 50% 50%, rgba(236, 72, 153, 0.15) 0%, transparent 50%),
+                radial-gradient(circle at 90% 20%, rgba(59, 130, 246, 0.18) 0%, transparent 45%);
+            animation: meshMove 25s ease-in-out infinite;
             pointer-events: none;
+        }
+
+        @keyframes meshMove {
+            0%, 100% {
+                transform: translate(0, 0) rotate(0deg);
+            }
+            33% {
+                transform: translate(30px, -30px) rotate(5deg);
+            }
+            66% {
+                transform: translate(-20px, 20px) rotate(-5deg);
+            }
+        }
+
+        /* Animated grid pattern overlay */
+        .hero::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image:
+                linear-gradient(rgba(99, 102, 241, 0.03) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(99, 102, 241, 0.03) 1px, transparent 1px);
+            background-size: 50px 50px;
+            opacity: 0.4;
+            pointer-events: none;
+            animation: gridPulse 4s ease-in-out infinite;
+        }
+
+        @keyframes gridPulse {
+            0%, 100% {
+                opacity: 0.2;
+            }
+            50% {
+                opacity: 0.4;
+            }
         }
 
         .hero-content {
@@ -952,11 +995,12 @@
             color: #64748b;
         }
 
-        /* Case Studies Section */
+        /* Case Studies Section - Premium Background */
         .case-studies-section {
             background: #0f172a;
             padding: 100px 0;
             position: relative;
+            overflow: hidden;
         }
 
         .case-study-card {
@@ -1145,27 +1189,62 @@
             color: #8b5cf6;
         }
 
+        /* Premium mesh gradient background for case studies */
         .case-studies-section::before {
             content: '';
             position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background-image:
-                radial-gradient(circle at 20% 50%, rgba(99, 102, 241, 0.08) 0%, transparent 50%),
-                radial-gradient(circle at 80% 80%, rgba(139, 92, 246, 0.08) 0%, transparent 50%),
-                radial-gradient(circle at 40% 20%, rgba(6, 182, 212, 0.08) 0%, transparent 50%);
+            top: -20%;
+            left: -10%;
+            width: 120%;
+            height: 140%;
+            background:
+                radial-gradient(circle at 15% 30%, rgba(99, 102, 241, 0.18) 0%, transparent 45%),
+                radial-gradient(circle at 85% 60%, rgba(139, 92, 246, 0.15) 0%, transparent 45%),
+                radial-gradient(circle at 50% 80%, rgba(236, 72, 153, 0.12) 0%, transparent 50%),
+                radial-gradient(circle at 30% 10%, rgba(59, 130, 246, 0.14) 0%, transparent 45%),
+                radial-gradient(circle at 70% 90%, rgba(6, 182, 212, 0.1) 0%, transparent 40%);
             pointer-events: none;
-            animation: backgroundShift 20s ease-in-out infinite;
+            animation: backgroundShift 30s ease-in-out infinite;
+            z-index: 0;
         }
 
         @keyframes backgroundShift {
             0%, 100% {
-                background-position: 0% 0%, 100% 100%, 0% 0%;
+                transform: translate(0, 0) scale(1);
             }
-            50% {
-                background-position: 100% 100%, 0% 0%, 100% 100%;
+            33% {
+                transform: translate(20px, -30px) scale(1.05);
+            }
+            66% {
+                transform: translate(-30px, 20px) scale(0.95);
+            }
+        }
+
+        /* Animated geometric grid overlay for trust */
+        .case-studies-section::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image:
+                linear-gradient(rgba(99, 102, 241, 0.04) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(99, 102, 241, 0.04) 1px, transparent 1px),
+                linear-gradient(45deg, transparent 48%, rgba(139, 92, 246, 0.02) 49%, rgba(139, 92, 246, 0.02) 51%, transparent 52%);
+            background-size: 60px 60px, 60px 60px, 120px 120px;
+            opacity: 0.6;
+            pointer-events: none;
+            animation: gridSlide 40s linear infinite;
+            z-index: 0;
+        }
+
+        @keyframes gridSlide {
+            0% {
+                background-position: 0 0, 0 0, 0 0;
+            }
+            100% {
+                background-position: 60px 60px, 60px 60px, 120px 120px;
             }
         }
 
@@ -2107,9 +2186,26 @@
                 min-height: auto;
             }
 
+            .hero-content {
+                grid-template-columns: 1fr;
+                gap: 50px;
+                text-align: center;
+            }
+
+            .hero-text {
+                order: 2;
+            }
+
+            .profile-container {
+                order: 1;
+                display: flex;
+                justify-content: center;
+            }
+
             .hero-text h1 {
-                font-size: 48px;
+                font-size: 42px;
                 letter-spacing: -1px;
+                line-height: 1.15;
             }
 
             .hero-text .tagline {
@@ -2119,11 +2215,27 @@
             .hero-text p {
                 font-size: 16px;
                 max-width: 100%;
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            .cta-button {
+                width: 100%;
+                padding: 18px 35px;
+                font-size: 16px;
+            }
+
+            .social-icons {
+                justify-content: center;
+            }
+
+            .trust-badges {
+                justify-content: center;
             }
 
             .profile-photo {
-                width: 280px;
-                height: 280px;
+                width: 240px;
+                height: 240px;
             }
 
             .floating-badge {
@@ -2220,12 +2332,53 @@
             }
 
             .case-card {
-                padding: 35px;
+                padding: 30px 20px;
+            }
+
+            .case-card h3 {
+                font-size: 22px;
+                line-height: 1.3;
+            }
+
+            .case-card-tag {
+                font-size: 10px;
+                padding: 6px 14px;
+                margin-bottom: 15px;
+            }
+
+            .case-card-badge {
+                top: -6px;
+                right: 15px;
+                font-size: 9px;
+                padding: 6px 12px;
+            }
+
+            /* Hide preview on mobile for cleaner look */
+            .case-card-preview {
+                display: none !important;
             }
 
             .case-card-metrics {
                 grid-template-columns: repeat(2, 1fr);
-                gap: 15px;
+                gap: 12px;
+            }
+
+            .case-card-metric {
+                padding: 15px 10px;
+            }
+
+            .case-card-metric-value {
+                font-size: 24px;
+            }
+
+            .case-card-metric-label {
+                font-size: 11px;
+            }
+
+            .case-card-cta {
+                font-size: 14px;
+                padding: 12px 24px;
+                margin-top: 20px;
             }
 
             .metrics-grid {
@@ -2308,11 +2461,78 @@
             }
 
             .hero-text h1 {
-                font-size: 38px;
+                font-size: 34px;
             }
 
             .hero-text p {
                 font-size: 15px;
+            }
+
+            .profile-photo {
+                width: 200px;
+                height: 200px;
+            }
+
+            .case-card {
+                padding: 25px 18px;
+            }
+
+            .case-card h3 {
+                font-size: 20px;
+            }
+
+            .section-title {
+                font-size: 32px;
+            }
+
+            .service-card-header {
+                padding: 30px 25px;
+            }
+
+            .cta-section {
+                padding: 40px 25px;
+            }
+
+            .cta-section h2 {
+                font-size: 28px;
+            }
+        }
+
+        /* Extra small phones: 320px - 480px */
+        @media (max-width: 480px) {
+            .hero-text h1 {
+                font-size: 32px;
+            }
+
+            .profile-photo {
+                width: 180px;
+                height: 180px;
+            }
+
+            .floating-badge {
+                font-size: 8px;
+                padding: 10px;
+            }
+
+            .badge-1, .badge-2, .badge-3, .badge-4 {
+                width: 70px;
+                height: 70px;
+            }
+
+            .section-title {
+                font-size: 28px;
+            }
+
+            .section-subtitle {
+                font-size: 14px;
+            }
+
+            .case-card h3 {
+                font-size: 18px;
+            }
+
+            .case-card-metric-value {
+                font-size: 20px;
             }
 
             .cta-button {
@@ -4170,11 +4390,11 @@
         <!-- Email Contact -->
         <div style="margin: 30px 0; padding: 25px; background: rgba(255, 255, 255, 0.1); border-radius: 20px; backdrop-filter: blur(10px);">
             <p style="font-size: 16px; margin-bottom: 12px; opacity: 0.9;">📧 Email</p>
-            <p style="font-size: 22px; font-weight: 700; margin-bottom: 0; letter-spacing: 0.5px;">ikramullah.ppc@gmail.com</p>
+            <p style="font-size: 22px; font-weight: 700; margin-bottom: 0; letter-spacing: 0.5px;">myppcg@gmail.com</p>
         </div>
 
         <div class="cta-buttons">
-            <a href="mailto:ikramullah.ppc@gmail.com?subject=Amazon PPC Partnership Inquiry&body=Hi Ikram,%0D%0A%0D%0AI'm interested in discussing how you can help scale my Amazon business.%0D%0A%0D%0A" class="btn-white">
+            <a href="mailto:myppcg@gmail.com?subject=Amazon PPC Partnership Inquiry&body=Hi Ikram,%0D%0A%0D%0AI'm interested in discussing how you can help scale my Amazon business.%0D%0A%0D%0A" class="btn-white">
                 <i class="fas fa-envelope" style="margin-right: 8px;"></i>Get Connected via Email
             </a>
             <a href="https://www.upwork.com/freelancers/~01b5433f91682047d5" class="btn-outline" target="_blank">View Upwork Profile</a>
@@ -4186,9 +4406,9 @@
     <footer>
         <p><strong>Ikram Ullah</strong> - Senior Amazon PPC Manager</p>
         <p>Helping Amazon sellers grow profitably through data-driven strategies</p>
-        <p style="margin-top: 15px; color: #6366f1; font-weight: 500;">📧 ikramullah.ppc@gmail.com</p>
+        <p style="margin-top: 15px; color: #6366f1; font-weight: 500;">📧 myppcg@gmail.com</p>
         <div class="footer-links">
-            <a href="mailto:ikramullah.ppc@gmail.com">Email</a>
+            <a href="mailto:myppcg@gmail.com">Email</a>
             <a href="https://www.upwork.com/freelancers/~01b5433f91682047d5" target="_blank">Upwork</a>
             <a href="https://www.linkedin.com/in/ikram-ullah-9a42b3210" target="_blank">LinkedIn</a>
             <a href="ikram-portfolio-final_1.html">Full Portfolio</a>
