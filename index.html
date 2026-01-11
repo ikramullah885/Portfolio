@@ -995,12 +995,68 @@
             color: #64748b;
         }
 
-        /* Case Studies Section - Premium Background */
+        /* Case Studies Section - Dashboard Background */
         .case-studies-section {
             background: #0f172a;
             padding: 100px 0;
             position: relative;
             overflow: hidden;
+        }
+
+        /* Dashboard/Analytics visual overlay */
+        .case-studies-section .dashboard-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0.08;
+            z-index: 0;
+            pointer-events: none;
+            background-image:
+                /* Vertical bar charts */
+                linear-gradient(to top, rgba(99, 102, 241, 0.6) 0%, rgba(99, 102, 241, 0.6) 40%, transparent 40%),
+                linear-gradient(to top, rgba(139, 92, 246, 0.6) 0%, rgba(139, 92, 246, 0.6) 60%, transparent 60%),
+                linear-gradient(to top, rgba(236, 72, 153, 0.6) 0%, rgba(236, 72, 153, 0.6) 35%, transparent 35%),
+                linear-gradient(to top, rgba(59, 130, 246, 0.6) 0%, rgba(59, 130, 246, 0.6) 75%, transparent 75%),
+                linear-gradient(to top, rgba(6, 182, 212, 0.6) 0%, rgba(6, 182, 212, 0.6) 50%, transparent 50%),
+                /* Line chart effect */
+                linear-gradient(135deg, transparent 48%, rgba(99, 102, 241, 0.4) 49%, rgba(99, 102, 241, 0.4) 51%, transparent 52%),
+                /* Grid lines */
+                repeating-linear-gradient(0deg, transparent, transparent 80px, rgba(255, 255, 255, 0.03) 80px, rgba(255, 255, 255, 0.03) 81px),
+                repeating-linear-gradient(90deg, transparent, transparent 80px, rgba(255, 255, 255, 0.03) 80px, rgba(255, 255, 255, 0.03) 81px);
+            background-size:
+                60px 200px,
+                60px 200px,
+                60px 200px,
+                60px 200px,
+                60px 200px,
+                100% 100%,
+                100% 100%,
+                100% 100%;
+            background-position:
+                5% 80%,
+                15% 80%,
+                25% 80%,
+                35% 80%,
+                45% 80%,
+                0 0,
+                0 0,
+                0 0;
+            background-repeat: no-repeat, no-repeat, no-repeat, no-repeat, no-repeat, no-repeat, repeat, repeat;
+            filter: blur(1px);
+            animation: dashboardPulse 6s ease-in-out infinite;
+        }
+
+        @keyframes dashboardPulse {
+            0%, 100% {
+                opacity: 0.08;
+                transform: scale(1);
+            }
+            50% {
+                opacity: 0.12;
+                transform: scale(1.02);
+            }
         }
 
         .case-study-card {
@@ -2303,13 +2359,33 @@
                 gap: 20px;
             }
 
+            /* MOBILE SERVICE CARDS - Make them float and engaging */
             .service-card {
                 padding: 35px;
+                animation: serviceFloatMobile 9s ease-in-out infinite !important;
+                transition: all 0.3s ease;
+            }
+
+            .service-card:nth-child(1) { animation-delay: 0s !important; }
+            .service-card:nth-child(2) { animation-delay: 1.5s !important; }
+            .service-card:nth-child(3) { animation-delay: 3s !important; }
+            .service-card:nth-child(4) { animation-delay: 4.5s !important; }
+
+            @keyframes serviceFloatMobile {
+                0%, 100% { transform: translateY(0px); box-shadow: 0 10px 30px rgba(0,0,0,0.2); }
+                50% { transform: translateY(-10px); box-shadow: 0 20px 50px rgba(99, 102, 241, 0.3); }
+            }
+
+            /* Tap feedback for service cards */
+            .service-card:active {
+                transform: scale(0.97) !important;
+                animation: none !important;
             }
 
             .service-icon,
             .standard-icon {
                 font-size: 42px;
+                animation: iconBounce 3s ease-in-out infinite !important;
             }
 
             .standard-card {
@@ -2331,8 +2407,32 @@
                 gap: 30px;
             }
 
+            /* MOBILE ENHANCEMENTS - Make cards float and interactive */
             .case-card {
                 padding: 30px 20px;
+                animation: mobileFloat 8s ease-in-out infinite !important;
+                transform-origin: center;
+                transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            }
+
+            /* Stagger floating animations on mobile */
+            .case-card:nth-child(1) { animation-delay: 0s !important; }
+            .case-card:nth-child(2) { animation-delay: 1s !important; }
+            .case-card:nth-child(3) { animation-delay: 2s !important; }
+            .case-card:nth-child(4) { animation-delay: 3s !important; }
+            .case-card:nth-child(5) { animation-delay: 4s !important; }
+            .case-card:nth-child(6) { animation-delay: 5s !important; }
+
+            @keyframes mobileFloat {
+                0%, 100% { transform: translateY(0px) scale(1); }
+                50% { transform: translateY(-12px) scale(1.02); }
+            }
+
+            /* Tap feedback - when user taps card */
+            .case-card:active {
+                transform: scale(0.98) !important;
+                box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3) !important;
+                animation: none !important;
             }
 
             .case-card h3 {
@@ -2344,6 +2444,12 @@
                 font-size: 10px;
                 padding: 6px 14px;
                 margin-bottom: 15px;
+                animation: tagShine 3s ease-in-out infinite;
+            }
+
+            @keyframes tagShine {
+                0%, 100% { box-shadow: 0 5px 15px rgba(99, 102, 241, 0.3); }
+                50% { box-shadow: 0 8px 25px rgba(99, 102, 241, 0.6); }
             }
 
             .case-card-badge {
@@ -2351,11 +2457,36 @@
                 right: 15px;
                 font-size: 9px;
                 padding: 6px 12px;
+                /* Keep pulsing animation on mobile */
             }
 
-            /* Hide preview on mobile for cleaner look */
-            .case-card-preview {
-                display: none !important;
+            /* Show quick preview text on mobile tap */
+            .case-card::after {
+                content: '👆 Tap to view full details';
+                position: absolute;
+                bottom: 20px;
+                left: 50%;
+                transform: translateX(-50%);
+                background: rgba(99, 102, 241, 0.95);
+                color: white;
+                padding: 8px 16px;
+                border-radius: 20px;
+                font-size: 11px;
+                font-weight: 600;
+                opacity: 0.8;
+                animation: tapPulse 2s ease-in-out infinite;
+                pointer-events: none;
+            }
+
+            @keyframes tapPulse {
+                0%, 100% {
+                    opacity: 0.8;
+                    transform: translateX(-50%) scale(1);
+                }
+                50% {
+                    opacity: 1;
+                    transform: translateX(-50%) scale(1.05);
+                }
             }
 
             .case-card-metrics {
@@ -2498,6 +2629,76 @@
             }
         }
 
+        /* MOBILE STICKY CTA BUTTON */
+        @media (max-width: 768px) {
+            .sticky-mobile-cta {
+                position: fixed;
+                bottom: 20px;
+                left: 50%;
+                transform: translateX(-50%);
+                z-index: 999;
+                background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+                padding: 16px 32px;
+                border-radius: 50px;
+                box-shadow: 0 10px 40px rgba(99, 102, 241, 0.6);
+                color: white;
+                font-weight: 700;
+                font-size: 16px;
+                text-decoration: none;
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                animation: stickyCtaPulse 2s ease-in-out infinite;
+                border: 2px solid rgba(255, 255, 255, 0.3);
+            }
+
+            .sticky-mobile-cta:active {
+                transform: translateX(-50%) scale(0.95);
+                box-shadow: 0 5px 20px rgba(99, 102, 241, 0.8);
+            }
+
+            @keyframes stickyCtaPulse {
+                0%, 100% {
+                    box-shadow: 0 10px 40px rgba(99, 102, 241, 0.6);
+                }
+                50% {
+                    box-shadow: 0 15px 60px rgba(99, 102, 241, 0.9), 0 0 0 8px rgba(99, 102, 241, 0.2);
+                }
+            }
+
+            /* Add floating action indicator */
+            .mobile-tap-indicator {
+                position: fixed;
+                bottom: 100px;
+                right: 20px;
+                background: rgba(99, 102, 241, 0.95);
+                color: white;
+                padding: 12px 20px;
+                border-radius: 50px;
+                font-size: 13px;
+                font-weight: 600;
+                z-index: 998;
+                animation: slideInRight 1s ease-out, indicatorPulse 3s ease-in-out infinite 1s;
+                box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+            }
+
+            @keyframes slideInRight {
+                from {
+                    transform: translateX(200px);
+                    opacity: 0;
+                }
+                to {
+                    transform: translateX(0);
+                    opacity: 1;
+                }
+            }
+
+            @keyframes indicatorPulse {
+                0%, 100% { transform: scale(1); opacity: 1; }
+                50% { transform: scale(1.1); opacity: 0.9; }
+            }
+        }
+
         /* Extra small phones: 320px - 480px */
         @media (max-width: 480px) {
             .hero-text h1 {
@@ -2521,6 +2722,12 @@
 
             .section-title {
                 font-size: 28px;
+                animation: titleShine 4s ease-in-out infinite;
+            }
+
+            @keyframes titleShine {
+                0%, 100% { text-shadow: 0 0 10px rgba(99, 102, 241, 0.3); }
+                50% { text-shadow: 0 0 20px rgba(99, 102, 241, 0.6), 0 0 30px rgba(139, 92, 246, 0.4); }
             }
 
             .section-subtitle {
@@ -2533,7 +2740,19 @@
 
             .case-card-metric-value {
                 font-size: 20px;
+                animation: metricPop 2s ease-in-out infinite;
             }
+
+            @keyframes metricPop {
+                0%, 100% { transform: scale(1); }
+                50% { transform: scale(1.1); }
+            }
+
+            .sticky-mobile-cta {
+                padding: 14px 28px;
+                font-size: 15px;
+            }
+        }
 
             .cta-button {
                 padding: 14px 30px;
@@ -3125,6 +3344,9 @@
 
     <!-- Case Studies Section -->
     <section class="case-studies-section" id="case-studies">
+        <!-- Dashboard background overlay -->
+        <div class="dashboard-bg"></div>
+
         <div class="section">
             <h2 class="section-title">Proven Results</h2>
             <p class="section-subtitle">Click on any case study to see the full breakdown</p>
@@ -4387,12 +4609,6 @@
         <h2>Ready to Scale Your Amazon Business?</h2>
         <p>If your brand meets the engagement criteria and you're seeking a strategic partner for profitable Amazon expansion, let's discuss your growth objectives.</p>
 
-        <!-- Email Contact -->
-        <div style="margin: 30px 0; padding: 25px; background: rgba(255, 255, 255, 0.1); border-radius: 20px; backdrop-filter: blur(10px);">
-            <p style="font-size: 16px; margin-bottom: 12px; opacity: 0.9;">📧 Email</p>
-            <p style="font-size: 22px; font-weight: 700; margin-bottom: 0; letter-spacing: 0.5px;">myppcg@gmail.com</p>
-        </div>
-
         <div class="cta-buttons">
             <a href="mailto:myppcg@gmail.com?subject=Amazon PPC Partnership Inquiry&body=Hi Ikram,%0D%0A%0D%0AI'm interested in discussing how you can help scale my Amazon business.%0D%0A%0D%0A" class="btn-white">
                 <i class="fas fa-envelope" style="margin-right: 8px;"></i>Get Connected via Email
@@ -4406,9 +4622,8 @@
     <footer>
         <p><strong>Ikram Ullah</strong> - Senior Amazon PPC Manager</p>
         <p>Helping Amazon sellers grow profitably through data-driven strategies</p>
-        <p style="margin-top: 15px; color: #6366f1; font-weight: 500;">📧 myppcg@gmail.com</p>
         <div class="footer-links">
-            <a href="mailto:myppcg@gmail.com">Email</a>
+            <a href="mailto:myppcg@gmail.com">Contact via Email</a>
             <a href="https://www.upwork.com/freelancers/~01b5433f91682047d5" target="_blank">Upwork</a>
             <a href="https://www.linkedin.com/in/ikram-ullah-9a42b3210" target="_blank">LinkedIn</a>
             <a href="ikram-portfolio-final_1.html">Full Portfolio</a>
@@ -4529,6 +4744,47 @@
             }
         });
     </script>
-</body>
+
+    <!-- Mobile Sticky CTA (only visible on mobile) -->
+    <a href="mailto:myppcg@gmail.com?subject=Amazon PPC Partnership Inquiry&body=Hi Ikram,%0D%0A%0D%0AI'm interested in discussing how you can help scale my Amazon business.%0D%0A%0D%0A" class="sticky-mobile-cta">
+        <i class="fas fa-envelope"></i>
+        <span>Get In Touch</span>
+    </a>
+
+    <!-- Mobile tap indicator (auto-hides after a few seconds) -->
+    <div class="mobile-tap-indicator">👆 Scroll to see results</div>
+
+    <script>
+        // Hide mobile tap indicator after 5 seconds
+        setTimeout(function() {
+            var indicator = document.querySelector('.mobile-tap-indicator');
+            if (indicator) {
+                indicator.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+                indicator.style.opacity = '0';
+                indicator.style.transform = 'translateX(200px)';
+                setTimeout(function() {
+                    indicator.style.display = 'none';
+                }, 500);
+            }
+        }, 5000);
+
+        // Show/hide sticky CTA based on scroll (hide when at contact section)
+        window.addEventListener('scroll', function() {
+            var stickyBtn = document.querySelector('.sticky-mobile-cta');
+            var contactSection = document.getElementById('contact');
+            if (stickyBtn && contactSection) {
+                var contactPosition = contactSection.getBoundingClientRect().top;
+                var windowHeight = window.innerHeight;
+
+                if (contactPosition < windowHeight) {
+                    stickyBtn.style.opacity = '0';
+                    stickyBtn.style.pointerEvents = 'none';
+                } else {
+                    stickyBtn.style.opacity = '1';
+                    stickyBtn.style.pointerEvents = 'auto';
+                }
+            }
+        });
+    </script>
 </body>
 </html>
