@@ -876,11 +876,25 @@
         /* Case Study Cards - Floating Style */
         .case-study-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 40px;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
             margin-top: 50px;
             position: relative;
             z-index: 1;
+        }
+
+        /* Ensure 4 cards display on larger screens */
+        @media (min-width: 1200px) {
+            .case-study-grid {
+                grid-template-columns: repeat(4, 1fr);
+            }
+        }
+
+        /* 2 cards on medium screens */
+        @media (min-width: 768px) and (max-width: 1199px) {
+            .case-study-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
         }
 
         .case-card {
