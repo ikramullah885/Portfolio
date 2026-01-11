@@ -424,20 +424,20 @@
             line-height: 1.7;
         }
 
-        /* Services Grid */
+        /* Services Grid - Interactive Accordion Cards */
         .services-grid {
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 30px;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 35px;
             margin-top: 50px;
         }
 
         .service-card {
             background: rgba(255,255,255,0.03);
-            padding: 45px;
+            padding: 0;
             border-radius: 24px;
             border: 1px solid rgba(255,255,255,0.08);
-            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            transition: all 0.2s ease;
             position: relative;
             overflow: hidden;
         }
@@ -451,7 +451,7 @@
             height: 4px;
             background: linear-gradient(90deg, #6366f1 0%, #8b5cf6 100%);
             transform: scaleX(0);
-            transition: transform 0.4s ease;
+            transition: transform 0.2s ease;
         }
 
         .service-card:hover::before {
@@ -459,33 +459,44 @@
         }
 
         .service-card:hover {
-            transform: translateY(-10px);
-            background: rgba(99, 102, 241, 0.05);
             border-color: rgba(99, 102, 241, 0.3);
-            box-shadow: 0 25px 60px rgba(99, 102, 241, 0.2);
+            box-shadow: 0 10px 40px rgba(99, 102, 241, 0.15);
+            transform: translateY(-2px);
+        }
+
+        .service-card:focus-visible {
+            outline: 2px solid #6366f1;
+            outline-offset: 2px;
+        }
+
+        .service-card-header {
+            padding: 40px;
+            cursor: pointer;
         }
 
         .service-icon {
             font-size: 52px;
             margin-bottom: 25px;
-            filter: grayscale(0.3);
+            display: block;
         }
 
         .service-card h3 {
             font-size: 24px;
             margin-bottom: 20px;
             color: white;
-            font-weight: 700;
+            font-weight: 800;
+            letter-spacing: -0.5px;
         }
 
         .service-card ul {
             list-style: none;
             padding: 0;
+            margin: 0;
         }
 
         .service-card li {
             padding: 10px 0;
-            padding-left: 28px;
+            padding-left: 25px;
             position: relative;
             color: #cbd5e1;
             font-size: 15px;
@@ -493,16 +504,135 @@
         }
 
         .service-card li:before {
-            content: "✓";
+            content: '→';
             position: absolute;
             left: 0;
             color: #6366f1;
-            font-weight: bold;
-            font-size: 16px;
+            font-weight: 700;
+        }
+
+        .service-tooltip {
+            margin-top: 20px;
+            padding: 18px 20px;
+            background: rgba(99, 102, 241, 0.1);
+            border-left: 3px solid #6366f1;
+            border-radius: 8px;
+            font-size: 14px;
+            line-height: 1.6;
+            color: #e2e8f0;
+            opacity: 0;
+            max-height: 0;
+            overflow: hidden;
+            transition: all 0.2s ease;
+        }
+
+        .service-card:hover .service-tooltip {
+            opacity: 1;
+            max-height: 200px;
+        }
+
+        @media (max-width: 767px) {
+            .service-card:hover .service-tooltip {
+                opacity: 0;
+                max-height: 0;
+            }
+        }
+
+        .service-expand-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            margin-top: 25px;
+            padding: 12px 24px;
+            background: rgba(99, 102, 241, 0.1);
+            border: 1px solid rgba(99, 102, 241, 0.3);
+            border-radius: 12px;
+            color: #a5b4fc;
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .service-expand-btn:hover {
+            background: rgba(99, 102, 241, 0.2);
+            border-color: rgba(99, 102, 241, 0.5);
+            color: #c7d2fe;
+        }
+
+        .service-expand-icon {
+            transition: transform 0.25s ease;
+            font-size: 12px;
+        }
+
+        .service-card[aria-expanded="true"] .service-expand-icon {
+            transform: rotate(180deg);
+        }
+
+        .service-accordion-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.25s ease;
+            border-top: 1px solid rgba(255,255,255,0.05);
+        }
+
+        .service-card[aria-expanded="true"] .service-accordion-content {
+            max-height: 2000px;
+        }
+
+        .service-accordion-inner {
+            padding: 40px;
+            padding-top: 35px;
+        }
+
+        .service-section {
+            margin-bottom: 30px;
+        }
+
+        .service-section:last-child {
+            margin-bottom: 0;
+        }
+
+        .service-section h4 {
+            font-size: 18px;
+            font-weight: 700;
+            color: #a5b4fc;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .service-section h4::before {
+            content: '';
+            display: inline-block;
+            width: 4px;
+            height: 18px;
+            background: linear-gradient(180deg, #6366f1 0%, #8b5cf6 100%);
+            border-radius: 2px;
+        }
+
+        .service-section ul li {
+            color: #cbd5e1;
+            font-size: 15px;
+            padding: 8px 0;
+            padding-left: 25px;
+            line-height: 1.7;
+        }
+
+        .service-section li:before {
+            content: '•';
+            position: absolute;
+            left: 10px;
+            color: #6366f1;
+            font-size: 18px;
         }
 
         .service-card p {
             color: #cbd5e1;
+            font-size: 15px;
+            line-height: 1.8;
+            margin: 0;
         }
 
         /* Standards Grid - The Standard I Deliver Section */
@@ -2478,46 +2608,253 @@
         </div>
     </section>
 
-    <!-- Services Section -->
+    <!-- Services Section - Interactive Accordion Cards -->
     <section class="section" id="services">
         <h2 class="section-title">How I Help You Grow</h2>
         <p class="section-subtitle">Complete Amazon growth services designed for profitable scaling</p>
 
         <div class="services-grid">
-            <div class="service-card">
-                <div class="service-icon">🎯</div>
-                <h3>PPC Management</h3>
-                <ul>
-                    <li>Campaign architecture & optimization</li>
-                    <li>Sponsored Products, Brands & Display</li>
-                    <li>Algorithmic bid management</li>
-                    <li>Keyword expansion & targeting</li>
-                    <li>Negative keyword strategy</li>
-                </ul>
+            <!-- Service Card 1: Amazon Advertising (PPC) -->
+            <div class="service-card" role="button" tabindex="0" aria-expanded="false" aria-controls="service-content-1">
+                <div class="service-card-header" onclick="toggleService(this.parentElement)">
+                    <div class="service-icon">🎯</div>
+                    <h3>Amazon Advertising (PPC)</h3>
+                    <ul>
+                        <li>Sponsored Products, Brands, Display</li>
+                        <li>Scalable campaign architecture</li>
+                        <li>Brand Analytics driven growth</li>
+                        <li>Keyword and search term mining</li>
+                        <li>KPI benchmarking + action plan</li>
+                    </ul>
+
+                    <div class="service-tooltip">
+                        Brand Analytics led scaling, search term discipline, and KPI driven POAs to grow without losing control of TACOS.
+                    </div>
+
+                    <div class="service-expand-btn">
+                        <span>View Details</span>
+                        <span class="service-expand-icon">▼</span>
+                    </div>
+                </div>
+
+                <div class="service-accordion-content" id="service-content-1">
+                    <div class="service-accordion-inner">
+                        <div class="service-section">
+                            <h4>Build and structure</h4>
+                            <ul>
+                                <li>Rebuild account structure (Branded, Non-Branded, ASIN targeting, category segments)</li>
+                                <li>Separate scale campaigns vs efficiency campaigns to avoid mixed signals</li>
+                                <li>Portfolio and budget guardrails to prevent overspend</li>
+                            </ul>
+                        </div>
+
+                        <div class="service-section">
+                            <h4>Growth and discovery</h4>
+                            <ul>
+                                <li>Brand Analytics deep dive to identify high-opportunity terms and demand shifts</li>
+                                <li>Weekly search term mining, promote winners to exact and phrase</li>
+                                <li>Systematic negative keyword cleanup to reduce waste</li>
+                            </ul>
+                        </div>
+
+                        <div class="service-section">
+                            <h4>Optimization and control</h4>
+                            <ul>
+                                <li>KPI benchmarking (ACOS, TACOS, ROAS, CVR, CPC, CTR) vs targets</li>
+                                <li>Placement optimization, bid tuning, budget pacing based on conversion stability</li>
+                                <li>Weekly plan of action with prioritized fixes (what changed, why, what we do next)</li>
+                            </ul>
+                        </div>
+
+                        <div class="service-section">
+                            <h4>Reporting</h4>
+                            <ul>
+                                <li>Client-friendly reporting that ties actions to results</li>
+                                <li>Clear notes on what scaled, what was cut, and why</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
             </div>
 
-            <div class="service-card">
-                <div class="service-icon">📈</div>
-                <h3>Listing Optimization</h3>
-                <ul>
-                    <li>Conversion-focused product pages</li>
-                    <li>Backend keyword optimization</li>
-                    <li>A+ Content development</li>
-                    <li>Competitive analysis</li>
-                    <li>CVR enhancement</li>
-                </ul>
+            <!-- Service Card 2: Listing Optimization -->
+            <div class="service-card" role="button" tabindex="0" aria-expanded="false" aria-controls="service-content-2">
+                <div class="service-card-header" onclick="toggleService(this.parentElement)">
+                    <div class="service-icon">📝</div>
+                    <h3>Listing Optimization</h3>
+                    <ul>
+                        <li>Conversion-focused copy updates</li>
+                        <li>Backend keywords aligned to PPC</li>
+                        <li>A+ content direction</li>
+                        <li>CVR improvement support</li>
+                        <li>Listing readiness checks</li>
+                    </ul>
+
+                    <div class="service-tooltip">
+                        Improve conversion so ad growth sticks, traffic is worthless if the product page does not convert.
+                    </div>
+
+                    <div class="service-expand-btn">
+                        <span>View Details</span>
+                        <span class="service-expand-icon">▼</span>
+                    </div>
+                </div>
+
+                <div class="service-accordion-content" id="service-content-2">
+                    <div class="service-accordion-inner">
+                        <div class="service-section">
+                            <h4>Conversion foundation</h4>
+                            <ul>
+                                <li>Title, bullets, description rewrites focused on buyer objections and clarity</li>
+                                <li>Image and A+ recommendations tied to conversion gaps (not aesthetics)</li>
+                            </ul>
+                        </div>
+
+                        <div class="service-section">
+                            <h4>SEO alignment</h4>
+                            <ul>
+                                <li>Backend search terms optimized using proven PPC search terms</li>
+                                <li>Keyword mapping (primary, secondary, long-tail) across listing sections</li>
+                            </ul>
+                        </div>
+
+                        <div class="service-section">
+                            <h4>Performance checks</h4>
+                            <ul>
+                                <li>Session and conversion review to spot drop-offs</li>
+                                <li>Price, coupon, variation, and buy box checks before scaling ads</li>
+                            </ul>
+                        </div>
+
+                        <div class="service-section">
+                            <h4>Execution support</h4>
+                            <ul>
+                                <li>Clear change list for your designer and copy team</li>
+                                <li>Prioritized recommendations (highest impact first)</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
             </div>
 
-            <div class="service-card">
-                <div class="service-icon">💡</div>
-                <h3>Strategy & Analytics</h3>
-                <ul>
-                    <li>Performance reporting & insights</li>
-                    <li>Predictive analytics</li>
-                    <li>ROI modeling & forecasting</li>
-                    <li>Portfolio optimization</li>
-                    <li>Strategic roadmapping</li>
-                </ul>
+            <!-- Service Card 3: Strategy and Analytics -->
+            <div class="service-card" role="button" tabindex="0" aria-expanded="false" aria-controls="service-content-3">
+                <div class="service-card-header" onclick="toggleService(this.parentElement)">
+                    <div class="service-icon">📊</div>
+                    <h3>Strategy and Analytics</h3>
+                    <ul>
+                        <li>Weekly performance insights</li>
+                        <li>Scaling rules and guardrails</li>
+                        <li>Profitability tracking</li>
+                        <li>Marketplace strategy (US, UK, CA)</li>
+                        <li>Simple reporting, no noise</li>
+                    </ul>
+
+                    <div class="service-tooltip">
+                        A weekly decision system that turns metrics into actions, scale what works, fix what blocks growth.
+                    </div>
+
+                    <div class="service-expand-btn">
+                        <span>View Details</span>
+                        <span class="service-expand-icon">▼</span>
+                    </div>
+                </div>
+
+                <div class="service-accordion-content" id="service-content-3">
+                    <div class="service-accordion-inner">
+                        <div class="service-section">
+                            <h4>KPI system</h4>
+                            <ul>
+                                <li>Weekly tracking of ACOS, TACOS, CVR, CPC, CTR, ad sales share, and revenue</li>
+                                <li>Trend analysis to separate normal volatility from real issues</li>
+                            </ul>
+                        </div>
+
+                        <div class="service-section">
+                            <h4>Planning</h4>
+                            <ul>
+                                <li>Monthly roadmap with weekly execution priorities</li>
+                                <li>Scaling rules, when to increase budgets, when to pause, when to restructure</li>
+                            </ul>
+                        </div>
+
+                        <div class="service-section">
+                            <h4>Profit focus</h4>
+                            <ul>
+                                <li>Profitability lens, not just ad metrics (efficiency vs growth tradeoffs explained clearly)</li>
+                                <li>SKU prioritization based on what drives sustainable growth</li>
+                            </ul>
+                        </div>
+
+                        <div class="service-section">
+                            <h4>Client communication</h4>
+                            <ul>
+                                <li>Short weekly updates, what changed, why, what is next</li>
+                                <li>Preemptive notes on expected fluctuations (seasonality, promos, inventory)</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Service Card 4: Product Validation, Keyword Research, Category Analysis -->
+            <div class="service-card" role="button" tabindex="0" aria-expanded="false" aria-controls="service-content-4">
+                <div class="service-card-header" onclick="toggleService(this.parentElement)">
+                    <div class="service-icon">🔍</div>
+                    <h3>Product Validation, Keyword Research, Category Analysis</h3>
+                    <ul>
+                        <li>Product validation support</li>
+                        <li>High-intent keyword research</li>
+                        <li>Category and competitor analysis</li>
+                        <li>SKU prioritization</li>
+                        <li>Opportunity sizing</li>
+                    </ul>
+
+                    <div class="service-tooltip">
+                        Validate demand and competition before scaling spend, target keywords that match buying intent.
+                    </div>
+
+                    <div class="service-expand-btn">
+                        <span>View Details</span>
+                        <span class="service-expand-icon">▼</span>
+                    </div>
+                </div>
+
+                <div class="service-accordion-content" id="service-content-4">
+                    <div class="service-accordion-inner">
+                        <div class="service-section">
+                            <h4>Product validation</h4>
+                            <ul>
+                                <li>Demand check using category signals, search behavior, and competitive intensity</li>
+                                <li>Identify pricing pressure and review barriers that impact conversion</li>
+                            </ul>
+                        </div>
+
+                        <div class="service-section">
+                            <h4>Keyword research</h4>
+                            <ul>
+                                <li>Build keyword sets by intent (buying vs research)</li>
+                                <li>Prioritize keywords that match conversion likelihood, not just volume</li>
+                            </ul>
+                        </div>
+
+                        <div class="service-section">
+                            <h4>Category analysis</h4>
+                            <ul>
+                                <li>Competitor review (positioning, price points, reviews, offer strategy)</li>
+                                <li>Identify subcategory pockets where ads can win efficiently</li>
+                            </ul>
+                        </div>
+
+                        <div class="service-section">
+                            <h4>Execution outputs</h4>
+                            <ul>
+                                <li>Keyword map for PPC and listing alignment</li>
+                                <li>Clear priority list, what to launch, what to avoid, where to scale first</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -3617,12 +3954,56 @@
             }
         }
 
+        // Service Accordion Functions
+        function toggleService(card) {
+            const isExpanded = card.getAttribute('aria-expanded') === 'true';
+
+            // Close all other service cards (one-open-at-a-time behavior)
+            document.querySelectorAll('.service-card[aria-expanded="true"]').forEach(otherCard => {
+                if (otherCard !== card) {
+                    otherCard.setAttribute('aria-expanded', 'false');
+                }
+            });
+
+            // Toggle current card
+            card.setAttribute('aria-expanded', !isExpanded);
+        }
+
+        // Keyboard navigation for service cards
+        document.querySelectorAll('.service-card').forEach(card => {
+            card.addEventListener('keydown', function(event) {
+                // Enter or Space to toggle
+                if (event.key === 'Enter' || event.key === ' ') {
+                    event.preventDefault();
+                    toggleService(card);
+                }
+                // Escape to collapse
+                else if (event.key === 'Escape') {
+                    card.setAttribute('aria-expanded', 'false');
+                }
+            });
+
+            // Prevent header click from bubbling when clicking expand button
+            const header = card.querySelector('.service-card-header');
+            const expandBtn = card.querySelector('.service-expand-btn');
+
+            if (expandBtn) {
+                expandBtn.addEventListener('click', function(event) {
+                    event.stopPropagation();
+                });
+            }
+        });
+
         // Close modal with Escape key
         document.addEventListener('keydown', function(event) {
             if (event.key === 'Escape') {
                 // Close modals
                 document.querySelectorAll('.modal.active').forEach(modal => {
                     modal.classList.remove('active');
+                });
+                // Close expanded service cards
+                document.querySelectorAll('.service-card[aria-expanded="true"]').forEach(card => {
+                    card.setAttribute('aria-expanded', 'false');
                 });
                 // Close menu
                 closeMenu();
