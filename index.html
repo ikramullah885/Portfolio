@@ -498,6 +498,314 @@
             font-weight: 500;
         }
 
+        /* Case Study Cards - Floating Style */
+        .case-study-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .case-card {
+            background: white;
+            border-radius: 20px;
+            padding: 35px;
+            box-shadow: 0 10px 40px rgba(102, 126, 234, 0.15);
+            border-top: 5px solid #667eea;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .case-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 150px;
+            height: 150px;
+            background: radial-gradient(circle, rgba(102, 126, 234, 0.1) 0%, transparent 70%);
+            border-radius: 50%;
+        }
+
+        .case-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 60px rgba(102, 126, 234, 0.25);
+        }
+
+        .case-card-tag {
+            display: inline-block;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 600;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .case-card h3 {
+            font-size: 24px;
+            color: #1a202c;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+
+        .case-card-metrics {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+            margin: 25px 0;
+        }
+
+        .case-card-metric {
+            text-align: center;
+            padding: 15px;
+            background: linear-gradient(135deg, #f7fafc 0%, #edf2f7 100%);
+            border-radius: 12px;
+        }
+
+        .case-card-metric-value {
+            font-size: 28px;
+            font-weight: 900;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .case-card-metric-label {
+            font-size: 12px;
+            color: #718096;
+            font-weight: 600;
+        }
+
+        .case-card-cta {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            color: #667eea;
+            font-weight: 700;
+            margin-top: 20px;
+            font-size: 15px;
+        }
+
+        .case-card-cta:hover {
+            gap: 12px;
+        }
+
+        /* Modal Styles */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 10000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            backdrop-filter: blur(5px);
+            overflow-y: auto;
+        }
+
+        .modal.active {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            animation: fadeIn 0.3s ease;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .modal-content {
+            background: white;
+            margin: 40px;
+            padding: 50px;
+            border-radius: 25px;
+            max-width: 1000px;
+            width: 100%;
+            position: relative;
+            animation: slideUp 0.3s ease;
+            max-height: 90vh;
+            overflow-y: auto;
+        }
+
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .modal-close {
+            position: absolute;
+            right: 25px;
+            top: 25px;
+            font-size: 32px;
+            font-weight: bold;
+            color: #718096;
+            cursor: pointer;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            transition: all 0.3s ease;
+        }
+
+        .modal-close:hover {
+            background: #f7fafc;
+            color: #1a202c;
+        }
+
+        .modal-header {
+            margin-bottom: 35px;
+        }
+
+        .modal-header h2 {
+            font-size: 36px;
+            color: #1a202c;
+            margin-bottom: 15px;
+        }
+
+        .modal-overview {
+            font-size: 18px;
+            color: #4a5568;
+            line-height: 1.7;
+            margin-bottom: 40px;
+        }
+
+        .modal-section {
+            margin-bottom: 40px;
+        }
+
+        .modal-section h3 {
+            font-size: 24px;
+            color: #1a202c;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+
+        .modal-metrics-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+
+        .modal-metric {
+            background: linear-gradient(135deg, #f7fafc 0%, #edf2f7 100%);
+            padding: 25px;
+            border-radius: 15px;
+            text-align: center;
+            border: 2px solid #e2e8f0;
+        }
+
+        .modal-metric-value {
+            font-size: 32px;
+            font-weight: 900;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        .modal-metric-label {
+            font-size: 14px;
+            color: #718096;
+            font-weight: 600;
+        }
+
+        .modal-metric-change {
+            font-size: 16px;
+            color: #48BB78;
+            font-weight: 700;
+            margin-top: 5px;
+        }
+
+        .modal-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .modal-list li {
+            padding: 12px 0;
+            padding-left: 30px;
+            position: relative;
+            color: #4a5568;
+            line-height: 1.7;
+            font-size: 16px;
+        }
+
+        .modal-list li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #667eea;
+            font-weight: bold;
+            font-size: 18px;
+        }
+
+        .modal-highlight {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 30px;
+            border-radius: 15px;
+            margin: 30px 0;
+        }
+
+        .modal-highlight h4 {
+            font-size: 20px;
+            margin-bottom: 15px;
+            font-weight: 700;
+        }
+
+        .modal-highlight p {
+            font-size: 16px;
+            line-height: 1.7;
+            margin: 0;
+        }
+
+        .modal-screenshots {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .modal-screenshot {
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        .modal-screenshot img {
+            width: 100%;
+            display: block;
+        }
+
+        .modal-screenshot-label {
+            background: #f7fafc;
+            padding: 12px;
+            text-align: center;
+            font-size: 14px;
+            color: #4a5568;
+            font-weight: 600;
+        }
+
         /* Responsive */
         @media (max-width: 1024px) {
             .hero-content {
@@ -524,6 +832,14 @@
 
             .metrics-grid {
                 grid-template-columns: repeat(2, 1fr);
+            }
+
+            .modal-metrics-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .modal-screenshots {
+                grid-template-columns: 1fr;
             }
         }
 
@@ -552,6 +868,23 @@
             .cta-section {
                 margin: 40px 20px;
                 padding: 50px 30px;
+            }
+
+            .case-study-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .case-card-metrics {
+                grid-template-columns: 1fr;
+            }
+
+            .modal-content {
+                margin: 20px;
+                padding: 30px;
+            }
+
+            .modal-metrics-grid {
+                grid-template-columns: 1fr;
             }
         }
     </style>
@@ -785,44 +1118,234 @@
     <section class="case-studies-section" id="case-studies">
         <div class="section">
             <h2 class="section-title">Proven Results</h2>
-            <p class="section-subtitle">Real brands, real growth, real numbers</p>
+            <p class="section-subtitle">Click on any case study to see the full breakdown</p>
 
-            <!-- Case Study 1 -->
-            <div class="case-study-card">
-                <span class="case-study-tag">E-commerce Brand</span>
-                <h3>From $353K to $671K in 12 Months</h3>
-                <p><strong>The Challenge:</strong> Client was stuck at ~$350K annual revenue with inconsistent TACoS fluctuating between 4-10%. They wanted 50% growth to reach $500K but didn't know how to scale without killing margins.</p>
+            <div class="case-study-grid">
+                <!-- Case Study Card 1: £1M+ Revenue -->
+                <div class="case-card" onclick="openModal('modal1')">
+                    <span class="case-card-tag">Amazon UK Brand</span>
+                    <h3>£1M+ Revenue with Lower TACoS</h3>
 
-                <p><strong>The Strategy:</strong> Rebuilt entire campaign architecture, implemented precision bid algorithms, systematically optimized listings, and strategically reallocated budget to high-performing ASINs.</p>
+                    <div class="case-card-metrics">
+                        <div class="case-card-metric">
+                            <span class="case-card-metric-value">$1.05M</span>
+                            <span class="case-card-metric-label">Total Revenue</span>
+                        </div>
+                        <div class="case-card-metric">
+                            <span class="case-card-metric-value">+48%</span>
+                            <span class="case-card-metric-label">YoY Growth</span>
+                        </div>
+                        <div class="case-card-metric">
+                            <span class="case-card-metric-value">-10pp</span>
+                            <span class="case-card-metric-label">TACoS Reduced</span>
+                        </div>
+                        <div class="case-card-metric">
+                            <span class="case-card-metric-value">14.1%</span>
+                            <span class="case-card-metric-label">Final TACoS</span>
+                        </div>
+                    </div>
 
-                <div class="metrics-grid">
-                    <div class="metric-box">
-                        <span class="metric-value">88%</span>
-                        <span class="metric-label">Revenue Growth</span>
-                    </div>
-                    <div class="metric-box">
-                        <span class="metric-value">$671K</span>
-                        <span class="metric-label">Annual Revenue</span>
-                    </div>
-                    <div class="metric-box">
-                        <span class="metric-value">$318K</span>
-                        <span class="metric-label">Revenue Added</span>
-                    </div>
-                    <div class="metric-box">
-                        <span class="metric-value">34%</span>
-                        <span class="metric-label">Above Target</span>
+                    <div class="case-card-cta">
+                        <span>View Full Case Study</span>
+                        <span>→</span>
                     </div>
                 </div>
 
-                <p><strong>The Result:</strong> Not only did we hit their $500K goal—we crushed it by $171K. All while improving Total Advertising Cost of Sale. Goal achieved by end of Q4.</p>
-            </div>
+                <!-- Case Study Card 2: $353K to $671K -->
+                <div class="case-card" onclick="openModal('modal2')">
+                    <span class="case-card-tag">E-commerce Brand</span>
+                    <h3>From $353K to $671K in 12 Months</h3>
 
-            <!-- Placeholder for more case studies -->
-            <div style="text-align: center; padding: 40px; background: white; border-radius: 20px; border: 2px dashed #e2e8f0;">
-                <p style="color: #718096; font-size: 16px; font-style: italic;">More case studies coming soon...</p>
+                    <div class="case-card-metrics">
+                        <div class="case-card-metric">
+                            <span class="case-card-metric-value">88%</span>
+                            <span class="case-card-metric-label">Revenue Growth</span>
+                        </div>
+                        <div class="case-card-metric">
+                            <span class="case-card-metric-value">$671K</span>
+                            <span class="case-card-metric-label">Annual Revenue</span>
+                        </div>
+                        <div class="case-card-metric">
+                            <span class="case-card-metric-value">$318K</span>
+                            <span class="case-card-metric-label">Revenue Added</span>
+                        </div>
+                        <div class="case-card-metric">
+                            <span class="case-card-metric-value">34%</span>
+                            <span class="case-card-metric-label">Above Target</span>
+                        </div>
+                    </div>
+
+                    <div class="case-card-cta">
+                        <span>View Full Case Study</span>
+                        <span>→</span>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
+
+    <!-- Modal 1: £1M+ Revenue Case Study -->
+    <div id="modal1" class="modal">
+        <div class="modal-content">
+            <span class="modal-close" onclick="closeModal('modal1')">&times;</span>
+
+            <div class="modal-header">
+                <span class="case-card-tag">Amazon UK Brand</span>
+                <h2>£1M+ Revenue with Lower TACoS</h2>
+                <p class="modal-overview">Scaled an Amazon UK brand past $1M annual revenue while reducing TACoS and improving overall profitability through strategic, margin-intelligent growth.</p>
+            </div>
+
+            <div class="modal-section">
+                <h3>Year-Over-Year Results</h3>
+                <div class="modal-metrics-grid">
+                    <div class="modal-metric">
+                        <span class="modal-metric-value">$1,058,382</span>
+                        <span class="modal-metric-label">Revenue</span>
+                        <div class="modal-metric-change">+48%</div>
+                    </div>
+                    <div class="modal-metric">
+                        <span class="modal-metric-value">$445,760</span>
+                        <span class="modal-metric-label">Ad Sales</span>
+                        <div class="modal-metric-change">+22%</div>
+                    </div>
+                    <div class="modal-metric">
+                        <span class="modal-metric-value">-15%</span>
+                        <span class="modal-metric-label">Ad Spend</span>
+                        <div class="modal-metric-change">Lower Spend</div>
+                    </div>
+                    <div class="modal-metric">
+                        <span class="modal-metric-value">14.1%</span>
+                        <span class="modal-metric-label">TACoS</span>
+                        <div class="modal-metric-change">-10pp</div>
+                    </div>
+                    <div class="modal-metric">
+                        <span class="modal-metric-value">33.5%</span>
+                        <span class="modal-metric-label">ACoS</span>
+                        <div class="modal-metric-change">-14pp</div>
+                    </div>
+                    <div class="modal-metric">
+                        <span class="modal-metric-value">-21%</span>
+                        <span class="modal-metric-label">CPC</span>
+                        <div class="modal-metric-change">Lower Cost</div>
+                    </div>
+                </div>
+
+                <!-- Screenshots -->
+                <div class="modal-screenshots">
+                    <div class="modal-screenshot">
+                        <img src="traffic-conversion-summary.png" alt="Traffic and Conversion Summary" onerror="this.parentElement.style.display='none'">
+                        <div class="modal-screenshot-label">Traffic & Conversion Summary</div>
+                    </div>
+                    <div class="modal-screenshot">
+                        <img src="advertising-performance-summary.png" alt="Advertising Performance Summary" onerror="this.parentElement.style.display='none'">
+                        <div class="modal-screenshot-label">Advertising Performance</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal-section">
+                <h3>What I Did</h3>
+                <ul class="modal-list">
+                    <li>Scaled using Brand Analytics, not broad traffic</li>
+                    <li>Optimized CVR before increasing spend</li>
+                    <li>Ran weekly profitability tracking to control TACoS</li>
+                    <li>Shifted budget to high-intent, high-converting terms</li>
+                    <li>Cut inefficient spend instead of pushing volume</li>
+                </ul>
+            </div>
+
+            <div class="modal-highlight">
+                <h4>Why It Worked</h4>
+                <p>Growth was tied to profitability, not spend. Every scale decision passed a TACoS and CVR check first. This ensured that revenue growth came from efficiency gains and strategic targeting, not from burning through budget.</p>
+            </div>
+
+            <div class="modal-section">
+                <h3>Outcome</h3>
+                <p style="font-size: 18px; color: #1a202c; line-height: 1.8;">Crossed $1M revenue with <strong>lower TACoS</strong>, <strong>higher efficiency</strong>, and <strong>stronger margins</strong>. Proved that aggressive scaling doesn't require sacrificing profitability when strategy is rigorous and data-driven.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 2: $353K to $671K Case Study -->
+    <div id="modal2" class="modal">
+        <div class="modal-content">
+            <span class="modal-close" onclick="closeModal('modal2')">&times;</span>
+
+            <div class="modal-header">
+                <span class="case-card-tag">E-commerce Brand</span>
+                <h2>From $353K to $671K in 12 Months</h2>
+                <p class="modal-overview">88% year-over-year growth while slashing TACoS. Client wanted 50% growth to $500K—we delivered 88% growth to $671K, crushing their goal by $171K.</p>
+            </div>
+
+            <div class="modal-section">
+                <h3>Key Results</h3>
+                <div class="modal-metrics-grid">
+                    <div class="modal-metric">
+                        <span class="modal-metric-value">88%</span>
+                        <span class="modal-metric-label">Revenue Growth</span>
+                    </div>
+                    <div class="modal-metric">
+                        <span class="modal-metric-value">$671K</span>
+                        <span class="modal-metric-label">Annual Revenue</span>
+                    </div>
+                    <div class="modal-metric">
+                        <span class="modal-metric-value">$318K</span>
+                        <span class="modal-metric-label">Revenue Added</span>
+                    </div>
+                    <div class="modal-metric">
+                        <span class="modal-metric-value">34%</span>
+                        <span class="modal-metric-label">Above Target</span>
+                    </div>
+                    <div class="modal-metric">
+                        <span class="modal-metric-value">72%+</span>
+                        <span class="modal-metric-label">Session Growth</span>
+                    </div>
+                    <div class="modal-metric">
+                        <span class="modal-metric-value">↑ CVR</span>
+                        <span class="modal-metric-label">Conv. Improved</span>
+                    </div>
+                </div>
+
+                <!-- Screenshots -->
+                <div class="modal-screenshots">
+                    <div class="modal-screenshot">
+                        <img src="2024-sales-data.png" alt="2024 Sales Data">
+                        <div class="modal-screenshot-label">2024 Baseline: $352,742</div>
+                    </div>
+                    <div class="modal-screenshot">
+                        <img src="2025-sales-data.png" alt="2025 Sales Data">
+                        <div class="modal-screenshot-label">2025 Results: $670,287</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal-section">
+                <h3>The Challenge</h3>
+                <p style="color: #4a5568; line-height: 1.7;">Client was stuck at ~$350K annual revenue with inconsistent TACoS fluctuating between 4-10%. Needed aggressive scaling without sacrificing profitability or burning through margin with inefficient ad spend.</p>
+            </div>
+
+            <div class="modal-section">
+                <h3>The Strategy</h3>
+                <ul class="modal-list">
+                    <li>Rebuilt campaign architecture from ground up for scalable traffic acquisition</li>
+                    <li>Deployed precision bid algorithms optimizing for conversion quality over volume</li>
+                    <li>Systematic listing optimization absorbing 72% more sessions with higher CVR</li>
+                    <li>Strategic budget reallocation prioritizing profitable ASINs and keywords</li>
+                    <li>Continuous A/B testing maintaining conversion rates under increased traffic pressure</li>
+                </ul>
+            </div>
+
+            <div class="modal-highlight">
+                <h4>The Paradox Achieved</h4>
+                <p>Client wanted 50% growth ($175K additional revenue)—we delivered 88% growth ($318K additional revenue). Target was $500K annually—achieved $671K, crushing goal by $171K. Most critically: accomplished this while <em>improving</em> Total Advertising Cost of Sale, not degrading it.</p>
+            </div>
+
+            <div class="modal-section">
+                <h3>Outcome</h3>
+                <p style="font-size: 18px; color: #1a202c; line-height: 1.8;">Conventional wisdom says you sacrifice margin to scale aggressively. This engagement proves margin-intelligent growth is achievable when strategy is rigorous. The brand didn't just grow—it grew <strong>profitably</strong>, <strong>sustainably</strong>, and <strong>dramatically exceeded expectations</strong>.</p>
+            </div>
+        </div>
+    </div>
 
     <!-- Ideal Client Section -->
     <section class="section">
@@ -917,5 +1440,36 @@
         </div>
         <p style="margin-top: 30px; font-size: 14px;">© 2026 Ikram Ullah. All rights reserved.</p>
     </footer>
+
+    <!-- Modal JavaScript -->
+    <script>
+        function openModal(modalId) {
+            document.getElementById(modalId).classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeModal(modalId) {
+            document.getElementById(modalId).classList.remove('active');
+            document.body.style.overflow = 'auto';
+        }
+
+        // Close modal when clicking outside
+        window.onclick = function(event) {
+            if (event.target.classList.contains('modal')) {
+                event.target.classList.remove('active');
+                document.body.style.overflow = 'auto';
+            }
+        }
+
+        // Close modal with Escape key
+        document.addEventListener('keydown', function(event) {
+            if (event.key === 'Escape') {
+                document.querySelectorAll('.modal.active').forEach(modal => {
+                    modal.classList.remove('active');
+                });
+                document.body.style.overflow = 'auto';
+            }
+        });
+    </script>
 </body>
 </html>
