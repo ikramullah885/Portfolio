@@ -873,34 +873,37 @@
             }
         }
 
-        /* Case Study Cards - Floating Style */
+        /* Case Study Cards - 3x2 Grid Layout */
         .case-study-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-            margin-top: 50px;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 35px;
+            margin-top: 60px;
             position: relative;
             z-index: 1;
         }
 
-        /* Ensure all 5 cards display properly on larger screens */
-        @media (min-width: 1200px) {
+        /* Desktop: 3 cards per row */
+        @media (min-width: 1024px) {
             .case-study-grid {
                 grid-template-columns: repeat(3, 1fr);
+                gap: 40px;
             }
         }
 
-        /* Ultra-wide: 5 cards in a row */
-        @media (min-width: 1600px) {
-            .case-study-grid {
-                grid-template-columns: repeat(5, 1fr);
-            }
-        }
-
-        /* 2 cards on medium screens */
-        @media (min-width: 768px) and (max-width: 1199px) {
+        /* Tablets: 2 cards per row */
+        @media (min-width: 768px) and (max-width: 1023px) {
             .case-study-grid {
                 grid-template-columns: repeat(2, 1fr);
+                gap: 30px;
+            }
+        }
+
+        /* Mobile: 1 card per row */
+        @media (max-width: 767px) {
+            .case-study-grid {
+                grid-template-columns: 1fr;
+                gap: 25px;
             }
         }
 
@@ -1091,13 +1094,33 @@
             box-shadow: 0 5px 15px rgba(79, 172, 254, 0.4);
         }
 
+        .case-card:nth-child(4) .case-card-tag {
+            background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);
+            color: white;
+            box-shadow: 0 5px 15px rgba(250, 112, 154, 0.4);
+        }
+
+        .case-card:nth-child(5) .case-card-tag {
+            background: linear-gradient(135deg, #30cfd0 0%, #330867 100%);
+            color: white;
+            box-shadow: 0 5px 15px rgba(48, 207, 208, 0.4);
+        }
+
+        .case-card:nth-child(6) .case-card-tag {
+            background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
+            color: #1a202c;
+            font-weight: 800;
+            box-shadow: 0 5px 15px rgba(168, 237, 234, 0.4);
+        }
+
         .case-card h3 {
-            font-size: 26px;
+            font-size: 28px;
             color: white;
             margin-bottom: 25px;
-            font-weight: 800;
-            line-height: 1.3;
+            font-weight: 900;
+            line-height: 1.2;
             transition: all 0.3s ease;
+            letter-spacing: -0.5px;
         }
 
         .case-card:hover h3 {
@@ -1156,6 +1179,21 @@
         .case-card:nth-child(3) .case-card-metric {
             background: linear-gradient(135deg, rgba(79, 172, 254, 0.1) 0%, rgba(0, 242, 254, 0.1) 100%);
             border: 2px solid rgba(79, 172, 254, 0.2);
+        }
+
+        .case-card:nth-child(4) .case-card-metric {
+            background: linear-gradient(135deg, rgba(250, 112, 154, 0.1) 0%, rgba(254, 225, 64, 0.1) 100%);
+            border: 2px solid rgba(250, 112, 154, 0.2);
+        }
+
+        .case-card:nth-child(5) .case-card-metric {
+            background: linear-gradient(135deg, rgba(48, 207, 208, 0.1) 0%, rgba(51, 8, 103, 0.1) 100%);
+            border: 2px solid rgba(48, 207, 208, 0.2);
+        }
+
+        .case-card:nth-child(6) .case-card-metric {
+            background: linear-gradient(135deg, rgba(168, 237, 234, 0.1) 0%, rgba(254, 214, 227, 0.1) 100%);
+            border: 2px solid rgba(168, 237, 234, 0.2);
         }
 
         .case-card-metric:hover {
@@ -2749,6 +2787,35 @@
                         <span>View Full Case Study</span>
                     </div>
                 </div>
+
+                <!-- Case Study Card 6: US Consumer Brand -->
+                <div class="case-card" onclick="openModal('modal6')">
+                    <span class="case-card-tag">US Consumer Brand</span>
+                    <h3>+63% Revenue Growth with Buy Box Control</h3>
+
+                    <div class="case-card-metrics">
+                        <div class="case-card-metric">
+                            <span class="case-card-metric-value">$630K</span>
+                            <span class="case-card-metric-label">Revenue Ordered</span>
+                        </div>
+                        <div class="case-card-metric">
+                            <span class="case-card-metric-value">+56%</span>
+                            <span class="case-card-metric-label">Unit Growth</span>
+                        </div>
+                        <div class="case-card-metric">
+                            <span class="case-card-metric-value">+2pp</span>
+                            <span class="case-card-metric-label">Conversion ↑</span>
+                        </div>
+                        <div class="case-card-metric">
+                            <span class="case-card-metric-value">89.7%</span>
+                            <span class="case-card-metric-label">Buy Box Win</span>
+                        </div>
+                    </div>
+
+                    <div class="case-card-cta">
+                        <span>View Full Case Study</span>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -3287,6 +3354,115 @@
             <div class="modal-section">
                 <h3>Key Takeaway</h3>
                 <p style="font-size: 18px; line-height: 1.8;"><strong>Vendor Central success is not about pushing ads harder.</strong> It's about aligning advertising with retail readiness, conversion health, and inventory reality. This engagement delivered scale without compromising profitability or Amazon's retail partnership.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 6: US Consumer Brand Case Study -->
+    <div id="modal6" class="modal">
+        <div class="modal-content">
+            <span class="modal-close" onclick="closeModal('modal6')">&times;</span>
+
+            <div class="modal-header">
+                <span class="case-card-tag">US Consumer Brand</span>
+                <h2>+63% Revenue Growth with Buy Box Control</h2>
+                <p class="modal-overview">Scaled a US-based consumer brand by increasing qualified traffic and improving conversion efficiency, resulting in strong revenue and unit growth while maintaining Buy Box stability.</p>
+            </div>
+
+            <div class="modal-section">
+                <h3>Year-Over-Year Results</h3>
+                <div class="modal-metrics-grid">
+                    <div class="modal-metric">
+                        <span class="modal-metric-value">$630,147</span>
+                        <span class="modal-metric-label">Revenue Ordered</span>
+                        <div class="modal-metric-change">+63%</div>
+                    </div>
+                    <div class="modal-metric">
+                        <span class="modal-metric-value">36,821</span>
+                        <span class="modal-metric-label">Ordered Units</span>
+                        <div class="modal-metric-change">+56%</div>
+                    </div>
+                    <div class="modal-metric">
+                        <span class="modal-metric-value">+37%</span>
+                        <span class="modal-metric-label">Sessions</span>
+                        <div class="modal-metric-change">186,764</div>
+                    </div>
+                    <div class="modal-metric">
+                        <span class="modal-metric-value">+33%</span>
+                        <span class="modal-metric-label">Page Views</span>
+                        <div class="modal-metric-change">263,725</div>
+                    </div>
+                    <div class="modal-metric">
+                        <span class="modal-metric-value">14.0%</span>
+                        <span class="modal-metric-label">Conversion Rate</span>
+                        <div class="modal-metric-change">+2pp</div>
+                    </div>
+                    <div class="modal-metric">
+                        <span class="modal-metric-value">89.7%</span>
+                        <span class="modal-metric-label">Buy Box Win Rate</span>
+                        <div class="modal-metric-change">+1pp</div>
+                    </div>
+                    <div class="modal-metric">
+                        <span class="modal-metric-value">$615,583</span>
+                        <span class="modal-metric-label">B2C Sales</span>
+                        <div class="modal-metric-change">+63%</div>
+                    </div>
+                    <div class="modal-metric">
+                        <span class="modal-metric-value">$17</span>
+                        <span class="modal-metric-label">Avg Retail Price</span>
+                        <div class="modal-metric-change">+4%</div>
+                    </div>
+                </div>
+
+                <!-- Screenshots -->
+                <div class="modal-screenshots">
+                    <div class="modal-screenshot">
+                        <img src="us-consumer-brand-traffic-conversion.png" alt="Traffic and Conversion Summary" onerror="this.parentElement.style.display='none'">
+                        <div class="modal-screenshot-label">Traffic & Conversion Summary</div>
+                    </div>
+                    <div class="modal-screenshot">
+                        <img src="us-consumer-brand-advertising-performance.png" alt="Advertising Performance Summary" onerror="this.parentElement.style.display='none'">
+                        <div class="modal-screenshot-label">Advertising Performance (if available)</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal-section">
+                <h3>The Challenge</h3>
+                <p style="color: #cbd5e1; line-height: 1.7;">The brand needed growth without compromising:</p>
+                <ul class="modal-list">
+                    <li>Buy Box ownership</li>
+                    <li>Conversion rate</li>
+                    <li>Traffic quality</li>
+                </ul>
+                <p style="color: #cbd5e1; line-height: 1.7; margin-top: 20px;">The focus was to scale volume and revenue, not just ads, while keeping the retail fundamentals intact.</p>
+            </div>
+
+            <div class="modal-section">
+                <h3>What I Did</h3>
+                <ul class="modal-list">
+                    <li>Focused ad spend on core converting ASINs instead of spreading budgets thin</li>
+                    <li>Expanded high-intent keyword coverage that aligned with existing conversion behavior</li>
+                    <li>Used search term reports to continuously refine traffic and remove low-converting queries</li>
+                    <li>Controlled scaling through budget pacing, increasing spend only where CVR remained stable</li>
+                    <li>Supported growth by aligning ads with retail readiness, Buy Box health, and pricing stability</li>
+                    <li>Allowed session growth while protecting conversion rate through disciplined bid control</li>
+                </ul>
+            </div>
+
+            <div class="modal-highlight">
+                <h4>Buy Box Stability During Growth</h4>
+                <p>While traffic grew +37% and units sold increased +56%, Buy Box win rate actually improved from 88.6% to 89.7%. This demonstrates that disciplined PPC execution can drive massive growth without destabilizing retail fundamentals.</p>
+            </div>
+
+            <div class="modal-section">
+                <h3>Outcome</h3>
+                <p style="font-size: 18px; line-height: 1.8;">The brand scaled meaningfully across traffic, units, and revenue while <strong>improving conversion efficiency</strong> and <strong>maintaining Buy Box strength</strong>. Conversion rate increased from 12.0% to 14.0% (+2pp) even as traffic volume surged.</p>
+            </div>
+
+            <div class="modal-section">
+                <h3>Key Takeaway</h3>
+                <p style="font-size: 18px; line-height: 1.8;"><strong>Consumer brands scale best when traffic growth and conversion health move together.</strong> This case shows that disciplined Amazon PPC execution can drive growth without destabilizing the retail foundation.</p>
             </div>
         </div>
     </div>
