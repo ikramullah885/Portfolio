@@ -316,87 +316,18 @@
             position: relative;
         }
 
-        /* Rotating gradient ring around profile photo */
-        .profile-container::before {
-            content: '';
-            position: absolute;
-            width: 560px;
-            height: 560px;
-            border-radius: 50%;
-            background: conic-gradient(
-                from 0deg,
-                #6366f1 0deg,
-                #8b5cf6 90deg,
-                #ec4899 180deg,
-                #f97316 270deg,
-                #6366f1 360deg
-            );
-            animation: rotateRing 4s linear infinite;
-            z-index: 1;
-            opacity: 0.5;
-            pointer-events: none;
-        }
-
-        /* Pulsing aura rings */
-        .profile-container::after {
-            content: '';
-            position: absolute;
-            width: 600px;
-            height: 600px;
-            border-radius: 50%;
-            background: radial-gradient(circle, rgba(99, 102, 241, 0.3) 0%, rgba(139, 92, 246, 0.2) 40%, transparent 70%);
-            animation: pulseAura 3s ease-in-out infinite;
-            z-index: 0;
-            pointer-events: none;
-        }
-
-        @keyframes rotateRing {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
-        }
-
-        @keyframes pulseAura {
-            0%, 100% {
-                transform: scale(1);
-                opacity: 0.4;
-            }
-            50% {
-                transform: scale(1.1);
-                opacity: 0.7;
-            }
-        }
-
         .profile-photo {
             width: 520px;
             height: 520px;
             border-radius: 50%;
-            border: 6px solid rgba(255, 255, 255, 0.4);
-            box-shadow: 0 30px 80px rgba(0,0,0,0.5),
-                        0 0 0 20px rgba(99, 102, 241, 0.1),
-                        0 0 100px rgba(99, 102, 241, 0.3),
-                        inset 0 0 60px rgba(99, 102, 241, 0.1);
+            border: 6px solid rgba(99, 102, 241, 0.3);
+            box-shadow: 0 30px 80px rgba(0,0,0,0.5), 0 0 0 20px rgba(99, 102, 241, 0.05);
             object-fit: cover;
             position: relative;
             z-index: 2;
-            animation: photoPulseGlow 4s ease-in-out infinite;
         }
 
-        @keyframes photoPulseGlow {
-            0%, 100% {
-                box-shadow: 0 30px 80px rgba(0,0,0,0.5),
-                            0 0 0 20px rgba(99, 102, 241, 0.1),
-                            0 0 100px rgba(99, 102, 241, 0.3),
-                            inset 0 0 60px rgba(99, 102, 241, 0.1);
-            }
-            50% {
-                box-shadow: 0 30px 100px rgba(0,0,0,0.6),
-                            0 0 0 25px rgba(99, 102, 241, 0.2),
-                            0 0 150px rgba(99, 102, 241, 0.5),
-                            inset 0 0 80px rgba(99, 102, 241, 0.2);
-            }
-        }
-
-        /* Floating Circular Badges - ENHANCED */
+        /* Floating Circular Badges */
         .floating-badge {
             position: absolute;
             background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
@@ -409,63 +340,24 @@
             font-size: 14px;
             text-align: center;
             padding: 20px;
-            box-shadow: 0 10px 40px rgba(99, 102, 241, 0.6), 0 0 60px rgba(99, 102, 241, 0.4), inset 0 0 20px rgba(255, 255, 255, 0.2);
-            z-index: 10;
-            animation: floatBadge 6s ease-in-out infinite, badgePulseGlow 3s ease-in-out infinite, badgeShimmer 4s linear infinite;
-            border: 2px solid rgba(255, 255, 255, 0.3);
-            position: relative;
-            overflow: hidden;
-        }
-
-        /* Shimmer effect overlay */
-        .floating-badge::before {
-            content: '';
-            position: absolute;
-            top: -50%;
-            left: -50%;
-            width: 200%;
-            height: 200%;
-            background: linear-gradient(45deg, transparent 30%, rgba(255, 255, 255, 0.3) 50%, transparent 70%);
-            animation: shimmerMove 3s linear infinite;
-            pointer-events: none;
-        }
-
-        @keyframes shimmerMove {
-            0% { transform: translateX(-100%) translateY(-100%) rotate(45deg); }
-            100% { transform: translateX(100%) translateY(100%) rotate(45deg); }
-        }
-
-        @keyframes badgePulseGlow {
-            0%, 100% {
-                box-shadow: 0 10px 40px rgba(99, 102, 241, 0.6), 0 0 60px rgba(99, 102, 241, 0.4), inset 0 0 20px rgba(255, 255, 255, 0.2);
-            }
-            50% {
-                box-shadow: 0 15px 60px rgba(99, 102, 241, 0.9), 0 0 100px rgba(99, 102, 241, 0.7), inset 0 0 30px rgba(255, 255, 255, 0.3), 0 0 0 8px rgba(99, 102, 241, 0.3);
-            }
-        }
-
-        @keyframes badgeShimmer {
-            0%, 100% { filter: brightness(1); }
-            50% { filter: brightness(1.15); }
+            box-shadow: 0 10px 40px rgba(99, 102, 241, 0.4);
+            z-index: 3;
+            animation: floatBadge 6s ease-in-out infinite;
         }
 
         .floating-badge.cyan {
             background: linear-gradient(135deg, #06b6d4 0%, #0891b2 100%);
-            box-shadow: 0 10px 40px rgba(6, 182, 212, 0.6), 0 0 60px rgba(6, 182, 212, 0.4), inset 0 0 20px rgba(255, 255, 255, 0.2);
-        }
-
-        .floating-badge.cyan::before {
-            background: linear-gradient(45deg, transparent 30%, rgba(255, 255, 255, 0.3) 50%, transparent 70%);
+            box-shadow: 0 10px 40px rgba(6, 182, 212, 0.4);
         }
 
         .floating-badge.orange {
             background: linear-gradient(135deg, #f97316 0%, #ea580c 100%);
-            box-shadow: 0 10px 40px rgba(249, 115, 22, 0.6), 0 0 60px rgba(249, 115, 22, 0.4), inset 0 0 20px rgba(255, 255, 255, 0.2);
+            box-shadow: 0 10px 40px rgba(249, 115, 22, 0.4);
         }
 
         .floating-badge.purple {
             background: linear-gradient(135deg, #8b5cf6 0%, #6366f1 100%);
-            box-shadow: 0 10px 40px rgba(139, 92, 246, 0.6), 0 0 60px rgba(139, 92, 246, 0.4), inset 0 0 20px rgba(255, 255, 255, 0.2);
+            box-shadow: 0 10px 40px rgba(139, 92, 246, 0.4);
         }
 
         .badge-1 {
@@ -521,7 +413,7 @@
 
         .floating-badge.green {
             background: linear-gradient(135deg, #10b981 0%, #059669 100%);
-            box-shadow: 0 10px 40px rgba(16, 185, 129, 0.6), 0 0 60px rgba(16, 185, 129, 0.4), inset 0 0 20px rgba(255, 255, 255, 0.2);
+            box-shadow: 0 10px 40px rgba(16, 185, 129, 0.5);
         }
 
         @keyframes floatBadge {
@@ -2446,17 +2338,6 @@
                 justify-content: center;
             }
 
-            /* Adjust rotating ring and aura for mobile */
-            .profile-container::before {
-                width: 330px;
-                height: 330px;
-            }
-
-            .profile-container::after {
-                width: 360px;
-                height: 360px;
-            }
-
             .profile-photo {
                 width: 300px;
                 height: 300px;
@@ -3066,17 +2947,6 @@
                 margin-bottom: 20px;
             }
 
-            /* Adjust rotating ring and aura for smaller phones */
-            .profile-container::before {
-                width: 290px;
-                height: 290px;
-            }
-
-            .profile-container::after {
-                width: 320px;
-                height: 320px;
-            }
-
             .profile-photo {
                 width: 260px;
                 height: 260px;
@@ -3206,17 +3076,6 @@
             .hero-text p {
                 font-size: 13px;
                 margin-bottom: 18px;
-            }
-
-            /* Adjust rotating ring and aura for smallest phones */
-            .profile-container::before {
-                width: 250px;
-                height: 250px;
-            }
-
-            .profile-container::after {
-                width: 280px;
-                height: 280px;
             }
 
             .profile-photo {
