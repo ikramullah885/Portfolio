@@ -316,15 +316,82 @@
             position: relative;
         }
 
+        /* Rotating gradient ring around profile photo */
+        .profile-container::before {
+            content: '';
+            position: absolute;
+            width: 560px;
+            height: 560px;
+            border-radius: 50%;
+            background: conic-gradient(
+                from 0deg,
+                #6366f1 0deg,
+                #8b5cf6 90deg,
+                #ec4899 180deg,
+                #f97316 270deg,
+                #6366f1 360deg
+            );
+            animation: rotateRing 4s linear infinite;
+            z-index: 1;
+            opacity: 0.7;
+        }
+
+        /* Pulsing aura rings */
+        .profile-container::after {
+            content: '';
+            position: absolute;
+            width: 600px;
+            height: 600px;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(99, 102, 241, 0.3) 0%, rgba(139, 92, 246, 0.2) 40%, transparent 70%);
+            animation: pulseAura 3s ease-in-out infinite;
+            z-index: 0;
+        }
+
+        @keyframes rotateRing {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        @keyframes pulseAura {
+            0%, 100% {
+                transform: scale(1);
+                opacity: 0.4;
+            }
+            50% {
+                transform: scale(1.1);
+                opacity: 0.7;
+            }
+        }
+
         .profile-photo {
             width: 520px;
             height: 520px;
             border-radius: 50%;
-            border: 6px solid rgba(99, 102, 241, 0.3);
-            box-shadow: 0 30px 80px rgba(0,0,0,0.5), 0 0 0 20px rgba(99, 102, 241, 0.05);
+            border: 6px solid rgba(255, 255, 255, 0.4);
+            box-shadow: 0 30px 80px rgba(0,0,0,0.5),
+                        0 0 0 20px rgba(99, 102, 241, 0.1),
+                        0 0 100px rgba(99, 102, 241, 0.3),
+                        inset 0 0 60px rgba(99, 102, 241, 0.1);
             object-fit: cover;
             position: relative;
             z-index: 2;
+            animation: photoPulseGlow 4s ease-in-out infinite;
+        }
+
+        @keyframes photoPulseGlow {
+            0%, 100% {
+                box-shadow: 0 30px 80px rgba(0,0,0,0.5),
+                            0 0 0 20px rgba(99, 102, 241, 0.1),
+                            0 0 100px rgba(99, 102, 241, 0.3),
+                            inset 0 0 60px rgba(99, 102, 241, 0.1);
+            }
+            50% {
+                box-shadow: 0 30px 100px rgba(0,0,0,0.6),
+                            0 0 0 25px rgba(99, 102, 241, 0.2),
+                            0 0 150px rgba(99, 102, 241, 0.5),
+                            inset 0 0 80px rgba(99, 102, 241, 0.2);
+            }
         }
 
         /* Floating Circular Badges - ENHANCED */
@@ -2321,13 +2388,13 @@
             }
 
             .hero {
-                padding: 60px 25px 80px;
+                padding: 40px 25px 50px;
                 min-height: auto;
             }
 
             .hero-content {
                 grid-template-columns: 1fr;
-                gap: 50px;
+                gap: 30px;
                 text-align: center;
             }
 
@@ -2342,26 +2409,31 @@
             }
 
             .hero-text h1 {
-                font-size: 42px;
+                font-size: 36px;
                 letter-spacing: -1px;
                 line-height: 1.15;
+                margin-bottom: 15px;
             }
 
             .hero-text .tagline {
-                font-size: 12px;
+                font-size: 11px;
+                margin-bottom: 10px;
             }
 
             .hero-text p {
-                font-size: 16px;
+                font-size: 15px;
                 max-width: 100%;
                 margin-left: auto;
                 margin-right: auto;
+                margin-bottom: 25px;
+                line-height: 1.6;
             }
 
             .cta-button {
                 width: 100%;
-                padding: 18px 35px;
-                font-size: 16px;
+                padding: 16px 30px;
+                font-size: 15px;
+                margin-bottom: 20px;
             }
 
             .social-icons {
@@ -2372,14 +2444,25 @@
                 justify-content: center;
             }
 
+            /* Adjust rotating ring and aura for mobile */
+            .profile-container::before {
+                width: 330px;
+                height: 330px;
+            }
+
+            .profile-container::after {
+                width: 360px;
+                height: 360px;
+            }
+
             .profile-photo {
                 width: 300px;
                 height: 300px;
             }
 
             .floating-badge {
-                font-size: 10px;
-                padding: 15px;
+                font-size: 9px;
+                padding: 12px;
             }
 
             .badge-1 {
@@ -2414,43 +2497,50 @@
                 font-size: 9px;
             }
 
+            .social-icons {
+                margin-bottom: 0;
+                gap: 12px;
+            }
+
             .social-icons a {
-                width: 40px;
-                height: 40px;
-                font-size: 16px;
+                width: 38px;
+                height: 38px;
+                font-size: 15px;
             }
 
             .section {
-                margin: 70px auto;
+                margin: 50px auto;
                 padding: 0 25px;
             }
 
             .section-title {
-                font-size: 36px;
+                font-size: 32px;
+                margin-bottom: 15px;
             }
 
             .section-subtitle {
-                font-size: 15px;
-                margin-bottom: 50px;
+                font-size: 14px;
+                margin-bottom: 35px;
+                line-height: 1.6;
             }
 
             .stats-grid {
                 grid-template-columns: 1fr;
-                gap: 20px;
+                gap: 15px;
             }
 
             .stat-card {
-                padding: 30px;
+                padding: 25px 20px;
             }
 
             .services-grid {
                 grid-template-columns: 1fr;
-                gap: 20px;
+                gap: 15px;
             }
 
             /* MOBILE SERVICE CARDS - Make them float and engaging */
             .service-card {
-                padding: 35px;
+                padding: 25px 20px;
                 animation: serviceFloatMobile 9s ease-in-out infinite !important;
                 transition: all 0.3s ease;
             }
@@ -2478,27 +2568,27 @@
             }
 
             .standard-card {
-                padding: 30px;
-                gap: 20px;
+                padding: 25px 20px;
+                gap: 15px;
             }
 
             .criteria-grid {
                 grid-template-columns: 1fr;
-                gap: 25px;
+                gap: 15px;
             }
 
             .criteria-card {
-                padding: 35px;
+                padding: 25px 20px;
             }
 
             .case-study-grid {
                 grid-template-columns: 1fr;
-                gap: 30px;
+                gap: 20px;
             }
 
             /* MOBILE ENHANCEMENTS - Make cards float and interactive */
             .case-card {
-                padding: 30px 20px;
+                padding: 25px 18px;
                 animation: mobileFloat 8s ease-in-out infinite !important;
                 transform-origin: center;
                 transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
@@ -2889,16 +2979,18 @@
             }
 
             .cta-section {
-                margin: 60px 25px;
-                padding: 50px 30px;
+                margin: 40px 25px;
+                padding: 35px 25px;
             }
 
             .cta-section h2 {
-                font-size: 32px;
+                font-size: 28px;
+                margin-bottom: 15px;
             }
 
             .cta-section p {
-                font-size: 16px;
+                font-size: 15px;
+                margin-bottom: 25px;
             }
 
             .cta-buttons {
@@ -2959,15 +3051,28 @@
             }
 
             .hero {
-                padding: 50px 20px 60px;
+                padding: 35px 20px 45px;
             }
 
             .hero-text h1 {
-                font-size: 34px;
+                font-size: 32px;
+                margin-bottom: 12px;
             }
 
             .hero-text p {
-                font-size: 15px;
+                font-size: 14px;
+                margin-bottom: 20px;
+            }
+
+            /* Adjust rotating ring and aura for smaller phones */
+            .profile-container::before {
+                width: 290px;
+                height: 290px;
+            }
+
+            .profile-container::after {
+                width: 320px;
+                height: 320px;
             }
 
             .profile-photo {
@@ -2983,20 +3088,31 @@
                 font-size: 20px;
             }
 
+            .section {
+                margin: 40px auto;
+            }
+
             .section-title {
-                font-size: 32px;
+                font-size: 28px;
+                margin-bottom: 12px;
+            }
+
+            .section-subtitle {
+                font-size: 13px;
+                margin-bottom: 30px;
             }
 
             .service-card-header {
-                padding: 30px 25px;
+                padding: 25px 20px;
             }
 
             .cta-section {
-                padding: 40px 25px;
+                padding: 30px 20px;
+                margin: 35px 20px;
             }
 
             .cta-section h2 {
-                font-size: 28px;
+                font-size: 26px;
             }
         }
 
@@ -3072,8 +3188,33 @@
 
         /* Extra small phones: 320px - 480px */
         @media (max-width: 480px) {
+            .hero {
+                padding: 30px 18px 40px;
+            }
+
+            .hero-content {
+                gap: 25px;
+            }
+
             .hero-text h1 {
-                font-size: 32px;
+                font-size: 28px;
+                margin-bottom: 10px;
+            }
+
+            .hero-text p {
+                font-size: 13px;
+                margin-bottom: 18px;
+            }
+
+            /* Adjust rotating ring and aura for smallest phones */
+            .profile-container::before {
+                width: 250px;
+                height: 250px;
+            }
+
+            .profile-container::after {
+                width: 280px;
+                height: 280px;
             }
 
             .profile-photo {
@@ -3082,17 +3223,23 @@
             }
 
             .floating-badge {
-                font-size: 8px;
-                padding: 10px;
+                font-size: 7px;
+                padding: 8px;
             }
 
             .badge-1, .badge-2, .badge-3, .badge-4, .badge-5 {
-                width: 70px;
-                height: 70px;
+                width: 65px;
+                height: 65px;
+            }
+
+            .section {
+                margin: 35px auto;
+                padding: 0 18px;
             }
 
             .section-title {
-                font-size: 28px;
+                font-size: 26px;
+                margin-bottom: 10px;
                 animation: titleShine 4s ease-in-out infinite;
             }
 
@@ -3102,7 +3249,16 @@
             }
 
             .section-subtitle {
-                font-size: 14px;
+                font-size: 13px;
+                margin-bottom: 25px;
+            }
+
+            .case-study-grid {
+                gap: 15px;
+            }
+
+            .case-card {
+                padding: 20px 15px;
             }
 
             .case-card h3 {
