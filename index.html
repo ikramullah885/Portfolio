@@ -1,0 +1,5221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Senior Amazon PPC Manager helping sellers scale profitably. Proven strategies, data-driven results, margin-intelligent growth.">
+    <title>Ikram Ullah | Amazon PPC Expert - Grow Your Business Profitably</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', sans-serif;
+            line-height: 1.6;
+            color: #e2e8f0;
+            background: #0f172a;
+            overflow-x: hidden;
+            position: relative;
+        }
+
+        /* Animated Gradient Background */
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background:
+                radial-gradient(circle at 20% 50%, rgba(99, 102, 241, 0.15) 0%, transparent 50%),
+                radial-gradient(circle at 80% 80%, rgba(139, 92, 246, 0.15) 0%, transparent 50%),
+                radial-gradient(circle at 40% 90%, rgba(236, 72, 153, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 90% 20%, rgba(59, 130, 246, 0.1) 0%, transparent 50%);
+            background-size: 200% 200%;
+            animation: gradientShift 20s ease infinite;
+            z-index: -1;
+            pointer-events: none;
+        }
+
+        @keyframes gradientShift {
+            0%, 100% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+        }
+
+        /* Floating background elements */
+        body::after {
+            content: '';
+            position: fixed;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background:
+                repeating-linear-gradient(
+                    45deg,
+                    transparent,
+                    transparent 100px,
+                    rgba(99, 102, 241, 0.02) 100px,
+                    rgba(99, 102, 241, 0.02) 200px
+                );
+            animation: patternMove 30s linear infinite;
+            z-index: -1;
+            pointer-events: none;
+        }
+
+        @keyframes patternMove {
+            0% {
+                transform: translate(0, 0);
+            }
+            100% {
+                transform: translate(50px, 50px);
+            }
+        }
+
+        /* Header */
+        header {
+            background: rgba(15, 23, 42, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 20px 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .header-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 16px;
+            font-weight: 700;
+            color: white;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        nav {
+            display: flex;
+            gap: 35px;
+            align-items: center;
+        }
+
+        nav a {
+            color: #94a3b8;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 14px;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: white;
+        }
+
+        /* Hamburger Menu */
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            cursor: pointer;
+            padding: 10px;
+            z-index: 1001;
+        }
+
+        .hamburger span {
+            width: 25px;
+            height: 3px;
+            background: white;
+            border-radius: 3px;
+            transition: all 0.3s ease;
+        }
+
+        .hamburger.active span:nth-child(1) {
+            transform: rotate(45deg) translate(8px, 8px);
+        }
+
+        .hamburger.active span:nth-child(2) {
+            opacity: 0;
+        }
+
+        .hamburger.active span:nth-child(3) {
+            transform: rotate(-45deg) translate(7px, -7px);
+        }
+
+        .nav-cta {
+            background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+            color: white !important;
+            padding: 10px 25px;
+            border-radius: 25px;
+            box-shadow: 0 4px 15px rgba(99, 102, 241, 0.3);
+        }
+
+        .nav-cta:hover {
+            box-shadow: 0 6px 20px rgba(99, 102, 241, 0.4);
+            transform: translateY(-2px);
+        }
+
+        /* Hero Section - Premium Dark Design */
+        .hero {
+            background: #0f172a;
+            margin: 0;
+            padding: 100px 60px 120px;
+            position: relative;
+            overflow: hidden;
+            min-height: 90vh;
+            display: flex;
+            align-items: center;
+        }
+
+
+        .hero-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 100px;
+            align-items: center;
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero-text h1 {
+            font-size: 80px;
+            font-weight: 900;
+            color: white;
+            line-height: 1.1;
+            margin-bottom: 30px;
+            letter-spacing: -2px;
+        }
+
+        .hero-text h1 .arrow {
+            display: inline-block;
+            background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero-text .tagline {
+            font-size: 18px;
+            color: #94a3b8;
+            margin-bottom: 25px;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-size: 13px;
+        }
+
+        .hero-text p {
+            font-size: 18px;
+            color: #cbd5e1;
+            line-height: 1.8;
+            margin-bottom: 40px;
+            max-width: 550px;
+        }
+
+        .social-icons {
+            display: flex;
+            gap: 12px;
+            margin-top: 30px;
+        }
+
+        .social-icons a {
+            width: 44px;
+            height: 44px;
+            background: rgba(255,255,255,0.05);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #94a3b8;
+            text-decoration: none;
+            font-size: 18px;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .social-icons a:hover {
+            background: rgba(99, 102, 241, 0.2);
+            color: #6366f1;
+            border-color: #6366f1;
+            transform: translateY(-3px);
+        }
+
+        .profile-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+
+        .profile-photo {
+            width: 520px;
+            height: 520px;
+            border-radius: 50%;
+            border: 6px solid rgba(99, 102, 241, 0.3);
+            box-shadow: 0 30px 80px rgba(0,0,0,0.5), 0 0 0 20px rgba(99, 102, 241, 0.05);
+            object-fit: cover;
+            position: relative;
+            z-index: 2;
+        }
+
+        /* Floating Circular Badges */
+        .floating-badge {
+            position: absolute;
+            background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: 700;
+            font-size: 14px;
+            text-align: center;
+            padding: 20px;
+            box-shadow: 0 10px 40px rgba(99, 102, 241, 0.4);
+            z-index: 3;
+            animation: floatBadge 6s ease-in-out infinite;
+        }
+
+        .floating-badge.cyan {
+            background: linear-gradient(135deg, #06b6d4 0%, #0891b2 100%);
+            box-shadow: 0 10px 40px rgba(6, 182, 212, 0.4);
+        }
+
+        .floating-badge.orange {
+            background: linear-gradient(135deg, #f97316 0%, #ea580c 100%);
+            box-shadow: 0 10px 40px rgba(249, 115, 22, 0.4);
+        }
+
+        .floating-badge.purple {
+            background: linear-gradient(135deg, #8b5cf6 0%, #6366f1 100%);
+            box-shadow: 0 10px 40px rgba(139, 92, 246, 0.4);
+        }
+
+        .badge-1 {
+            width: 160px;
+            height: 160px;
+            top: -20px;
+            right: 5px;
+            animation-delay: 0s;
+            font-size: 13px;
+            line-height: 1.3;
+        }
+
+        .badge-2 {
+            width: 140px;
+            height: 140px;
+            bottom: 60px;
+            left: -5px;
+            animation-delay: 2s;
+            font-size: 13px;
+            line-height: 1.3;
+        }
+
+        .badge-3 {
+            width: 120px;
+            height: 120px;
+            top: 45%;
+            right: -10px;
+            animation-delay: 4s;
+            font-size: 13px;
+            line-height: 1.3;
+        }
+
+        .badge-4 {
+            width: 110px;
+            height: 110px;
+            top: 10%;
+            left: 5px;
+            animation-delay: 1s;
+            font-size: 12px;
+            line-height: 1.3;
+        }
+
+        .badge-5 {
+            width: 150px;
+            height: 150px;
+            bottom: -10px;
+            right: 0px;
+            animation-delay: 3s;
+            font-size: 13px;
+            line-height: 1.3;
+            font-weight: 700;
+        }
+
+        .floating-badge.green {
+            background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+            box-shadow: 0 10px 40px rgba(16, 185, 129, 0.5);
+        }
+
+        @keyframes floatBadge {
+            0%, 100% {
+                transform: translateY(0px) rotate(0deg);
+            }
+            50% {
+                transform: translateY(-20px) rotate(5deg);
+            }
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+            color: white;
+            padding: 16px 40px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 16px;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 30px rgba(99, 102, 241, 0.4);
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(99, 102, 241, 0.5);
+        }
+
+        .trust-badges {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+            margin-top: 40px;
+        }
+
+        .badge {
+            background: rgba(255,255,255,0.05);
+            backdrop-filter: blur(10px);
+            padding: 10px 20px;
+            border-radius: 30px;
+            color: #cbd5e1;
+            font-size: 13px;
+            border: 1px solid rgba(255,255,255,0.1);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.3s ease;
+        }
+
+        .badge:hover {
+            background: rgba(99, 102, 241, 0.1);
+            border-color: rgba(99, 102, 241, 0.3);
+        }
+
+        /* Stats Section */
+        .stats-section {
+            max-width: 1400px;
+            margin: 80px auto;
+            padding: 0 60px;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 30px;
+        }
+
+        .stat-card {
+            background: rgba(255,255,255,0.03);
+            padding: 40px;
+            border-radius: 24px;
+            text-align: center;
+            border: 1px solid rgba(255,255,255,0.08);
+            transition: all 0.4s ease;
+        }
+
+        .stat-card:hover {
+            transform: translateY(-8px);
+            background: rgba(99, 102, 241, 0.05);
+            border-color: rgba(99, 102, 241, 0.3);
+            box-shadow: 0 20px 50px rgba(99, 102, 241, 0.2);
+        }
+
+        .stat-number {
+            font-size: 48px;
+            font-weight: 900;
+            background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 12px;
+        }
+
+        .stat-label {
+            color: #94a3b8;
+            font-size: 14px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* Section Styles */
+        .section {
+            max-width: 1400px;
+            margin: 100px auto;
+            padding: 0 60px;
+        }
+
+        .section-title {
+            font-size: 48px;
+            font-weight: 900;
+            text-align: center;
+            margin-bottom: 20px;
+            color: white;
+            letter-spacing: -1px;
+        }
+
+        .section-subtitle {
+            text-align: center;
+            font-size: 18px;
+            color: #94a3b8;
+            margin-bottom: 70px;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+            line-height: 1.7;
+        }
+
+        /* Services Grid - Interactive Accordion Cards */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 35px;
+            margin-top: 50px;
+        }
+
+        .service-card {
+            background: rgba(255,255,255,0.03);
+            padding: 0;
+            border-radius: 24px;
+            border: 1px solid rgba(255,255,255,0.08);
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            position: relative;
+            overflow: hidden;
+            animation: serviceFloat 8s ease-in-out infinite;
+        }
+
+        /* Vibrant gradient backgrounds for each service card */
+        .service-card:nth-child(1) {
+            background: radial-gradient(circle at top right, rgba(99, 102, 241, 0.15), rgba(255,255,255,0.03));
+            border: 2px solid rgba(99, 102, 241, 0.3);
+            animation-delay: 0s;
+        }
+
+        .service-card:nth-child(2) {
+            background: radial-gradient(circle at top right, rgba(236, 72, 153, 0.15), rgba(255,255,255,0.03));
+            border: 2px solid rgba(236, 72, 153, 0.3);
+            animation-delay: 1s;
+        }
+
+        .service-card:nth-child(3) {
+            background: radial-gradient(circle at top right, rgba(59, 130, 246, 0.15), rgba(255,255,255,0.03));
+            border: 2px solid rgba(59, 130, 246, 0.3);
+            animation-delay: 2s;
+        }
+
+        .service-card:nth-child(4) {
+            background: radial-gradient(circle at top right, rgba(139, 92, 246, 0.15), rgba(255,255,255,0.03));
+            border: 2px solid rgba(139, 92, 246, 0.3);
+            animation-delay: 3s;
+        }
+
+        @keyframes serviceFloat {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+        }
+
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(90deg, #6366f1 0%, #8b5cf6 50%, #ec4899 100%);
+            transform: scaleX(0);
+            transition: transform 0.4s ease;
+        }
+
+        .service-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        /* Animated glow effect behind cards on hover */
+        .service-card::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle, rgba(99, 102, 241, 0.3) 0%, transparent 70%);
+            transform: translate(-50%, -50%) scale(0.8);
+            opacity: 0;
+            transition: all 0.4s ease;
+            pointer-events: none;
+            z-index: -1;
+        }
+
+        .service-card:hover::after {
+            transform: translate(-50%, -50%) scale(1.5);
+            opacity: 1;
+        }
+
+        .service-card:hover {
+            border-color: rgba(99, 102, 241, 0.5);
+            box-shadow: 0 20px 60px rgba(99, 102, 241, 0.3);
+            transform: translateY(-8px) scale(1.02);
+            animation: none;
+        }
+
+        .service-card:nth-child(2):hover {
+            border-color: rgba(236, 72, 153, 0.5);
+            box-shadow: 0 20px 60px rgba(236, 72, 153, 0.3);
+        }
+
+        .service-card:nth-child(3):hover {
+            border-color: rgba(59, 130, 246, 0.5);
+            box-shadow: 0 20px 60px rgba(59, 130, 246, 0.3);
+        }
+
+        .service-card:nth-child(4):hover {
+            border-color: rgba(139, 92, 246, 0.5);
+            box-shadow: 0 20px 60px rgba(139, 92, 246, 0.3);
+        }
+
+        .service-card:focus-visible {
+            outline: 2px solid #6366f1;
+            outline-offset: 2px;
+        }
+
+        .service-card-header {
+            padding: 40px;
+            cursor: pointer;
+        }
+
+        .service-icon {
+            font-size: 52px;
+            margin-bottom: 25px;
+            display: block;
+            filter: drop-shadow(0 5px 15px rgba(99, 102, 241, 0.4));
+            transition: all 0.3s ease;
+            animation: iconBounce 3s ease-in-out infinite;
+        }
+
+        @keyframes iconBounce {
+            0%, 100% { transform: translateY(0) rotate(0deg); }
+            25% { transform: translateY(-8px) rotate(-5deg); }
+            75% { transform: translateY(-5px) rotate(5deg); }
+        }
+
+        .service-card:hover .service-icon {
+            transform: scale(1.15) rotate(5deg);
+            filter: drop-shadow(0 8px 25px rgba(99, 102, 241, 0.6));
+            animation: none;
+        }
+
+        .service-card:nth-child(2) .service-icon {
+            filter: drop-shadow(0 5px 15px rgba(236, 72, 153, 0.4));
+        }
+
+        .service-card:nth-child(2):hover .service-icon {
+            filter: drop-shadow(0 8px 25px rgba(236, 72, 153, 0.6));
+        }
+
+        .service-card:nth-child(3) .service-icon {
+            filter: drop-shadow(0 5px 15px rgba(59, 130, 246, 0.4));
+        }
+
+        .service-card:nth-child(3):hover .service-icon {
+            filter: drop-shadow(0 8px 25px rgba(59, 130, 246, 0.6));
+        }
+
+        .service-card:nth-child(4) .service-icon {
+            filter: drop-shadow(0 5px 15px rgba(139, 92, 246, 0.4));
+        }
+
+        .service-card:nth-child(4):hover .service-icon {
+            filter: drop-shadow(0 8px 25px rgba(139, 92, 246, 0.6));
+        }
+
+        .service-card h3 {
+            font-size: 24px;
+            margin-bottom: 20px;
+            color: white;
+            font-weight: 800;
+            letter-spacing: -0.5px;
+        }
+
+        .service-card ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .service-card li {
+            padding: 10px 0;
+            padding-left: 25px;
+            position: relative;
+            color: #cbd5e1;
+            font-size: 15px;
+            line-height: 1.6;
+        }
+
+        .service-card li:before {
+            content: '→';
+            position: absolute;
+            left: 0;
+            color: #6366f1;
+            font-weight: 700;
+        }
+
+        .service-tooltip {
+            margin-top: 20px;
+            padding: 18px 20px;
+            background: rgba(99, 102, 241, 0.1);
+            border-left: 3px solid #6366f1;
+            border-radius: 8px;
+            font-size: 14px;
+            line-height: 1.6;
+            color: #e2e8f0;
+            opacity: 0;
+            max-height: 0;
+            overflow: hidden;
+            transition: all 0.2s ease;
+        }
+
+        .service-card:hover .service-tooltip {
+            opacity: 1;
+            max-height: 200px;
+        }
+
+        @media (max-width: 767px) {
+            .service-card:hover .service-tooltip {
+                opacity: 0;
+                max-height: 0;
+            }
+        }
+
+        .service-expand-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            margin-top: 25px;
+            padding: 12px 24px;
+            background: rgba(99, 102, 241, 0.1);
+            border: 1px solid rgba(99, 102, 241, 0.3);
+            border-radius: 12px;
+            color: #a5b4fc;
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .service-expand-btn:hover {
+            background: rgba(99, 102, 241, 0.2);
+            border-color: rgba(99, 102, 241, 0.5);
+            color: #c7d2fe;
+        }
+
+        .service-expand-icon {
+            transition: transform 0.25s ease;
+            font-size: 12px;
+        }
+
+        .service-card[aria-expanded="true"] .service-expand-icon {
+            transform: rotate(180deg);
+        }
+
+        .service-accordion-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.25s ease;
+            border-top: 1px solid rgba(255,255,255,0.05);
+        }
+
+        .service-card[aria-expanded="true"] .service-accordion-content {
+            max-height: 2000px;
+        }
+
+        .service-accordion-inner {
+            padding: 40px;
+            padding-top: 35px;
+        }
+
+        .service-section {
+            margin-bottom: 30px;
+        }
+
+        .service-section:last-child {
+            margin-bottom: 0;
+        }
+
+        .service-section h4 {
+            font-size: 18px;
+            font-weight: 700;
+            color: #a5b4fc;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .service-section h4::before {
+            content: '';
+            display: inline-block;
+            width: 4px;
+            height: 18px;
+            background: linear-gradient(180deg, #6366f1 0%, #8b5cf6 100%);
+            border-radius: 2px;
+        }
+
+        .service-section ul li {
+            color: #cbd5e1;
+            font-size: 15px;
+            padding: 8px 0;
+            padding-left: 25px;
+            line-height: 1.7;
+        }
+
+        .service-section li:before {
+            content: '•';
+            position: absolute;
+            left: 10px;
+            color: #6366f1;
+            font-size: 18px;
+        }
+
+        .service-card p {
+            color: #cbd5e1;
+            font-size: 15px;
+            line-height: 1.8;
+            margin: 0;
+        }
+
+        /* Standards Grid - The Standard I Deliver Section */
+        .standards-grid {
+            display: grid;
+            gap: 25px;
+            margin-top: 50px;
+        }
+
+        .standard-card {
+            background: rgba(255,255,255,0.03);
+            padding: 40px;
+            border-radius: 24px;
+            display: flex;
+            gap: 30px;
+            align-items: flex-start;
+            border: 1px solid rgba(255,255,255,0.08);
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .standard-card::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 5px;
+            background: linear-gradient(180deg, #6366f1 0%, #8b5cf6 100%);
+            opacity: 0;
+            transition: opacity 0.4s ease;
+        }
+
+        .standard-card:hover::before {
+            opacity: 1;
+        }
+
+        .standard-card:hover {
+            transform: translateX(8px);
+            background: rgba(99, 102, 241, 0.05);
+            border-color: rgba(99, 102, 241, 0.3);
+            box-shadow: 0 20px 50px rgba(99, 102, 241, 0.15);
+        }
+
+        .standard-icon {
+            font-size: 52px;
+            min-width: 70px;
+            filter: grayscale(0.2);
+            transition: all 0.3s ease;
+        }
+
+        .standard-card:hover .standard-icon {
+            filter: grayscale(0);
+            transform: scale(1.1);
+        }
+
+        .standard-content h3 {
+            font-size: 22px;
+            color: white;
+            margin-bottom: 15px;
+            font-weight: 700;
+        }
+
+        .standard-content p {
+            color: #cbd5e1;
+            line-height: 1.8;
+            font-size: 16px;
+        }
+
+        /* Engagement Criteria Section */
+        .criteria-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            max-width: 1200px;
+            margin: 0 auto;
+            margin-top: 50px;
+        }
+
+        .criteria-card {
+            background: rgba(255,255,255,0.03);
+            padding: 45px;
+            border-radius: 24px;
+            border: 1px solid rgba(255,255,255,0.08);
+            transition: all 0.4s ease;
+        }
+
+        .criteria-card.good-fit {
+            border-top: 4px solid #10b981;
+        }
+
+        .criteria-card.good-fit:hover {
+            background: rgba(16, 185, 129, 0.05);
+            border-color: rgba(16, 185, 129, 0.3);
+            box-shadow: 0 20px 50px rgba(16, 185, 129, 0.15);
+        }
+
+        .criteria-card.bad-fit {
+            border-top: 4px solid #64748b;
+        }
+
+        .criteria-card.bad-fit:hover {
+            background: rgba(100, 116, 139, 0.05);
+            border-color: rgba(100, 116, 139, 0.3);
+        }
+
+        .criteria-card h3 {
+            font-size: 26px;
+            margin-bottom: 30px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-weight: 700;
+        }
+
+        .criteria-card.good-fit h3 {
+            color: #10b981;
+        }
+
+        .criteria-card.bad-fit h3 {
+            color: #94a3b8;
+        }
+
+        .criteria-card ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .criteria-card li {
+            padding: 14px 0;
+            padding-left: 35px;
+            position: relative;
+            color: #cbd5e1;
+            line-height: 1.7;
+            font-size: 16px;
+        }
+
+        .criteria-card li span {
+            position: absolute;
+            left: 0;
+            font-weight: bold;
+            font-size: 18px;
+        }
+
+        .criteria-card.good-fit li span {
+            color: #10b981;
+        }
+
+        .criteria-card.bad-fit li span {
+            color: #64748b;
+        }
+
+        /* Case Studies Section - Dashboard Background */
+        .case-studies-section {
+            background: #0f172a;
+            padding: 100px 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Dashboard/Analytics visual overlay - MORE VISIBLE */
+        .case-studies-section .dashboard-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0.15;
+            z-index: 1;
+            pointer-events: none;
+            background-image:
+                /* Larger vertical bar charts with growth pattern */
+                linear-gradient(to top, rgba(99, 102, 241, 0.7) 0%, rgba(99, 102, 241, 0.7) 45%, transparent 45%),
+                linear-gradient(to top, rgba(139, 92, 246, 0.7) 0%, rgba(139, 92, 246, 0.7) 65%, transparent 65%),
+                linear-gradient(to top, rgba(236, 72, 153, 0.7) 0%, rgba(236, 72, 153, 0.7) 55%, transparent 55%),
+                linear-gradient(to top, rgba(59, 130, 246, 0.7) 0%, rgba(59, 130, 246, 0.7) 80%, transparent 80%),
+                linear-gradient(to top, rgba(6, 182, 212, 0.7) 0%, rgba(6, 182, 212, 0.7) 70%, transparent 70%),
+                linear-gradient(to top, rgba(168, 85, 247, 0.7) 0%, rgba(168, 85, 247, 0.7) 85%, transparent 85%),
+                /* Multiple trend lines */
+                linear-gradient(135deg, transparent 46%, rgba(99, 102, 241, 0.5) 48%, rgba(99, 102, 241, 0.5) 52%, transparent 54%),
+                linear-gradient(120deg, transparent 48%, rgba(139, 92, 246, 0.4) 49%, rgba(139, 92, 246, 0.4) 51%, transparent 52%),
+                /* Data points/dots pattern */
+                radial-gradient(circle, rgba(255, 255, 255, 0.4) 2px, transparent 2px),
+                /* Grid lines - more prominent */
+                repeating-linear-gradient(0deg, transparent, transparent 60px, rgba(255, 255, 255, 0.06) 60px, rgba(255, 255, 255, 0.06) 61px),
+                repeating-linear-gradient(90deg, transparent, transparent 60px, rgba(255, 255, 255, 0.06) 60px, rgba(255, 255, 255, 0.06) 61px);
+            background-size:
+                70px 300px,
+                70px 300px,
+                70px 300px,
+                70px 300px,
+                70px 300px,
+                70px 300px,
+                100% 100%,
+                100% 100%,
+                30px 30px,
+                100% 100%,
+                100% 100%;
+            background-position:
+                8% 70%,
+                18% 70%,
+                28% 70%,
+                38% 70%,
+                48% 70%,
+                58% 70%,
+                0 0,
+                0 0,
+                0 0,
+                0 0,
+                0 0;
+            background-repeat: no-repeat, no-repeat, no-repeat, no-repeat, no-repeat, no-repeat, no-repeat, no-repeat, repeat, repeat, repeat;
+            filter: blur(0.5px);
+            animation: dashboardPulse 8s ease-in-out infinite;
+        }
+
+        @keyframes dashboardPulse {
+            0%, 100% {
+                opacity: 0.12;
+                transform: scale(1);
+            }
+            50% {
+                opacity: 0.18;
+                transform: scale(1.01);
+            }
+        }
+
+        /* Hide dashboard on mobile for performance */
+        @media (max-width: 768px) {
+            .case-studies-section .dashboard-bg {
+                opacity: 0.08;
+                filter: blur(2px);
+            }
+        }
+
+        .case-study-card {
+            background: rgba(255,255,255,0.03);
+            border-radius: 24px;
+            padding: 50px;
+            margin-bottom: 40px;
+            border: 1px solid rgba(255,255,255,0.08);
+        }
+
+        .case-study-card h3 {
+            font-size: 28px;
+            color: white;
+            margin-bottom: 15px;
+        }
+
+        .case-study-tag {
+            display: inline-block;
+            background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+            color: white;
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-size: 13px;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+
+        .case-study-card p {
+            color: #cbd5e1;
+            line-height: 1.8;
+            margin-bottom: 15px;
+            font-size: 16px;
+        }
+
+        .case-study-card strong {
+            color: white;
+        }
+
+        .metrics-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            margin: 30px 0;
+        }
+
+        .metric-box {
+            background: rgba(99, 102, 241, 0.05);
+            padding: 25px;
+            border-radius: 16px;
+            text-align: center;
+            border: 1px solid rgba(99, 102, 241, 0.2);
+        }
+
+        .metric-value {
+            font-size: 32px;
+            font-weight: 900;
+            background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .metric-label {
+            font-size: 13px;
+            color: #94a3b8;
+            font-weight: 600;
+        }
+
+        /* CTA Section */
+        .cta-section {
+            background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+            border-radius: 32px;
+            margin: 100px 60px;
+            padding: 90px 60px;
+            text-align: center;
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta-section::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -10%;
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+            border-radius: 50%;
+        }
+
+        .cta-section h2 {
+            font-size: 48px;
+            font-weight: 900;
+            margin-bottom: 20px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .cta-section p {
+            font-size: 19px;
+            margin-bottom: 40px;
+            opacity: 0.95;
+            position: relative;
+            z-index: 1;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+            position: relative;
+            z-index: 1;
+        }
+
+        .btn-white {
+            background: white;
+            color: #6366f1;
+            padding: 18px 45px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 16px;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+
+        .btn-white:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+        }
+
+        .btn-outline {
+            background: rgba(255,255,255,0.1);
+            color: white;
+            padding: 18px 45px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 16px;
+            border: 2px solid rgba(255,255,255,0.3);
+            transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
+        }
+
+        .btn-outline:hover {
+            background: rgba(255,255,255,0.2);
+            border-color: white;
+            transform: translateY(-4px);
+        }
+
+        /* Footer */
+        footer {
+            background: #0a0f1e;
+            color: #94a3b8;
+            padding: 60px 60px;
+            text-align: center;
+            border-top: 1px solid rgba(255,255,255,0.05);
+        }
+
+        footer p {
+            margin: 10px 0;
+        }
+
+        footer p strong {
+            color: white;
+        }
+
+        .footer-links {
+            display: flex;
+            gap: 30px;
+            justify-content: center;
+            margin: 20px 0;
+        }
+
+        .footer-links a {
+            color: #6366f1;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .footer-links a:hover {
+            color: #8b5cf6;
+        }
+
+        /* Premium mesh gradient background for case studies */
+        .case-studies-section::before {
+            content: '';
+            position: absolute;
+            top: -20%;
+            left: -10%;
+            width: 120%;
+            height: 140%;
+            background:
+                radial-gradient(circle at 15% 30%, rgba(99, 102, 241, 0.18) 0%, transparent 45%),
+                radial-gradient(circle at 85% 60%, rgba(139, 92, 246, 0.15) 0%, transparent 45%),
+                radial-gradient(circle at 50% 80%, rgba(236, 72, 153, 0.12) 0%, transparent 50%),
+                radial-gradient(circle at 30% 10%, rgba(59, 130, 246, 0.14) 0%, transparent 45%),
+                radial-gradient(circle at 70% 90%, rgba(6, 182, 212, 0.1) 0%, transparent 40%);
+            pointer-events: none;
+            animation: backgroundShift 30s ease-in-out infinite;
+            z-index: 0;
+        }
+
+        @keyframes backgroundShift {
+            0%, 100% {
+                transform: translate(0, 0) scale(1);
+            }
+            33% {
+                transform: translate(20px, -30px) scale(1.05);
+            }
+            66% {
+                transform: translate(-30px, 20px) scale(0.95);
+            }
+        }
+
+        /* Animated geometric grid overlay for trust */
+        .case-studies-section::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image:
+                linear-gradient(rgba(99, 102, 241, 0.04) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(99, 102, 241, 0.04) 1px, transparent 1px),
+                linear-gradient(45deg, transparent 48%, rgba(139, 92, 246, 0.02) 49%, rgba(139, 92, 246, 0.02) 51%, transparent 52%);
+            background-size: 60px 60px, 60px 60px, 120px 120px;
+            opacity: 0.6;
+            pointer-events: none;
+            animation: gridSlide 40s linear infinite;
+            z-index: 0;
+        }
+
+        @keyframes gridSlide {
+            0% {
+                background-position: 0 0, 0 0, 0 0;
+            }
+            100% {
+                background-position: 60px 60px, 60px 60px, 120px 120px;
+            }
+        }
+
+        /* Case Study Cards - 3x2 Grid Layout */
+        .case-study-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 35px;
+            margin-top: 60px;
+            position: relative;
+            z-index: 1;
+        }
+
+        /* Desktop: 3 cards per row */
+        @media (min-width: 1024px) {
+            .case-study-grid {
+                grid-template-columns: repeat(3, 1fr);
+                gap: 40px;
+            }
+        }
+
+        /* Tablets: 2 cards per row */
+        @media (min-width: 768px) and (max-width: 1023px) {
+            .case-study-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 30px;
+            }
+        }
+
+        /* Mobile: 1 card per row */
+        @media (max-width: 767px) {
+            .case-study-grid {
+                grid-template-columns: 1fr;
+                gap: 25px;
+            }
+        }
+
+        .case-card {
+            background: rgba(255,255,255,0.03);
+            border-radius: 28px;
+            padding: 45px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+
+        /* Different gradient borders for each card */
+        .case-card:nth-child(1) {
+            background: rgba(99, 102, 241, 0.03);
+            border: 2px solid rgba(99, 102, 241, 0.3);
+        }
+
+        .case-card:nth-child(2) {
+            background: rgba(139, 92, 246, 0.03);
+            border: 2px solid rgba(139, 92, 246, 0.3);
+        }
+
+        .case-card:nth-child(3) {
+            background: rgba(6, 182, 212, 0.03);
+            border: 2px solid rgba(6, 182, 212, 0.3);
+        }
+
+        /* Animated gradient overlay */
+        .case-card::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255,255,255,0.8) 0%, transparent 70%);
+            opacity: 0;
+            transition: opacity 0.4s ease;
+            pointer-events: none;
+        }
+
+        .case-card:hover::before {
+            opacity: 1;
+            animation: shimmer 2s infinite;
+        }
+
+        @keyframes shimmer {
+            0% { transform: translate(-50%, -50%) rotate(0deg); }
+            100% { transform: translate(-50%, -50%) rotate(360deg); }
+        }
+
+        .case-card:hover {
+            transform: translateY(-20px) scale(1.03);
+            box-shadow: 0 30px 80px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Pulsing glow effect for cards */
+        @keyframes pulseGlow {
+            0%, 100% { filter: drop-shadow(0 0 15px rgba(102, 126, 234, 0.3)); }
+            50% { filter: drop-shadow(0 0 30px rgba(102, 126, 234, 0.6)); }
+        }
+
+        .case-card:nth-child(1):hover {
+            animation: pulseGlow 2s ease-in-out infinite;
+        }
+
+        .case-card:nth-child(2):hover {
+            animation: pulseGlow 2s ease-in-out infinite;
+            filter: drop-shadow(0 0 15px rgba(245, 87, 108, 0.3));
+        }
+
+        @keyframes pulseGlowPink {
+            0%, 100% { filter: drop-shadow(0 0 15px rgba(245, 87, 108, 0.3)); }
+            50% { filter: drop-shadow(0 0 30px rgba(245, 87, 108, 0.6)); }
+        }
+
+        .case-card:nth-child(2):hover {
+            animation: pulseGlowPink 2s ease-in-out infinite;
+        }
+
+        @keyframes pulseGlowBlue {
+            0%, 100% { filter: drop-shadow(0 0 15px rgba(79, 172, 254, 0.3)); }
+            50% { filter: drop-shadow(0 0 30px rgba(79, 172, 254, 0.6)); }
+        }
+
+        .case-card:nth-child(3):hover {
+            animation: pulseGlowBlue 2s ease-in-out infinite;
+        }
+
+        /* Entrance animations with stagger */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(60px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .case-card {
+            animation-fill-mode: both;
+        }
+
+        .case-card:nth-child(1) {
+            animation: fadeInUp 0.8s ease-out 0.2s, float 6s ease-in-out 1s infinite;
+        }
+
+        .case-card:nth-child(2) {
+            animation: fadeInUp 0.8s ease-out 0.4s, float 7s ease-in-out 1.5s infinite;
+        }
+
+        .case-card:nth-child(3) {
+            animation: fadeInUp 0.8s ease-out 0.6s, float 8s ease-in-out 2s infinite;
+        }
+
+        .case-card:nth-child(4) {
+            animation: fadeInUp 0.8s ease-out 0.8s, float 6.5s ease-in-out 2.5s infinite;
+        }
+
+        .case-card:nth-child(5) {
+            animation: fadeInUp 0.8s ease-out 1s, float 7.5s ease-in-out 3s infinite;
+        }
+
+        .case-card:nth-child(6) {
+            animation: fadeInUp 0.8s ease-out 1.2s, float 8.5s ease-in-out 3.5s infinite;
+        }
+
+        /* Floating animation for cards */
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-15px); }
+        }
+
+        .case-card:hover {
+            animation: none;
+        }
+
+        /* Hover Preview Hook - appears on card hover */
+        .case-card-preview {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: rgba(0, 0, 0, 0.85);
+            backdrop-filter: blur(10px);
+            padding: 15px 20px;
+            border-radius: 15px;
+            opacity: 0;
+            transform: translateY(-10px) scale(0.95);
+            transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+            pointer-events: none;
+            z-index: 10;
+            border: 2px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+            max-width: 280px;
+        }
+
+        .case-card:hover .case-card-preview {
+            opacity: 1;
+            transform: translateY(0) scale(1);
+        }
+
+        .case-card-preview-label {
+            font-size: 11px;
+            text-transform: uppercase;
+            font-weight: 700;
+            letter-spacing: 1px;
+            opacity: 0.7;
+            margin-bottom: 5px;
+        }
+
+        .case-card-preview-text {
+            font-size: 14px;
+            font-weight: 600;
+            line-height: 1.4;
+            color: #fff;
+        }
+
+        /* Hot Badge - top right corner */
+        .case-card-badge {
+            position: absolute;
+            top: -8px;
+            right: 30px;
+            background: linear-gradient(135deg, #ff6b6b, #ee5a6f);
+            color: white;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 11px;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 1.2px;
+            box-shadow: 0 8px 25px rgba(255, 107, 107, 0.5);
+            animation: badgePulse 2s ease-in-out infinite;
+            z-index: 5;
+        }
+
+        @keyframes badgePulse {
+            0%, 100% {
+                transform: scale(1);
+                box-shadow: 0 8px 25px rgba(255, 107, 107, 0.5);
+            }
+            50% {
+                transform: scale(1.1);
+                box-shadow: 0 12px 35px rgba(255, 107, 107, 0.7);
+            }
+        }
+
+        .case-card-badge-trending {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            box-shadow: 0 8px 25px rgba(102, 126, 234, 0.5);
+        }
+
+        .case-card-badge-new {
+            background: linear-gradient(135deg, #4facfe, #00f2fe);
+            box-shadow: 0 8px 25px rgba(79, 172, 254, 0.5);
+        }
+
+        .case-card-tag {
+            display: inline-block;
+            padding: 8px 18px;
+            border-radius: 25px;
+            font-size: 12px;
+            font-weight: 700;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .case-card:hover .case-card-tag {
+            transform: translateY(-5px) scale(1.05);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Shine effect on tags */
+        .case-card-tag::after {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(
+                45deg,
+                transparent 30%,
+                rgba(255, 255, 255, 0.3) 50%,
+                transparent 70%
+            );
+            transform: translateX(-100%);
+            transition: transform 0.6s ease;
+        }
+
+        .case-card:hover .case-card-tag::after {
+            transform: translateX(100%);
+        }
+
+        .case-card:nth-child(1) .case-card-tag {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+        }
+
+        .case-card:nth-child(2) .case-card-tag {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            color: white;
+            box-shadow: 0 5px 15px rgba(245, 87, 108, 0.4);
+        }
+
+        .case-card:nth-child(3) .case-card-tag {
+            background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+            color: white;
+            box-shadow: 0 5px 15px rgba(79, 172, 254, 0.4);
+        }
+
+        .case-card:nth-child(4) .case-card-tag {
+            background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);
+            color: white;
+            box-shadow: 0 5px 15px rgba(250, 112, 154, 0.4);
+        }
+
+        .case-card:nth-child(5) .case-card-tag {
+            background: linear-gradient(135deg, #30cfd0 0%, #330867 100%);
+            color: white;
+            box-shadow: 0 5px 15px rgba(48, 207, 208, 0.4);
+        }
+
+        .case-card:nth-child(6) .case-card-tag {
+            background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
+            color: #1a202c;
+            font-weight: 800;
+            box-shadow: 0 5px 15px rgba(168, 237, 234, 0.4);
+        }
+
+        .case-card h3 {
+            font-size: 28px;
+            color: #ffffff !important;
+            margin-bottom: 25px;
+            font-weight: 900;
+            line-height: 1.2;
+            transition: all 0.3s ease;
+            letter-spacing: -0.5px;
+            text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+        }
+
+        .case-card:hover h3 {
+            transform: translateX(5px);
+            letter-spacing: 0.5px;
+        }
+
+        .case-card-metrics {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            margin: 30px 0;
+        }
+
+        .case-card-metric {
+            text-align: center;
+            padding: 20px;
+            border-radius: 15px;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+
+        /* Staggered bounce effect on metrics when hovering card */
+        .case-card:hover .case-card-metric:nth-child(1) {
+            animation: metricBounce 0.5s ease-out 0.1s;
+        }
+
+        .case-card:hover .case-card-metric:nth-child(2) {
+            animation: metricBounce 0.5s ease-out 0.2s;
+        }
+
+        .case-card:hover .case-card-metric:nth-child(3) {
+            animation: metricBounce 0.5s ease-out 0.3s;
+        }
+
+        .case-card:hover .case-card-metric:nth-child(4) {
+            animation: metricBounce 0.5s ease-out 0.4s;
+        }
+
+        @keyframes metricBounce {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.15); }
+        }
+
+        .case-card:nth-child(1) .case-card-metric {
+            background: linear-gradient(135deg, rgba(102, 126, 234, 0.1) 0%, rgba(118, 75, 162, 0.1) 100%);
+            border: 2px solid rgba(102, 126, 234, 0.2);
+        }
+
+        .case-card:nth-child(2) .case-card-metric {
+            background: linear-gradient(135deg, rgba(240, 147, 251, 0.1) 0%, rgba(245, 87, 108, 0.1) 100%);
+            border: 2px solid rgba(245, 87, 108, 0.2);
+        }
+
+        .case-card:nth-child(3) .case-card-metric {
+            background: linear-gradient(135deg, rgba(79, 172, 254, 0.1) 0%, rgba(0, 242, 254, 0.1) 100%);
+            border: 2px solid rgba(79, 172, 254, 0.2);
+        }
+
+        .case-card:nth-child(4) .case-card-metric {
+            background: linear-gradient(135deg, rgba(250, 112, 154, 0.1) 0%, rgba(254, 225, 64, 0.1) 100%);
+            border: 2px solid rgba(250, 112, 154, 0.2);
+        }
+
+        .case-card:nth-child(5) .case-card-metric {
+            background: linear-gradient(135deg, rgba(48, 207, 208, 0.1) 0%, rgba(51, 8, 103, 0.1) 100%);
+            border: 2px solid rgba(48, 207, 208, 0.2);
+        }
+
+        .case-card:nth-child(6) .case-card-metric {
+            background: linear-gradient(135deg, rgba(168, 237, 234, 0.1) 0%, rgba(254, 214, 227, 0.1) 100%);
+            border: 2px solid rgba(168, 237, 234, 0.2);
+        }
+
+        .case-card-metric:hover {
+            transform: scale(1.1);
+        }
+
+        .case-card-metric-value {
+            font-size: 32px;
+            font-weight: 900;
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        .case-card:nth-child(1) .case-card-metric-value {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .case-card:nth-child(2) .case-card-metric-value {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .case-card:nth-child(3) .case-card-metric-value {
+            background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .case-card-metric-label {
+            font-size: 13px;
+            color: #94a3b8;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .case-card-cta {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            font-weight: 700;
+            margin-top: 25px;
+            font-size: 16px;
+            padding: 15px 30px;
+            border-radius: 30px;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .case-card:nth-child(1) .case-card-cta {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            box-shadow: 0 8px 20px rgba(102, 126, 234, 0.3);
+        }
+
+        .case-card:nth-child(2) .case-card-cta {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            color: white;
+            box-shadow: 0 8px 20px rgba(245, 87, 108, 0.3);
+        }
+
+        .case-card:nth-child(3) .case-card-cta {
+            background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+            color: white;
+            box-shadow: 0 8px 20px rgba(79, 172, 254, 0.3);
+        }
+
+        .case-card-cta:hover {
+            transform: translateX(5px);
+            gap: 15px;
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        .case-card-cta::after {
+            content: '→';
+            font-size: 20px;
+            transition: transform 0.3s ease;
+        }
+
+        .case-card-cta:hover::after {
+            transform: translateX(5px);
+        }
+
+        /* Modal Styles */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 10000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.9);
+            backdrop-filter: blur(10px);
+            overflow-y: auto;
+        }
+
+        .modal.active {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            animation: fadeIn 0.3s ease;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .modal-content {
+            background: #1e293b;
+            margin: 40px;
+            padding: 60px;
+            border-radius: 28px;
+            max-width: 1000px;
+            width: 100%;
+            position: relative;
+            animation: slideUp 0.3s ease;
+            max-height: 90vh;
+            overflow-y: auto;
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .modal-close {
+            position: absolute;
+            right: 25px;
+            top: 25px;
+            font-size: 32px;
+            font-weight: bold;
+            color: #94a3b8;
+            cursor: pointer;
+            width: 44px;
+            height: 44px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            transition: all 0.3s ease;
+            background: rgba(255,255,255,0.05);
+        }
+
+        .modal-close:hover {
+            background: rgba(255,255,255,0.1);
+            color: white;
+        }
+
+        .modal-header {
+            margin-bottom: 35px;
+        }
+
+        .modal-header h2 {
+            font-size: 36px;
+            color: white;
+            margin-bottom: 15px;
+        }
+
+        .modal-overview {
+            font-size: 18px;
+            color: #cbd5e1;
+            line-height: 1.7;
+            margin-bottom: 40px;
+        }
+
+        .modal-section {
+            margin-bottom: 40px;
+        }
+
+        .modal-section h3 {
+            font-size: 24px;
+            color: white;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+
+        .modal-section p {
+            color: #cbd5e1;
+        }
+
+        .modal-metrics-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+
+        .modal-metric {
+            background: rgba(99, 102, 241, 0.05);
+            padding: 25px;
+            border-radius: 16px;
+            text-align: center;
+            border: 1px solid rgba(99, 102, 241, 0.2);
+        }
+
+        .modal-metric-value {
+            font-size: 32px;
+            font-weight: 900;
+            background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        .modal-metric-label {
+            font-size: 14px;
+            color: #94a3b8;
+            font-weight: 600;
+        }
+
+        .modal-metric-change {
+            font-size: 16px;
+            color: #10b981;
+            font-weight: 700;
+            margin-top: 5px;
+        }
+
+        .modal-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .modal-list li {
+            padding: 12px 0;
+            padding-left: 30px;
+            position: relative;
+            color: #cbd5e1;
+            line-height: 1.7;
+            font-size: 16px;
+        }
+
+        .modal-list li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #6366f1;
+            font-weight: bold;
+            font-size: 18px;
+        }
+
+        .modal-highlight {
+            background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+            color: white;
+            padding: 35px;
+            border-radius: 20px;
+            margin: 30px 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .modal-highlight::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -20%;
+            width: 300px;
+            height: 300px;
+            background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+            border-radius: 50%;
+        }
+
+        .modal-highlight h4 {
+            font-size: 20px;
+            margin-bottom: 15px;
+            font-weight: 700;
+            position: relative;
+            z-index: 1;
+        }
+
+        .modal-highlight p {
+            font-size: 16px;
+            line-height: 1.7;
+            margin: 0;
+            position: relative;
+            z-index: 1;
+        }
+
+        .modal-screenshots {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .modal-screenshot {
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        .modal-screenshot img {
+            width: 100%;
+            display: block;
+        }
+
+        .modal-screenshot-label {
+            background: rgba(255,255,255,0.05);
+            padding: 12px;
+            text-align: center;
+            font-size: 14px;
+            color: #cbd5e1;
+            font-weight: 600;
+            border-top: 1px solid rgba(255,255,255,0.1);
+        }
+
+        /* Responsive Design - All Breakpoints */
+
+        /* Ultra-wide screens: 1920px+ */
+        @media (min-width: 1920px) {
+            .hero-content,
+            .section {
+                max-width: 1600px;
+            }
+        }
+
+        /* Desktops: 1367px - 1919px */
+        @media (max-width: 1366px) {
+            .hero-content {
+                max-width: 1200px;
+                gap: 60px;
+            }
+
+            .hero-text h1 {
+                font-size: 70px;
+            }
+
+            .profile-photo {
+                width: 480px;
+                height: 480px;
+            }
+
+            .badge-1, .badge-2, .badge-3, .badge-4, .badge-5 {
+                font-size: 12px;
+            }
+
+            .badge-1 {
+                width: 140px;
+                height: 140px;
+            }
+
+            .badge-2 {
+                width: 120px;
+                height: 120px;
+            }
+
+            .badge-3 {
+                width: 110px;
+                height: 110px;
+            }
+
+            .badge-4 {
+                width: 100px;
+                height: 100px;
+            }
+
+            .badge-5 {
+                width: 130px;
+                height: 130px;
+            }
+        }
+
+        /* Small laptops: 1025px - 1366px */
+        @media (max-width: 1024px) {
+            .header-container,
+            .section {
+                padding: 0 30px;
+            }
+
+            .hero {
+                padding: 80px 30px 100px;
+            }
+
+            .hero-content {
+                grid-template-columns: 1fr;
+                gap: 60px;
+                text-align: center;
+            }
+
+            .hero-text {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .hero-text h1 {
+                font-size: 60px;
+            }
+
+            .hero-text p {
+                max-width: 600px;
+            }
+
+            .profile-photo {
+                width: 440px;
+                height: 440px;
+            }
+
+            .floating-badge {
+                font-size: 11px;
+            }
+
+            .badge-1 {
+                width: 130px;
+                height: 130px;
+                right: 10%;
+                top: -40px;
+            }
+
+            .badge-2 {
+                width: 110px;
+                height: 110px;
+                left: 10%;
+                bottom: 30px;
+            }
+
+            .badge-3 {
+                width: 100px;
+                height: 100px;
+                right: 5%;
+            }
+
+            .badge-4 {
+                width: 90px;
+                height: 90px;
+                left: 10%;
+            }
+
+            .badge-5 {
+                width: 120px;
+                height: 120px;
+            }
+
+            .stats-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 20px;
+            }
+
+            .services-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 25px;
+            }
+
+            .section-title {
+                font-size: 42px;
+            }
+
+            .section-subtitle {
+                font-size: 16px;
+            }
+
+            .metrics-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .modal-metrics-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .modal-screenshots {
+                grid-template-columns: 1fr;
+            }
+
+            .case-study-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 30px;
+            }
+
+            .cta-section {
+                margin: 80px 30px;
+                padding: 70px 40px;
+            }
+
+            .cta-section h2 {
+                font-size: 40px;
+            }
+        }
+
+        /* Tablets: 641px - 1024px */
+        @media (max-width: 768px) {
+            .hamburger {
+                display: flex;
+            }
+
+            nav {
+                position: fixed;
+                top: 0;
+                right: -100%;
+                width: 70%;
+                max-width: 300px;
+                height: 100vh;
+                background: rgba(15, 23, 42, 0.98);
+                backdrop-filter: blur(20px);
+                flex-direction: column;
+                padding: 80px 30px 30px;
+                gap: 25px;
+                align-items: flex-start;
+                transition: right 0.3s ease;
+                border-left: 1px solid rgba(255, 255, 255, 0.1);
+                z-index: 1000;
+            }
+
+            nav.active {
+                right: 0;
+            }
+
+            nav a {
+                font-size: 18px;
+                width: 100%;
+                padding: 12px 0;
+            }
+
+            .nav-cta {
+                width: 100%;
+                text-align: center;
+                margin-top: 10px;
+            }
+
+            .hero {
+                padding: 40px 25px 50px;
+                min-height: auto;
+            }
+
+            .hero-content {
+                grid-template-columns: 1fr;
+                gap: 30px;
+                text-align: center;
+            }
+
+            .hero-text {
+                order: 2;
+            }
+
+            .profile-container {
+                order: 1;
+                display: flex;
+                justify-content: center;
+            }
+
+            .hero-text h1 {
+                font-size: 36px;
+                letter-spacing: -1px;
+                line-height: 1.15;
+                margin-bottom: 15px;
+            }
+
+            .hero-text .tagline {
+                font-size: 11px;
+                margin-bottom: 10px;
+            }
+
+            .hero-text p {
+                font-size: 15px;
+                max-width: 100%;
+                margin-left: auto;
+                margin-right: auto;
+                margin-bottom: 25px;
+                line-height: 1.6;
+            }
+
+            .cta-button {
+                width: 100%;
+                padding: 16px 30px;
+                font-size: 15px;
+                margin-bottom: 20px;
+            }
+
+            .social-icons {
+                justify-content: center;
+            }
+
+            .trust-badges {
+                justify-content: center;
+            }
+
+            .profile-photo {
+                width: 300px;
+                height: 300px;
+            }
+
+            .floating-badge {
+                font-size: 9px;
+                padding: 12px;
+            }
+
+            .badge-1 {
+                width: 100px;
+                height: 100px;
+                right: 5%;
+                top: -30px;
+            }
+
+            .badge-2 {
+                width: 90px;
+                height: 90px;
+                left: 5%;
+                bottom: 20px;
+            }
+
+            .badge-3 {
+                width: 80px;
+                height: 80px;
+                right: 0%;
+            }
+
+            .badge-4 {
+                width: 75px;
+                height: 75px;
+                left: 5%;
+            }
+
+            .badge-5 {
+                width: 90px;
+                height: 90px;
+                font-size: 9px;
+            }
+
+            .social-icons {
+                margin-bottom: 0;
+                gap: 12px;
+            }
+
+            .social-icons a {
+                width: 38px;
+                height: 38px;
+                font-size: 15px;
+            }
+
+            .section {
+                margin: 50px auto;
+                padding: 0 25px;
+            }
+
+            .section-title {
+                font-size: 32px;
+                margin-bottom: 15px;
+            }
+
+            .section-subtitle {
+                font-size: 14px;
+                margin-bottom: 35px;
+                line-height: 1.6;
+            }
+
+            .stats-grid {
+                grid-template-columns: 1fr;
+                gap: 15px;
+            }
+
+            .stat-card {
+                padding: 25px 20px;
+            }
+
+            .services-grid {
+                grid-template-columns: 1fr;
+                gap: 15px;
+            }
+
+            /* MOBILE SERVICE CARDS - Make them float and engaging */
+            .service-card {
+                padding: 25px 20px;
+                animation: serviceFloatMobile 9s ease-in-out infinite !important;
+                transition: all 0.3s ease;
+            }
+
+            .service-card:nth-child(1) { animation-delay: 0s !important; }
+            .service-card:nth-child(2) { animation-delay: 1.5s !important; }
+            .service-card:nth-child(3) { animation-delay: 3s !important; }
+            .service-card:nth-child(4) { animation-delay: 4.5s !important; }
+
+            @keyframes serviceFloatMobile {
+                0%, 100% { transform: translateY(0px); box-shadow: 0 10px 30px rgba(0,0,0,0.2); }
+                50% { transform: translateY(-10px); box-shadow: 0 20px 50px rgba(99, 102, 241, 0.3); }
+            }
+
+            /* Tap feedback for service cards */
+            .service-card:active {
+                transform: scale(0.97) !important;
+                animation: none !important;
+            }
+
+            .service-icon,
+            .standard-icon {
+                font-size: 42px;
+                animation: iconBounce 3s ease-in-out infinite !important;
+            }
+
+            .standard-card {
+                padding: 25px 20px;
+                gap: 15px;
+            }
+
+            .criteria-grid {
+                grid-template-columns: 1fr;
+                gap: 15px;
+            }
+
+            .criteria-card {
+                padding: 25px 20px;
+            }
+
+            .case-study-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
+            /* MOBILE ENHANCEMENTS - Make cards float and interactive */
+            .case-card {
+                padding: 25px 18px;
+                animation: mobileFloat 8s ease-in-out infinite !important;
+                transform-origin: center;
+                transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+                border: 3px solid transparent !important;
+                background-clip: padding-box;
+            }
+
+            /* Stagger floating animations on mobile */
+            .case-card:nth-child(1) {
+                animation-delay: 0s !important;
+                border-color: rgba(99, 102, 241, 0.5) !important;
+                box-shadow: 0 0 30px rgba(99, 102, 241, 0.3), inset 0 0 20px rgba(99, 102, 241, 0.1) !important;
+            }
+            .case-card:nth-child(2) {
+                animation-delay: 1s !important;
+                border-color: rgba(236, 72, 153, 0.5) !important;
+                box-shadow: 0 0 30px rgba(236, 72, 153, 0.3), inset 0 0 20px rgba(236, 72, 153, 0.1) !important;
+            }
+            .case-card:nth-child(3) {
+                animation-delay: 2s !important;
+                border-color: rgba(59, 130, 246, 0.5) !important;
+                box-shadow: 0 0 30px rgba(59, 130, 246, 0.3), inset 0 0 20px rgba(59, 130, 246, 0.1) !important;
+            }
+            .case-card:nth-child(4) {
+                animation-delay: 3s !important;
+                border-color: rgba(139, 92, 246, 0.5) !important;
+                box-shadow: 0 0 30px rgba(139, 92, 246, 0.3), inset 0 0 20px rgba(139, 92, 246, 0.1) !important;
+            }
+            .case-card:nth-child(5) {
+                animation-delay: 4s !important;
+                border-color: rgba(6, 182, 212, 0.5) !important;
+                box-shadow: 0 0 30px rgba(6, 182, 212, 0.3), inset 0 0 20px rgba(6, 182, 212, 0.1) !important;
+            }
+            .case-card:nth-child(6) {
+                animation-delay: 5s !important;
+                border-color: rgba(168, 85, 247, 0.5) !important;
+                box-shadow: 0 0 30px rgba(168, 85, 247, 0.3), inset 0 0 20px rgba(168, 85, 247, 0.1) !important;
+            }
+
+            @keyframes mobileFloat {
+                0%, 100% {
+                    transform: translateY(0px) scale(1);
+                    box-shadow: 0 0 30px rgba(99, 102, 241, 0.3), inset 0 0 20px rgba(99, 102, 241, 0.1);
+                }
+                50% {
+                    transform: translateY(-15px) scale(1.03);
+                    box-shadow: 0 0 50px rgba(99, 102, 241, 0.6), inset 0 0 30px rgba(99, 102, 241, 0.2), 0 20px 40px rgba(0, 0, 0, 0.3);
+                }
+            }
+
+            /* Tap feedback - when user taps card */
+            .case-card:active {
+                transform: scale(0.96) !important;
+                box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3) !important;
+                animation: none !important;
+                filter: brightness(1.2);
+            }
+
+            .case-card h3 {
+                font-size: 22px;
+                line-height: 1.3;
+                color: #ffffff !important;
+            }
+
+            .case-card-tag {
+                font-size: 10px;
+                padding: 6px 14px;
+                margin-bottom: 15px;
+                animation: tagShine 3s ease-in-out infinite;
+            }
+
+            @keyframes tagShine {
+                0%, 100% { box-shadow: 0 5px 15px rgba(99, 102, 241, 0.3); }
+                50% { box-shadow: 0 8px 25px rgba(99, 102, 241, 0.6); }
+            }
+
+            .case-card-badge {
+                top: -6px;
+                right: 15px;
+                font-size: 9px;
+                padding: 6px 12px;
+                /* Keep pulsing animation on mobile */
+            }
+
+            /* Show quick preview text on mobile tap - MORE PROMINENT */
+            .case-card::after {
+                content: '👆 TAP FOR DETAILS';
+                position: absolute;
+                bottom: 15px;
+                left: 50%;
+                transform: translateX(-50%);
+                background: linear-gradient(135deg, #6366f1, #8b5cf6);
+                color: white;
+                padding: 10px 20px;
+                border-radius: 25px;
+                font-size: 12px;
+                font-weight: 800;
+                opacity: 0.95;
+                animation: tapPulseStrong 1.5s ease-in-out infinite;
+                pointer-events: none;
+                box-shadow: 0 5px 20px rgba(99, 102, 241, 0.5);
+                text-transform: uppercase;
+                letter-spacing: 0.5px;
+                border: 2px solid rgba(255, 255, 255, 0.3);
+            }
+
+            @keyframes tapPulseStrong {
+                0%, 100% {
+                    opacity: 0.9;
+                    transform: translateX(-50%) scale(1);
+                    box-shadow: 0 5px 20px rgba(99, 102, 241, 0.5);
+                }
+                50% {
+                    opacity: 1;
+                    transform: translateX(-50%) scale(1.1);
+                    box-shadow: 0 8px 35px rgba(99, 102, 241, 0.8), 0 0 0 4px rgba(99, 102, 241, 0.3);
+                }
+            }
+
+            /* Add urgency indicators to mobile cards */
+            .case-card-tag {
+                animation: tagShine 2s ease-in-out infinite, tagFloat 3s ease-in-out infinite !important;
+            }
+
+            @keyframes tagFloat {
+                0%, 100% { transform: translateY(0px); }
+                50% { transform: translateY(-3px); }
+            }
+
+            /* Mobile progress bar at top */
+            .mobile-progress-bar {
+                position: fixed;
+                top: 0;
+                left: 0;
+                height: 4px;
+                background: linear-gradient(90deg, #6366f1, #8b5cf6, #ec4899);
+                width: 0%;
+                z-index: 9999;
+                transition: width 0.2s ease;
+                box-shadow: 0 2px 10px rgba(99, 102, 241, 0.5);
+            }
+
+            .case-card-metrics {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 12px;
+            }
+
+            .case-card-metric {
+                padding: 15px 10px;
+            }
+
+            .case-card-metric-value {
+                font-size: 26px;
+                animation: metricCountUp 0.8s ease-out, metricPulse 3s ease-in-out infinite 1s !important;
+                text-shadow: 0 2px 10px rgba(99, 102, 241, 0.4);
+            }
+
+            @keyframes metricCountUp {
+                from {
+                    opacity: 0;
+                    transform: translateY(20px) scale(0.5);
+                }
+                to {
+                    opacity: 1;
+                    transform: translateY(0) scale(1);
+                }
+            }
+
+            @keyframes metricPulse {
+                0%, 100% {
+                    transform: scale(1);
+                    text-shadow: 0 2px 10px rgba(99, 102, 241, 0.4);
+                }
+                50% {
+                    transform: scale(1.08);
+                    text-shadow: 0 4px 20px rgba(99, 102, 241, 0.8);
+                }
+            }
+
+            .case-card-metric-label {
+                font-size: 11px;
+            }
+
+            .case-card-cta {
+                font-size: 15px;
+                padding: 14px 28px;
+                margin-top: 20px;
+                background: linear-gradient(135deg, #6366f1, #8b5cf6) !important;
+                border: 2px solid rgba(255, 255, 255, 0.2) !important;
+                animation: ctaGlow 2s ease-in-out infinite;
+            }
+
+            @keyframes ctaGlow {
+                0%, 100% {
+                    box-shadow: 0 5px 15px rgba(99, 102, 241, 0.4);
+                }
+                50% {
+                    box-shadow: 0 8px 30px rgba(99, 102, 241, 0.8), 0 0 0 3px rgba(99, 102, 241, 0.2);
+                }
+            }
+
+            /* AGGRESSIVE MOBILE CTR BOOSTERS */
+
+            /* Floating "VIEW RESULTS" badge on top-right of cards */
+            .case-card::before {
+                content: '📊 VIEW RESULTS';
+                position: absolute;
+                top: 15px;
+                right: 15px;
+                background: linear-gradient(135deg, #ef4444, #f97316);
+                color: white;
+                padding: 8px 14px;
+                border-radius: 20px;
+                font-size: 10px;
+                font-weight: 900;
+                text-transform: uppercase;
+                letter-spacing: 0.5px;
+                animation: floatBadge 2s ease-in-out infinite, wiggle 3s ease-in-out infinite;
+                box-shadow: 0 4px 15px rgba(239, 68, 68, 0.6);
+                border: 2px solid rgba(255, 255, 255, 0.4);
+                z-index: 10;
+            }
+
+            @keyframes floatBadge {
+                0%, 100% {
+                    transform: translateY(0px) scale(1);
+                    box-shadow: 0 4px 15px rgba(239, 68, 68, 0.6);
+                }
+                50% {
+                    transform: translateY(-5px) scale(1.05);
+                    box-shadow: 0 8px 25px rgba(239, 68, 68, 0.9), 0 0 0 3px rgba(239, 68, 68, 0.3);
+                }
+            }
+
+            @keyframes wiggle {
+                0%, 100% { transform: rotate(0deg); }
+                25% { transform: rotate(-3deg); }
+                75% { transform: rotate(3deg); }
+            }
+
+            /* Shake animation on cards to draw attention */
+            .case-card {
+                animation: mobileFloat 8s ease-in-out infinite, cardShake 10s ease-in-out infinite !important;
+            }
+
+            @keyframes cardShake {
+                0%, 90%, 100% { transform: translateX(0); }
+                92%, 96% { transform: translateX(-3px); }
+                94%, 98% { transform: translateX(3px); }
+            }
+
+            /* Make hero CTA buttons bounce on mobile */
+            .cta-button {
+                animation: buttonBounce 2s ease-in-out infinite !important;
+            }
+
+            @keyframes buttonBounce {
+                0%, 100% {
+                    transform: translateY(0px);
+                    box-shadow: 0 10px 30px rgba(99, 102, 241, 0.4);
+                }
+                50% {
+                    transform: translateY(-8px);
+                    box-shadow: 0 15px 40px rgba(99, 102, 241, 0.7), 0 0 0 4px rgba(99, 102, 241, 0.2);
+                }
+            }
+
+            /* Floating arrow indicators */
+            .case-card h3::after {
+                content: '→';
+                margin-left: 8px;
+                display: inline-block;
+                animation: arrowBounce 1.5s ease-in-out infinite;
+                color: #6366f1;
+                font-weight: bold;
+            }
+
+            @keyframes arrowBounce {
+                0%, 100% { transform: translateX(0px); opacity: 0.7; }
+                50% { transform: translateX(5px); opacity: 1; }
+            }
+
+            /* Service cards bounce on mobile */
+            .service-card {
+                animation: serviceBounce 3s ease-in-out infinite !important;
+            }
+
+            @keyframes serviceBounce {
+                0%, 100% { transform: translateY(0px); }
+                50% { transform: translateY(-10px); }
+            }
+
+            /* Stagger service card animations */
+            .service-card:nth-child(1) { animation-delay: 0s !important; }
+            .service-card:nth-child(2) { animation-delay: 0.5s !important; }
+            .service-card:nth-child(3) { animation-delay: 1s !important; }
+            .service-card:nth-child(4) { animation-delay: 1.5s !important; }
+
+            /* Make metrics more prominent with stronger pulse */
+            .case-card-metric {
+                animation: metricBounce 3s ease-in-out infinite;
+                border: 2px solid rgba(99, 102, 241, 0.3) !important;
+                position: relative;
+                overflow: visible;
+            }
+
+            @keyframes metricBounce {
+                0%, 100% {
+                    transform: scale(1);
+                    border-color: rgba(99, 102, 241, 0.3);
+                }
+                50% {
+                    transform: scale(1.05);
+                    border-color: rgba(99, 102, 241, 0.6);
+                    box-shadow: 0 0 20px rgba(99, 102, 241, 0.5);
+                }
+            }
+
+            /* Add sparkle effect to metric values */
+            .case-card-metric-value::before {
+                content: '✨';
+                position: absolute;
+                top: -10px;
+                right: -10px;
+                font-size: 16px;
+                animation: sparkle 2s ease-in-out infinite;
+            }
+
+            @keyframes sparkle {
+                0%, 100% { opacity: 0; transform: scale(0.5) rotate(0deg); }
+                50% { opacity: 1; transform: scale(1) rotate(180deg); }
+            }
+
+            /* Wiggle sticky CTA for extra attention */
+            .sticky-mobile-cta {
+                animation: stickyCtaPulse 2s ease-in-out infinite, stickyWiggle 4s ease-in-out infinite !important;
+            }
+
+            @keyframes stickyWiggle {
+                0%, 100% { transform: translateX(-50%) rotate(0deg); }
+                25% { transform: translateX(-50%) rotate(-2deg); }
+                75% { transform: translateX(-50%) rotate(2deg); }
+            }
+
+            /* Add floating "CLICK ME" indicator above sticky CTA */
+            .sticky-mobile-cta::before {
+                content: '👇 CLICK ME';
+                position: absolute;
+                top: -35px;
+                left: 50%;
+                transform: translateX(-50%);
+                background: rgba(0, 0, 0, 0.9);
+                color: #fbbf24;
+                padding: 6px 12px;
+                border-radius: 15px;
+                font-size: 11px;
+                font-weight: 900;
+                animation: clickMeBounce 1.5s ease-in-out infinite;
+                white-space: nowrap;
+                border: 2px solid #fbbf24;
+            }
+
+            @keyframes clickMeBounce {
+                0%, 100% { transform: translateX(-50%) translateY(0px); opacity: 0.9; }
+                50% { transform: translateX(-50%) translateY(-5px); opacity: 1; }
+            }
+
+            /* Pulsing border on entire card */
+            .case-card {
+                position: relative;
+                overflow: visible;
+            }
+
+            .case-card::after {
+                /* Override previous ::after for stronger CTA */
+                content: '👆 TAP FOR DETAILS' !important;
+                animation: tapPulseStrong 1.5s ease-in-out infinite, shake 2s ease-in-out infinite !important;
+            }
+
+            @keyframes shake {
+                0%, 100% { transform: translateX(-50%) rotate(0deg); }
+                25% { transform: translateX(-50%) rotate(-1deg); }
+                75% { transform: translateX(-50%) rotate(1deg); }
+            }
+
+            .metrics-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 15px;
+            }
+
+            .cta-section {
+                margin: 40px 25px;
+                padding: 35px 25px;
+            }
+
+            .cta-section h2 {
+                font-size: 28px;
+                margin-bottom: 15px;
+            }
+
+            .cta-section p {
+                font-size: 15px;
+                margin-bottom: 25px;
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+                width: 100%;
+            }
+
+            .btn-white,
+            .btn-outline {
+                width: 100%;
+                text-align: center;
+            }
+
+            footer {
+                padding: 50px 25px;
+            }
+
+            .footer-links {
+                flex-wrap: wrap;
+                gap: 15px;
+            }
+
+            .modal-content {
+                margin: 20px;
+                padding: 40px 25px;
+            }
+
+            .modal-header h2 {
+                font-size: 28px;
+            }
+
+            .modal-metrics-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 15px;
+            }
+
+            .modal-metric {
+                padding: 18px;
+            }
+
+            .modal-metric-value {
+                font-size: 26px;
+            }
+
+            .modal-screenshots {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Large phones: 480px - 640px */
+        @media (max-width: 640px) {
+            .header-container {
+                padding: 0 20px;
+            }
+
+            .logo {
+                font-size: 14px;
+            }
+
+            .hero {
+                padding: 35px 20px 45px;
+            }
+
+            .hero-text h1 {
+                font-size: 32px;
+                margin-bottom: 12px;
+            }
+
+            .hero-text p {
+                font-size: 14px;
+                margin-bottom: 20px;
+            }
+
+            .profile-photo {
+                width: 260px;
+                height: 260px;
+            }
+
+            .case-card {
+                padding: 25px 18px;
+            }
+
+            .case-card h3 {
+                font-size: 20px;
+                color: #ffffff !important;
+            }
+
+            .section {
+                margin: 40px auto;
+            }
+
+            .section-title {
+                font-size: 28px;
+                margin-bottom: 12px;
+            }
+
+            .section-subtitle {
+                font-size: 13px;
+                margin-bottom: 30px;
+            }
+
+            .service-card-header {
+                padding: 25px 20px;
+            }
+
+            .cta-section {
+                padding: 30px 20px;
+                margin: 35px 20px;
+            }
+
+            .cta-section h2 {
+                font-size: 26px;
+            }
+        }
+
+        /* MOBILE STICKY CTA BUTTON */
+        @media (max-width: 768px) {
+            .sticky-mobile-cta {
+                position: fixed;
+                bottom: 20px;
+                left: 50%;
+                transform: translateX(-50%);
+                z-index: 999;
+                background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+                padding: 16px 32px;
+                border-radius: 50px;
+                box-shadow: 0 10px 40px rgba(99, 102, 241, 0.6);
+                color: white;
+                font-weight: 700;
+                font-size: 16px;
+                text-decoration: none;
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                animation: stickyCtaPulse 2s ease-in-out infinite;
+                border: 2px solid rgba(255, 255, 255, 0.3);
+            }
+
+            .sticky-mobile-cta:active {
+                transform: translateX(-50%) scale(0.95);
+                box-shadow: 0 5px 20px rgba(99, 102, 241, 0.8);
+            }
+
+            @keyframes stickyCtaPulse {
+                0%, 100% {
+                    box-shadow: 0 10px 40px rgba(99, 102, 241, 0.6);
+                }
+                50% {
+                    box-shadow: 0 15px 60px rgba(99, 102, 241, 0.9), 0 0 0 8px rgba(99, 102, 241, 0.2);
+                }
+            }
+
+            /* Add floating action indicator */
+            .mobile-tap-indicator {
+                position: fixed;
+                bottom: 100px;
+                right: 20px;
+                background: rgba(99, 102, 241, 0.95);
+                color: white;
+                padding: 12px 20px;
+                border-radius: 50px;
+                font-size: 13px;
+                font-weight: 600;
+                z-index: 998;
+                animation: slideInRight 1s ease-out, indicatorPulse 3s ease-in-out infinite 1s;
+                box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+            }
+
+            @keyframes slideInRight {
+                from {
+                    transform: translateX(200px);
+                    opacity: 0;
+                }
+                to {
+                    transform: translateX(0);
+                    opacity: 1;
+                }
+            }
+
+            @keyframes indicatorPulse {
+                0%, 100% { transform: scale(1); opacity: 1; }
+                50% { transform: scale(1.1); opacity: 0.9; }
+            }
+        }
+
+        /* Extra small phones: 320px - 480px */
+        @media (max-width: 480px) {
+            .hero {
+                padding: 30px 18px 40px;
+            }
+
+            .hero-content {
+                gap: 25px;
+            }
+
+            .hero-text h1 {
+                font-size: 28px;
+                margin-bottom: 10px;
+            }
+
+            .hero-text p {
+                font-size: 13px;
+                margin-bottom: 18px;
+            }
+
+            .profile-photo {
+                width: 220px;
+                height: 220px;
+            }
+
+            .floating-badge {
+                font-size: 7px;
+                padding: 8px;
+            }
+
+            .badge-1, .badge-2, .badge-3, .badge-4, .badge-5 {
+                width: 65px;
+                height: 65px;
+            }
+
+            .section {
+                margin: 35px auto;
+                padding: 0 18px;
+            }
+
+            .section-title {
+                font-size: 26px;
+                margin-bottom: 10px;
+                animation: titleShine 4s ease-in-out infinite;
+            }
+
+            @keyframes titleShine {
+                0%, 100% { text-shadow: 0 0 10px rgba(99, 102, 241, 0.3); }
+                50% { text-shadow: 0 0 20px rgba(99, 102, 241, 0.6), 0 0 30px rgba(139, 92, 246, 0.4); }
+            }
+
+            .section-subtitle {
+                font-size: 13px;
+                margin-bottom: 25px;
+            }
+
+            .case-study-grid {
+                gap: 15px;
+            }
+
+            .case-card {
+                padding: 20px 15px;
+            }
+
+            .case-card h3 {
+                font-size: 18px;
+                color: #ffffff !important;
+            }
+
+            .case-card-metric-value {
+                font-size: 20px;
+                animation: metricPop 2s ease-in-out infinite;
+            }
+
+            @keyframes metricPop {
+                0%, 100% { transform: scale(1); }
+                50% { transform: scale(1.1); }
+            }
+
+            .sticky-mobile-cta {
+                padding: 14px 28px;
+                font-size: 15px;
+            }
+        }
+
+            .cta-button {
+                padding: 14px 30px;
+                font-size: 15px;
+            }
+
+            .profile-photo {
+                width: 300px;
+                height: 300px;
+            }
+
+            .floating-badge {
+                font-size: 9px;
+                padding: 12px;
+            }
+
+            .badge-1 {
+                width: 85px;
+                height: 85px;
+            }
+
+            .badge-2 {
+                width: 75px;
+                height: 75px;
+            }
+
+            .badge-3 {
+                width: 70px;
+                height: 70px;
+            }
+
+            .badge-4 {
+                width: 65px;
+                height: 65px;
+            }
+
+            .badge-5 {
+                width: 80px;
+                height: 80px;
+                font-size: 8px;
+            }
+
+            .trust-badges {
+                gap: 10px;
+            }
+
+            .badge {
+                font-size: 11px;
+                padding: 8px 15px;
+            }
+
+            .section {
+                margin: 60px auto;
+                padding: 0 20px;
+            }
+
+            .section-title {
+                font-size: 30px;
+            }
+
+            .section-subtitle {
+                font-size: 14px;
+            }
+
+            .service-card,
+            .standard-card,
+            .criteria-card {
+                padding: 28px;
+            }
+
+            .service-card h3,
+            .standard-content h3,
+            .criteria-card h3 {
+                font-size: 20px;
+            }
+
+            .service-icon,
+            .standard-icon {
+                font-size: 36px;
+            }
+
+            .case-card {
+                padding: 28px;
+            }
+
+            .case-card h3 {
+                font-size: 22px;
+                color: #ffffff !important;
+            }
+
+            .case-card-metrics {
+                grid-template-columns: 1fr;
+                gap: 12px;
+            }
+
+            .case-card-metric {
+                padding: 15px;
+            }
+
+            .case-card-metric-value {
+                font-size: 26px;
+            }
+
+            .cta-section {
+                margin: 50px 20px;
+                padding: 40px 25px;
+            }
+
+            .cta-section h2 {
+                font-size: 28px;
+            }
+
+            .btn-white,
+            .btn-outline {
+                padding: 15px 35px;
+                font-size: 15px;
+            }
+
+            .modal-content {
+                padding: 35px 20px;
+            }
+
+            .modal-header h2 {
+                font-size: 24px;
+            }
+
+            .modal-overview {
+                font-size: 16px;
+            }
+
+            .modal-metrics-grid {
+                grid-template-columns: 1fr;
+                gap: 12px;
+            }
+
+            .modal-section h3 {
+                font-size: 20px;
+            }
+
+            .metrics-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Mobile: 320px - 480px */
+        @media (max-width: 480px) {
+            header {
+                padding: 15px 0;
+            }
+
+            .header-container {
+                padding: 0 15px;
+            }
+
+            .hero {
+                padding: 40px 15px 50px;
+            }
+
+            .hero-text h1 {
+                font-size: 32px;
+                margin-bottom: 20px;
+            }
+
+            .hero-text .tagline {
+                font-size: 11px;
+                margin-bottom: 20px;
+            }
+
+            .hero-text p {
+                font-size: 14px;
+                line-height: 1.7;
+                margin-bottom: 30px;
+            }
+
+            .cta-button {
+                padding: 12px 25px;
+                font-size: 14px;
+                width: 100%;
+                text-align: center;
+            }
+
+            .profile-photo {
+                width: 240px;
+                height: 240px;
+                border-width: 4px;
+            }
+
+            .floating-badge {
+                font-size: 8px;
+                padding: 10px;
+                line-height: 1.2;
+            }
+
+            .badge-1 {
+                width: 70px;
+                height: 70px;
+                right: 0;
+                top: -20px;
+            }
+
+            .badge-2 {
+                width: 65px;
+                height: 65px;
+                left: 0;
+                bottom: 10px;
+            }
+
+            .badge-3 {
+                width: 60px;
+                height: 60px;
+                right: -10px;
+            }
+
+            .badge-4 {
+                width: 55px;
+                height: 55px;
+                left: 0;
+                top: 10%;
+            }
+
+            .badge-5 {
+                width: 65px;
+                height: 65px;
+                font-size: 7px;
+            }
+
+            .social-icons {
+                gap: 10px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .social-icons a {
+                width: 36px;
+                height: 36px;
+                font-size: 14px;
+            }
+
+            .trust-badges {
+                justify-content: center;
+            }
+
+            .badge {
+                font-size: 10px;
+                padding: 6px 12px;
+            }
+
+            .section {
+                margin: 50px auto;
+                padding: 0 15px;
+            }
+
+            .section-title {
+                font-size: 26px;
+                margin-bottom: 15px;
+            }
+
+            .section-subtitle {
+                font-size: 13px;
+                margin-bottom: 40px;
+            }
+
+            .stats-grid {
+                gap: 15px;
+            }
+
+            .stat-card {
+                padding: 25px;
+            }
+
+            .stat-number {
+                font-size: 36px;
+            }
+
+            .stat-label {
+                font-size: 12px;
+            }
+
+            .services-grid {
+                gap: 15px;
+            }
+
+            .service-card {
+                padding: 25px;
+            }
+
+            .service-card h3 {
+                font-size: 18px;
+                margin-bottom: 15px;
+            }
+
+            .service-icon {
+                font-size: 32px;
+                margin-bottom: 20px;
+            }
+
+            .service-card li {
+                font-size: 14px;
+                padding: 8px 0;
+            }
+
+            .standard-card {
+                padding: 25px;
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .standard-icon {
+                font-size: 32px;
+                min-width: auto;
+            }
+
+            .standard-content h3 {
+                font-size: 18px;
+                margin-bottom: 12px;
+            }
+
+            .standard-content p {
+                font-size: 14px;
+            }
+
+            .criteria-card {
+                padding: 25px;
+            }
+
+            .criteria-card h3 {
+                font-size: 20px;
+                margin-bottom: 20px;
+            }
+
+            .criteria-card li {
+                font-size: 14px;
+                padding: 10px 0;
+                padding-left: 30px;
+            }
+
+            .case-card {
+                padding: 25px;
+            }
+
+            .case-card-tag {
+                font-size: 10px;
+                padding: 6px 14px;
+                margin-bottom: 15px;
+            }
+
+            .case-card h3 {
+                font-size: 19px;
+                margin-bottom: 20px;
+                color: #ffffff !important;
+            }
+
+            .case-card-metrics {
+                gap: 10px;
+                margin: 20px 0;
+            }
+
+            .case-card-metric {
+                padding: 15px;
+            }
+
+            .case-card-metric-value {
+                font-size: 22px;
+            }
+
+            .case-card-metric-label {
+                font-size: 11px;
+            }
+
+            .case-card-cta {
+                font-size: 14px;
+                padding: 12px 25px;
+                margin-top: 20px;
+            }
+
+            .cta-section {
+                margin: 40px 15px;
+                padding: 35px 20px;
+                border-radius: 24px;
+            }
+
+            .cta-section h2 {
+                font-size: 24px;
+                margin-bottom: 15px;
+            }
+
+            .cta-section p {
+                font-size: 14px;
+                margin-bottom: 30px;
+            }
+
+            .btn-white,
+            .btn-outline {
+                padding: 14px 30px;
+                font-size: 14px;
+            }
+
+            footer {
+                padding: 40px 15px;
+                font-size: 13px;
+            }
+
+            .footer-links {
+                flex-direction: column;
+                gap: 12px;
+            }
+
+            .modal-content {
+                margin: 10px;
+                padding: 30px 15px;
+                border-radius: 20px;
+            }
+
+            .modal-close {
+                right: 15px;
+                top: 15px;
+                width: 36px;
+                height: 36px;
+                font-size: 24px;
+            }
+
+            .modal-header h2 {
+                font-size: 22px;
+                margin-bottom: 12px;
+            }
+
+            .modal-overview {
+                font-size: 14px;
+                margin-bottom: 30px;
+            }
+
+            .modal-section {
+                margin-bottom: 30px;
+            }
+
+            .modal-section h3 {
+                font-size: 18px;
+                margin-bottom: 15px;
+            }
+
+            .modal-section p {
+                font-size: 14px;
+            }
+
+            .modal-metrics-grid {
+                gap: 10px;
+            }
+
+            .modal-metric {
+                padding: 15px;
+            }
+
+            .modal-metric-value {
+                font-size: 22px;
+            }
+
+            .modal-metric-label {
+                font-size: 11px;
+            }
+
+            .modal-list li {
+                font-size: 14px;
+                padding: 10px 0;
+                padding-left: 25px;
+            }
+
+            .modal-highlight {
+                padding: 25px;
+                margin: 20px 0;
+            }
+
+            .modal-highlight h4 {
+                font-size: 16px;
+                margin-bottom: 12px;
+            }
+
+            .modal-highlight p {
+                font-size: 14px;
+            }
+
+            .metrics-grid {
+                gap: 10px;
+            }
+
+            .metric-box {
+                padding: 18px;
+            }
+
+            .metric-value {
+                font-size: 24px;
+            }
+
+            .metric-label {
+                font-size: 11px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="header-container">
+            <div class="logo">Ikram Ullah</div>
+            <div class="hamburger" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <nav id="nav">
+                <a href="#home" onclick="closeMenu()">Home</a>
+                <a href="#services" onclick="closeMenu()">Services</a>
+                <a href="#case-studies" onclick="closeMenu()">Case Studies</a>
+                <a href="#contact" class="nav-cta" onclick="closeMenu()">Let's Talk</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <div class="hero-text">
+                <p class="tagline">/ THIS IS ME</p>
+                <h1>Ikram Ullah <span class="arrow">→</span></h1>
+                <p>Senior Amazon PPC Manager helping established sellers break through revenue plateaus. Margin-intelligent strategies, data-driven execution, sustainable growth—no wasted spend, no guesswork.</p>
+
+                <a href="#contact" class="cta-button">Book Free Strategy Call</a>
+
+                <div class="social-icons">
+                    <a href="https://www.linkedin.com/in/ikram-ullah-9a42b3210" target="_blank" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://www.upwork.com/freelancers/~01b5433f91682047d5" target="_blank" title="Upwork"><i class="fa-brands fa-upwork"></i></a>
+                </div>
+            </div>
+
+            <div class="profile-container">
+                <img src="profile-photo.jpg" alt="Ikram Ullah - Amazon PPC Expert" class="profile-photo">
+
+                <!-- Floating Badges -->
+                <div class="floating-badge badge-1 cyan">
+                    LinkedIn<br>Top PPC Voice
+                </div>
+                <div class="floating-badge badge-2 orange">
+                    16k+<br>Followers
+                </div>
+                <div class="floating-badge badge-3 purple">
+                    Upwork<br>Top Rated+
+                </div>
+                <div class="floating-badge badge-4">
+                    10,000+<br>Hours
+                </div>
+                <div class="floating-badge badge-5 green">
+                    $6M+/Year<br>Ad Spend
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Professional Background Section -->
+    <section class="section">
+        <h2 class="section-title">Professional Background</h2>
+        <p class="section-subtitle">Over five years architecting and executing Amazon advertising strategies for premier agency portfolios, I specialize in constructing profit-optimized growth systems for established brands operating at scale. My methodology integrates institutional rigor with entrepreneurial agility—delivering performance that compounds over time.</p>
+
+        <div class="services-grid">
+            <div class="service-card">
+                <div class="service-icon">🎓</div>
+                <h3>Academic Foundation</h3>
+                <p>Bachelor of Business Administration, providing systematic frameworks in financial analysis, strategic management, and organizational behavior that inform advertising strategy.</p>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon">🏢</div>
+                <h3>Agency Pedigree</h3>
+                <p>Five years directing campaigns across US, UK, and EU marketplaces for leading Amazon agencies, managing diverse portfolios at varying scales and competitive intensities.</p>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon">💎</div>
+                <h3>Core Competency</h3>
+                <p>Margin-intelligent scaling—engineering revenue growth that strengthens unit economics rather than diluting them, a discipline most practitioners overlook.</p>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon">⭐</div>
+                <h3>Platform Recognition</h3>
+                <p>Top Rated Plus status on Upwork with $30,000+ earned exclusively through extended partnerships averaging 10+ months, reflecting consistent value delivery.</p>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon">🏆</div>
+                <h3>Industry Authority</h3>
+                <p>Former LinkedIn Top Voice in PPC with 17,000+ following—recognized for strategic insights and analytical depth in Amazon advertising.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Case Studies Section -->
+    <section class="case-studies-section" id="case-studies">
+        <!-- Dashboard background overlay -->
+        <div class="dashboard-bg"></div>
+
+        <div class="section">
+            <h2 class="section-title">Proven Results</h2>
+            <p class="section-subtitle">Click on any case study to see the full breakdown</p>
+
+            <div class="case-study-grid">
+                <!-- Case Study Card 1: £1M+ Revenue -->
+                <div class="case-card" onclick="openModal('modal1')">
+                    <span class="case-card-badge case-card-badge-trending">🔥 HOT</span>
+                    <div class="case-card-preview">
+                        <div class="case-card-preview-label">QUICK PREVIEW</div>
+                        <div class="case-card-preview-text">Scaled past £1M revenue while reducing TACoS by 10 percentage points through disciplined growth strategy.</div>
+                    </div>
+                    <span class="case-card-tag">Amazon UK Brand</span>
+                    <h3>£1M+ Revenue with Lower TACoS</h3>
+
+                    <div class="case-card-metrics">
+                        <div class="case-card-metric">
+                            <span class="case-card-metric-value">$1.05M</span>
+                            <span class="case-card-metric-label">Total Revenue</span>
+                        </div>
+                        <div class="case-card-metric">
+                            <span class="case-card-metric-value">+48%</span>
+                            <span class="case-card-metric-label">YoY Growth</span>
+                        </div>
+                        <div class="case-card-metric">
+                            <span class="case-card-metric-value">-10pp</span>
+                            <span class="case-card-metric-label">TACoS Reduced</span>
+                        </div>
+                        <div class="case-card-metric">
+                            <span class="case-card-metric-value">14.1%</span>
+                            <span class="case-card-metric-label">Final TACoS</span>
+                        </div>
+                    </div>
+
+                    <div class="case-card-cta">
+                        <span>View Full Case Study</span>
+                    </div>
+                </div>
+
+                <!-- Case Study Card 2: Canadian Supplement Brand -->
+                <div class="case-card" onclick="openModal('modal2')">
+                    <span class="case-card-badge">⚡ TRENDING</span>
+                    <div class="case-card-preview">
+                        <div class="case-card-preview-label">QUICK PREVIEW</div>
+                        <div class="case-card-preview-text">+88% revenue growth in supplements vertical with incredibly low 5.1% TACoS—proof of conversion-focused scaling.</div>
+                    </div>
+                    <span class="case-card-tag">Canadian Supplement Brand</span>
+                    <h3>+88% Growth with 5.1% TACoS (Canada)</h3>
+
+                    <div class="case-card-metrics">
+                        <div class="case-card-metric">
+                            <span class="case-card-metric-value">$482K</span>
+                            <span class="case-card-metric-label">Revenue Scaled</span>
+                        </div>
+                        <div class="case-card-metric">
+                            <span class="case-card-metric-value">$223K</span>
+                            <span class="case-card-metric-label">Ad Sales</span>
+                        </div>
+                        <div class="case-card-metric">
+                            <span class="case-card-metric-value">8.3</span>
+                            <span class="case-card-metric-label">ROAS</span>
+                        </div>
+                        <div class="case-card-metric">
+                            <span class="case-card-metric-value">5.1%</span>
+                            <span class="case-card-metric-label">TACoS</span>
+                        </div>
+                    </div>
+
+                    <div class="case-card-cta">
+                        <span>View Full Case Study</span>
+                    </div>
+                </div>
+
+                <!-- Case Study Card 3: UK Commercial Brand -->
+                <div class="case-card" onclick="openModal('modal3')">
+                    <span class="case-card-badge case-card-badge-new">✨ NEW</span>
+                    <div class="case-card-preview">
+                        <div class="case-card-preview-label">QUICK PREVIEW</div>
+                        <div class="case-card-preview-text">Explosive +263% revenue growth in UK commercial products with only 6.6% TACoS—aggressive scale with tight control.</div>
+                    </div>
+                    <span class="case-card-tag">UK Commercial Brand</span>
+                    <h3>+263% Revenue Growth with 6.6% TACoS</h3>
+
+                    <div class="case-card-metrics">
+                        <div class="case-card-metric">
+                            <span class="case-card-metric-value">+263%</span>
+                            <span class="case-card-metric-label">Revenue Growth</span>
+                        </div>
+                        <div class="case-card-metric">
+                            <span class="case-card-metric-value">$640K</span>
+                            <span class="case-card-metric-label">Total Revenue</span>
+                        </div>
+                        <div class="case-card-metric">
+                            <span class="case-card-metric-value">6.6%</span>
+                            <span class="case-card-metric-label">TACoS at Scale</span>
+                        </div>
+                        <div class="case-card-metric">
+                            <span class="case-card-metric-value">+293%</span>
+                            <span class="case-card-metric-label">Ad Sales Growth</span>
+                        </div>
+                    </div>
+
+                    <div class="case-card-cta">
+                        <span>View Full Case Study</span>
+                    </div>
+                </div>
+
+                <!-- Case Study Card 4: US Fashion Brand -->
+                <div class="case-card" onclick="openModal('modal4')">
+                    <div class="case-card-preview">
+                        <div class="case-card-preview-label">QUICK PREVIEW</div>
+                        <div class="case-card-preview-text">+65% growth in competitive fashion vertical while slashing CPC by 37%—strategic efficiency in high-competition.</div>
+                    </div>
+                    <span class="case-card-tag">US Fashion Brand</span>
+                    <h3>+65% Revenue Growth in Competitive Fashion</h3>
+
+                    <div class="case-card-metrics">
+                        <div class="case-card-metric">
+                            <span class="case-card-metric-value">$360K</span>
+                            <span class="case-card-metric-label">Total Revenue</span>
+                        </div>
+                        <div class="case-card-metric">
+                            <span class="case-card-metric-value">$253K</span>
+                            <span class="case-card-metric-label">PPC Sales</span>
+                        </div>
+                        <div class="case-card-metric">
+                            <span class="case-card-metric-value">-37%</span>
+                            <span class="case-card-metric-label">CPC Reduced</span>
+                        </div>
+                        <div class="case-card-metric">
+                            <span class="case-card-metric-value">4.1</span>
+                            <span class="case-card-metric-label">ROAS</span>
+                        </div>
+                    </div>
+
+                    <div class="case-card-cta">
+                        <span>View Full Case Study</span>
+                    </div>
+                </div>
+
+                <!-- Case Study Card 5: Vendor Central Growth -->
+                <div class="case-card" onclick="openModal('modal5')">
+                    <span class="case-card-badge">💎 FEATURED</span>
+                    <div class="case-card-preview">
+                        <div class="case-card-preview-label">QUICK PREVIEW</div>
+                        <div class="case-card-preview-text">$3.28M revenue scale for Vendor Central account with 4.1% TACoS—mastering the 1P model constraints.</div>
+                    </div>
+                    <span class="case-card-tag">Vendor Central (US)</span>
+                    <h3>$3.28M Revenue | Vendor Central Scale</h3>
+
+                    <div class="case-card-metrics">
+                        <div class="case-card-metric">
+                            <span class="case-card-metric-value">$3.28M</span>
+                            <span class="case-card-metric-label">Ordered Revenue</span>
+                        </div>
+                        <div class="case-card-metric">
+                            <span class="case-card-metric-value">$495K</span>
+                            <span class="case-card-metric-label">Ad Sales</span>
+                        </div>
+                        <div class="case-card-metric">
+                            <span class="case-card-metric-value">4.1%</span>
+                            <span class="case-card-metric-label">TACoS</span>
+                        </div>
+                        <div class="case-card-metric">
+                            <span class="case-card-metric-value">3.7</span>
+                            <span class="case-card-metric-label">ROAS</span>
+                        </div>
+                    </div>
+
+                    <div class="case-card-cta">
+                        <span>View Full Case Study</span>
+                    </div>
+                </div>
+
+                <!-- Case Study Card 6: US Consumer Brand -->
+                <div class="case-card" onclick="openModal('modal6')">
+                    <div class="case-card-preview">
+                        <div class="case-card-preview-label">QUICK PREVIEW</div>
+                        <div class="case-card-preview-text">+63% revenue growth with 89.7% Buy Box win rate and exceptional 14% conversion rate—traffic quality at scale.</div>
+                    </div>
+                    <span class="case-card-tag">US Consumer Brand</span>
+                    <h3>+63% Revenue Growth with Buy Box Control</h3>
+
+                    <div class="case-card-metrics">
+                        <div class="case-card-metric">
+                            <span class="case-card-metric-value">$630K</span>
+                            <span class="case-card-metric-label">Revenue Ordered</span>
+                        </div>
+                        <div class="case-card-metric">
+                            <span class="case-card-metric-value">+56%</span>
+                            <span class="case-card-metric-label">Unit Growth</span>
+                        </div>
+                        <div class="case-card-metric">
+                            <span class="case-card-metric-value">+2pp</span>
+                            <span class="case-card-metric-label">Conversion ↑</span>
+                        </div>
+                        <div class="case-card-metric">
+                            <span class="case-card-metric-value">89.7%</span>
+                            <span class="case-card-metric-label">Buy Box Win</span>
+                        </div>
+                    </div>
+
+                    <div class="case-card-cta">
+                        <span>View Full Case Study</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal 1: £1M+ Revenue Case Study -->
+    <div id="modal1" class="modal">
+        <div class="modal-content">
+            <span class="modal-close" onclick="closeModal('modal1')">&times;</span>
+
+            <div class="modal-header">
+                <span class="case-card-tag">Amazon UK Brand</span>
+                <h2>£1M+ Revenue with Lower TACoS</h2>
+                <p class="modal-overview">Scaled an Amazon UK brand past $1M annual revenue while reducing TACoS and improving overall profitability through strategic, margin-intelligent growth.</p>
+            </div>
+
+            <div class="modal-section">
+                <h3>Year-Over-Year Results</h3>
+                <div class="modal-metrics-grid">
+                    <div class="modal-metric">
+                        <span class="modal-metric-value">$1,058,382</span>
+                        <span class="modal-metric-label">Revenue</span>
+                        <div class="modal-metric-change">+48%</div>
+                    </div>
+                    <div class="modal-metric">
+                        <span class="modal-metric-value">$445,760</span>
+                        <span class="modal-metric-label">Ad Sales</span>
+                        <div class="modal-metric-change">+22%</div>
+                    </div>
+                    <div class="modal-metric">
+                        <span class="modal-metric-value">-15%</span>
+                        <span class="modal-metric-label">Ad Spend</span>
+                        <div class="modal-metric-change">Lower Spend</div>
+                    </div>
+                    <div class="modal-metric">
+                        <span class="modal-metric-value">14.1%</span>
+                        <span class="modal-metric-label">TACoS</span>
+                        <div class="modal-metric-change">-10pp</div>
+                    </div>
+                    <div class="modal-metric">
+                        <span class="modal-metric-value">33.5%</span>
+                        <span class="modal-metric-label">ACoS</span>
+                        <div class="modal-metric-change">-14pp</div>
+                    </div>
+                    <div class="modal-metric">
+                        <span class="modal-metric-value">+3pp</span>
+                        <span class="modal-metric-label">Conversion Rate</span>
+                        <div class="modal-metric-change">Higher CVR</div>
+                    </div>
+                    <div class="modal-metric">
+                        <span class="modal-metric-value">-21%</span>
+                        <span class="modal-metric-label">CPC</span>
+                        <div class="modal-metric-change">Lower Cost</div>
+                    </div>
+                </div>
+
+                <!-- Screenshots -->
+                <div class="modal-screenshots">
+                    <div class="modal-screenshot">
+                        <img src="traffic-conversion-summary.png" alt="Traffic and Conversion Summary" onerror="this.parentElement.style.display='none'">
+                        <div class="modal-screenshot-label">Traffic & Conversion Summary</div>
+                    </div>
+                    <div class="modal-screenshot">
+                        <img src="advertising-performance-summary.png" alt="Advertising Performance Summary" onerror="this.parentElement.style.display='none'">
+                        <div class="modal-screenshot-label">Advertising Performance</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal-section">
+                <h3>What I Did</h3>
+                <ul class="modal-list">
+                    <li>Scaled using Brand Analytics, not broad traffic</li>
+                    <li>Optimized CVR before increasing spend</li>
+                    <li>Ran weekly profitability tracking to control TACoS</li>
+                    <li>Shifted budget to high-intent, high-converting terms</li>
+                    <li>Cut inefficient spend instead of pushing volume</li>
+                </ul>
+            </div>
+
+            <div class="modal-highlight">
+                <h4>Why It Worked</h4>
+                <p>Growth was tied to profitability, not spend. Every scale decision passed a TACoS and CVR check first. This ensured that revenue growth came from efficiency gains and strategic targeting, not from burning through budget.</p>
+            </div>
+
+            <div class="modal-section">
+                <h3>Outcome</h3>
+                <p style="font-size: 18px; color: #1a202c; line-height: 1.8;">Crossed $1M revenue with <strong>lower TACoS</strong>, <strong>higher efficiency</strong>, and <strong>stronger margins</strong>. Proved that aggressive scaling doesn't require sacrificing profitability when strategy is rigorous and data-driven.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 2: Canadian Supplement Brand Case Study -->
+    <div id="modal2" class="modal">
+        <div class="modal-content">
+            <span class="modal-close" onclick="closeModal('modal2')">&times;</span>
+
+            <div class="modal-header">
+                <span class="case-card-tag">Canadian Supplement Brand</span>
+                <h2>+88% Growth with 5.1% TACoS (Canada)</h2>
+                <p class="modal-overview">Scaled a Canada-based supplement brand from a growth plateau into a high-velocity, profitable trajectory while keeping TACoS tightly controlled at 5.1%.</p>
+            </div>
+
+            <div class="modal-section">
+                <h3>Year-Over-Year Results</h3>
+                <div class="modal-metrics-grid">
+                    <div class="modal-metric">
+                        <span class="modal-metric-value">$482,996</span>
+                        <span class="modal-metric-label">Total Revenue</span>
+                        <div class="modal-metric-change">+90%</div>
+                    </div>
+                    <div class="modal-metric">
+                        <span class="modal-metric-value">$223,374</span>
+                        <span class="modal-metric-label">Ad Sales</span>
+                        <div class="modal-metric-change">+141%</div>
+                    </div>
+                    <div class="modal-metric">
+                        <span class="modal-metric-value">$26,989</span>
+                        <span class="modal-metric-label">Ad Spend</span>
+                        <div class="modal-metric-change">+106%</div>
+                    </div>
+                    <div class="modal-metric">
+                        <span class="modal-metric-value">5.1%</span>
+                        <span class="modal-metric-label">TACoS</span>
+                        <div class="modal-metric-change">Maintained</div>
+                    </div>
+                    <div class="modal-metric">
+                        <span class="modal-metric-value">12.1%</span>
+                        <span class="modal-metric-label">ACoS</span>
+                        <div class="modal-metric-change">-2pp</div>
+                    </div>
+                    <div class="modal-metric">
+                        <span class="modal-metric-value">8.3</span>
+                        <span class="modal-metric-label">ROAS</span>
+                        <div class="modal-metric-change">Strong Return</div>
+                    </div>
+                    <div class="modal-metric">
+                        <span class="modal-metric-value">+143%</span>
+                        <span class="modal-metric-label">Orders</span>
+                        <div class="modal-metric-change">5,740 Orders</div>
+                    </div>
+                    <div class="modal-metric">
+                        <span class="modal-metric-value">+2pp</span>
+                        <span class="modal-metric-label">Conversion Rate</span>
+                        <div class="modal-metric-change">Higher CVR</div>
+                    </div>
+                </div>
+
+                <!-- Screenshots -->
+                <div class="modal-screenshots">
+                    <div class="modal-screenshot">
+                        <img src="canadian-supplement-traffic-conversion.png" alt="Traffic and Conversion Summary" onerror="this.parentElement.style.display='none'">
+                        <div class="modal-screenshot-label">Traffic & Conversion Summary</div>
+                    </div>
+                    <div class="modal-screenshot">
+                        <img src="canadian-supplement-advertising-performance.png" alt="Advertising Performance Summary" onerror="this.parentElement.style.display='none'">
+                        <div class="modal-screenshot-label">Advertising Performance</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal-section">
+                <h3>The Challenge</h3>
+                <p style="color: #cbd5e1; line-height: 1.7;">The brand was stuck around $350K annual revenue with inconsistent TACoS ranging from 4–10%. The client wanted aggressive growth without destroying margins or relying on inefficient spend.</p>
+            </div>
+
+            <div class="modal-section">
+                <h3>The Strategy</h3>
+                <ul class="modal-list">
+                    <li>Rebuilt the account for scalable traffic acquisition</li>
+                    <li>Shifted bidding logic from volume-driven to conversion-quality-driven</li>
+                    <li>Aligned ad scale with listing absorption capacity</li>
+                    <li>Protected profitability while pushing growth targets aggressively</li>
+                </ul>
+            </div>
+
+            <div class="modal-section">
+                <h3>Advanced Execution</h3>
+                <ul class="modal-list">
+                    <li>Re-engineered campaign structure around ASIN-level profitability, not blended account metrics</li>
+                    <li>Implemented margin-aware bid control—scaling bids based on contribution margin instead of ACoS alone</li>
+                    <li>Used search term velocity analysis to detect scaling opportunities before they appeared in revenue</li>
+                    <li>Deployed incremental spend testing—budgets expanded only after profit validation</li>
+                    <li>Introduced traffic saturation monitoring to prevent CVR decay under rising session volume</li>
+                    <li>Eliminated internal keyword cannibalization through continuous structural audits</li>
+                    <li>Synced ad expansion with listing conversion thresholds to absorb 72% more sessions efficiently</li>
+                </ul>
+            </div>
+
+            <div class="modal-highlight">
+                <h4>The Outcome</h4>
+                <p>The client targeted 50% growth. We delivered 88% growth, scaling the brand to $671K+ annualized revenue—exceeding the goal by $171K while maintaining profitability.</p>
+            </div>
+
+            <div class="modal-section">
+                <h3>Key Takeaway</h3>
+                <p style="font-size: 18px; line-height: 1.8;">Aggressive growth does not require margin sacrifice. When scale is controlled through margin intelligence, traffic quality, and structural discipline, <strong>profitability and velocity grow together</strong>.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 3: UK Commercial Brand Case Study -->
+    <div id="modal3" class="modal">
+        <div class="modal-content">
+            <span class="modal-close" onclick="closeModal('modal3')">&times;</span>
+
+            <div class="modal-header">
+                <span class="case-card-tag">UK Commercial Brand</span>
+                <h2>+263% Revenue Growth with 6.6% TACoS</h2>
+                <p class="modal-overview">Delivered aggressive, high-volume growth for a UK commercial products brand while maintaining exceptionally low TACoS and continuously improving conversion efficiency across all paid traffic.</p>
+            </div>
+
+            <div class="modal-section">
+                <h3>Year-Over-Year Performance</h3>
+                <div class="modal-metrics-grid">
+                    <div class="modal-metric">
+                        <span class="modal-metric-value">$640,416</span>
+                        <span class="modal-metric-label">Total Revenue</span>
+                        <div class="modal-metric-change">+263%</div>
+                    </div>
+                    <div class="modal-metric">
+                        <span class="modal-metric-value">$278,417</span>
+                        <span class="modal-metric-label">Ad Sales</span>
+                        <div class="modal-metric-change">+293%</div>
+                    </div>
+                    <div class="modal-metric">
+                        <span class="modal-metric-value">$42,494</span>
+                        <span class="modal-metric-label">Ad Spend</span>
+                        <div class="modal-metric-change">+241%</div>
+                    </div>
+                    <div class="modal-metric">
+                        <span class="modal-metric-value">6.6%</span>
+                        <span class="modal-metric-label">TACoS</span>
+                        <div class="modal-metric-change">Maintained</div>
+                    </div>
+                    <div class="modal-metric">
+                        <span class="modal-metric-value">15.3%</span>
+                        <span class="modal-metric-label">ACoS</span>
+                        <div class="modal-metric-change">-2pp</div>
+                    </div>
+                    <div class="modal-metric">
+                        <span class="modal-metric-value">6.6</span>
+                        <span class="modal-metric-label">ROAS</span>
+                        <div class="modal-metric-change">Strong Return</div>
+                    </div>
+                    <div class="modal-metric">
+                        <span class="modal-metric-value">+5pp</span>
+                        <span class="modal-metric-label">Conversion Rate</span>
+                        <div class="modal-metric-change">Higher CVR</div>
+                    </div>
+                    <div class="modal-metric">
+                        <span class="modal-metric-value">+305%</span>
+                        <span class="modal-metric-label">Orders</span>
+                        <div class="modal-metric-change">13,935 Orders</div>
+                    </div>
+                    <div class="modal-metric">
+                        <span class="modal-metric-value">+331%</span>
+                        <span class="modal-metric-label">Units Sold</span>
+                        <div class="modal-metric-change">14,420 Units</div>
+                    </div>
+                </div>
+
+                <!-- Screenshots -->
+                <div class="modal-screenshots">
+                    <div class="modal-screenshot">
+                        <img src="case3-traffic-conversion.png" alt="Traffic and Conversion Summary" onerror="this.parentElement.style.display='none'">
+                        <div class="modal-screenshot-label">Traffic & Conversion Summary</div>
+                    </div>
+                    <div class="modal-screenshot">
+                        <img src="case3-advertising-performance.png" alt="Advertising Performance Summary" onerror="this.parentElement.style.display='none'">
+                        <div class="modal-screenshot-label">Advertising Performance</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal-section">
+                <h3>The Strategy</h3>
+                <ul class="modal-list">
+                    <li>Engineered full-funnel keyword architecture separating discovery, mid-intent, and high-converting commercial terms</li>
+                    <li>Deployed systematic search term mining to continuously promote converting queries into exact-match profit drivers</li>
+                    <li>Applied conversion-rate-led bid scaling—spend increased only after CVR stability was confirmed</li>
+                    <li>Optimized placement modifiers dynamically to control CPC while maintaining volume</li>
+                    <li>Segmented campaigns by use case and buyer intent to eliminate internal competition</li>
+                    <li>Implemented weekly efficiency audits across ACoS, TACoS, CPC, and CVR before scaling decisions</li>
+                    <li>Balanced new-to-brand growth with efficiency targets to expand reach without hurting margins</li>
+                    <li>Actively pruned low-quality traffic to keep TACoS stable during aggressive growth phases</li>
+                </ul>
+            </div>
+
+            <div class="modal-highlight">
+                <h4>The Efficiency Paradox</h4>
+                <p>Traffic quality improved faster than spend. Conversion gains absorbed higher CPC pressure and enabled aggressive scaling without degrading profitability. While ad spend increased 241%, revenue grew 263%—proving that properly structured growth compounds efficiency, not destroys it.</p>
+            </div>
+
+            <div class="modal-section">
+                <h3>Why This Worked</h3>
+                <p>The conventional approach to aggressive scaling is to increase bids and budgets aggressively, accepting margin erosion as the cost of growth. This strategy inverted that logic.</p>
+                <p>By prioritizing conversion rate optimization <em>before</em> spend increases, traffic quality improved continuously. Higher CVR allowed bid competitiveness without efficiency loss. The result: triple-digit revenue growth with TACoS that would make most brands envious at 10% of this volume.</p>
+            </div>
+
+            <div class="modal-section">
+                <h3>Outcome</h3>
+                <p style="font-size: 18px; line-height: 1.8;">Achieved <strong>hyper-aggressive volume growth</strong> (+263% revenue, +331% units) while maintaining <strong>institutional-grade efficiency</strong> (6.6% TACoS, 6.6 ROAS). This case demonstrates that scale and profitability aren't mutually exclusive when strategy is rigorous and execution is disciplined.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 4: US Fashion Brand Case Study -->
+    <div id="modal4" class="modal">
+        <div class="modal-content">
+            <span class="modal-close" onclick="closeModal('modal4')">&times;</span>
+
+            <div class="modal-header">
+                <span class="case-card-tag">US Fashion Brand</span>
+                <h2>+65% Revenue Growth in Competitive Fashion</h2>
+                <p class="modal-overview">Scaled a US-based fashion and bags brand in a highly competitive category while reducing CPC by 37% and maintaining controlled efficiency—demonstrating disciplined growth in a challenging vertical.</p>
+            </div>
+
+            <div class="modal-section">
+                <h3>Year-Over-Year Results</h3>
+                <div class="modal-metrics-grid">
+                    <div class="modal-metric">
+                        <span class="modal-metric-value">$360,766</span>
+                        <span class="modal-metric-label">Total Revenue</span>
+                        <div class="modal-metric-change">+65%</div>
+                    </div>
+                    <div class="modal-metric">
+                        <span class="modal-metric-value">$253,104</span>
+                        <span class="modal-metric-label">PPC Sales</span>
+                        <div class="modal-metric-change">+136%</div>
+                    </div>
+                    <div class="modal-metric">
+                        <span class="modal-metric-value">$61,833</span>
+                        <span class="modal-metric-label">Ad Spend</span>
+                        <div class="modal-metric-change">+89%</div>
+                    </div>
+                    <div class="modal-metric">
+                        <span class="modal-metric-value">$0.37</span>
+                        <span class="modal-metric-label">CPC</span>
+                        <div class="modal-metric-change">-37%</div>
+                    </div>
+                    <div class="modal-metric">
+                        <span class="modal-metric-value">24.4%</span>
+                        <span class="modal-metric-label">ACoS</span>
+                        <div class="modal-metric-change">-6pp</div>
+                    </div>
+                    <div class="modal-metric">
+                        <span class="modal-metric-value">4.1</span>
+                        <span class="modal-metric-label">ROAS</span>
+                        <div class="modal-metric-change">+0.8</div>
+                    </div>
+                    <div class="modal-metric">
+                        <span class="modal-metric-value">+79%</span>
+                        <span class="modal-metric-label">Sessions</span>
+                        <div class="modal-metric-change">474,595</div>
+                    </div>
+                    <div class="modal-metric">
+                        <span class="modal-metric-value">+189%</span>
+                        <span class="modal-metric-label">Units Sold</span>
+                        <div class="modal-metric-change">3,374 Units</div>
+                    </div>
+                    <div class="modal-metric">
+                        <span class="modal-metric-value">+124%</span>
+                        <span class="modal-metric-label">Orders</span>
+                        <div class="modal-metric-change">3,504 Orders</div>
+                    </div>
+                </div>
+
+                <!-- Screenshots -->
+                <div class="modal-screenshots">
+                    <div class="modal-screenshot">
+                        <img src="fashion-brand-traffic-conversion.png" alt="Traffic and Conversion Summary" onerror="this.parentElement.style.display='none'">
+                        <div class="modal-screenshot-label">Traffic & Conversion Summary</div>
+                    </div>
+                    <div class="modal-screenshot">
+                        <img src="fashion-brand-advertising-performance.png" alt="Advertising Performance Summary" onerror="this.parentElement.style.display='none'">
+                        <div class="modal-screenshot-label">Advertising Performance</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal-section">
+                <h3>The Challenge</h3>
+                <p style="color: #cbd5e1; line-height: 1.7;">Fashion has high competition, volatile demand, and lower baseline conversion rates. The objective was to scale revenue without losing control of CPC, ACoS, and traffic quality in an intensely competitive environment.</p>
+            </div>
+
+            <div class="modal-section">
+                <h3>What I Did</h3>
+                <ul class="modal-list">
+                    <li>Rebuilt Sponsored Products structure to separate branded, generic, and ASIN targeting for granular control</li>
+                    <li>Scaled exact and phrase keywords that consistently converted instead of chasing volume with broad terms</li>
+                    <li>Used search term reports weekly to add converting terms and negate wasted spend systematically</li>
+                    <li>Controlled CPC through bid adjustments and placement tuning instead of budget cuts that sacrifice volume</li>
+                    <li>Expanded scale gradually by increasing budgets only on campaigns hitting efficiency targets</li>
+                    <li>Paused or reduced bids on keywords where conversion dropped as traffic increased</li>
+                    <li>Focused spend on best-performing SKUs, avoiding dilution across low-converting ASINs</li>
+                </ul>
+            </div>
+
+            <div class="modal-highlight">
+                <h4>Why CPC Dropped 37%</h4>
+                <p>Most brands raise CPC to scale in competitive categories. This engagement proved the opposite is possible. By focusing on high-converting search terms, improving Quality Score through better CTR and CVR, and eliminating wasteful broad traffic, CPC fell dramatically while volume increased.</p>
+            </div>
+
+            <div class="modal-section">
+                <h3>Outcome</h3>
+                <p style="font-size: 18px; line-height: 1.8;">Revenue grew meaningfully in a difficult category while CPC and ACoS <strong>improved</strong>. Scaling was driven by disciplined keyword management and spend control, not aggressive bidding. This brand grew by focusing on converting search terms, efficient bids, and SKU-level discipline.</p>
+            </div>
+
+            <div class="modal-section">
+                <h3>Key Takeaway</h3>
+                <p style="font-size: 18px; line-height: 1.8;"><strong>Amazon PPC growth comes from controlling what you scale, not scaling everything.</strong> This brand grew by focusing on converting search terms, efficient bids, and SKU-level discipline—proving that even in competitive categories, margin-intelligent growth is achievable.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 5: Vendor Central Case Study -->
+    <div id="modal5" class="modal">
+        <div class="modal-content">
+            <span class="modal-close" onclick="closeModal('modal5')">&times;</span>
+
+            <div class="modal-header">
+                <span class="case-card-tag">Vendor Central (US)</span>
+                <h2>$3.28M Revenue | Vendor Central Scale with Control</h2>
+                <p class="modal-overview">Scaled a US Amazon Vendor Central account, driving multi-million-dollar revenue growth while maintaining low TACoS and improving conversion rate at scale—navigating the unique constraints of Amazon's 1P business model.</p>
+            </div>
+
+            <div class="modal-section">
+                <h3>Advertising Performance</h3>
+                <div class="modal-metrics-grid">
+                    <div class="modal-metric">
+                        <span class="modal-metric-value">$495,224</span>
+                        <span class="modal-metric-label">Ad Sales</span>
+                    </div>
+                    <div class="modal-metric">
+                        <span class="modal-metric-value">$133,554</span>
+                        <span class="modal-metric-label">Ad Spend</span>
+                    </div>
+                    <div class="modal-metric">
+                        <span class="modal-metric-value">3.7</span>
+                        <span class="modal-metric-label">ROAS</span>
+                    </div>
+                    <div class="modal-metric">
+                        <span class="modal-metric-value">27.0%</span>
+                        <span class="modal-metric-label">ACoS</span>
+                    </div>
+                    <div class="modal-metric">
+                        <span class="modal-metric-value">4.1%</span>
+                        <span class="modal-metric-label">TACoS</span>
+                    </div>
+                    <div class="modal-metric">
+                        <span class="modal-metric-value">14.8%</span>
+                        <span class="modal-metric-label">Ad Conversion</span>
+                        <div class="modal-metric-change">+15pp</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal-section">
+                <h3>Retail Performance (Vendor Central)</h3>
+                <div class="modal-metrics-grid">
+                    <div class="modal-metric">
+                        <span class="modal-metric-value">$3,287,463</span>
+                        <span class="modal-metric-label">Ordered Revenue</span>
+                        <div class="modal-metric-change">+24%</div>
+                    </div>
+                    <div class="modal-metric">
+                        <span class="modal-metric-value">135,648</span>
+                        <span class="modal-metric-label">Ordered Units</span>
+                        <div class="modal-metric-change">+27%</div>
+                    </div>
+                    <div class="modal-metric">
+                        <span class="modal-metric-value">19.6%</span>
+                        <span class="modal-metric-label">Conversion Rate</span>
+                        <div class="modal-metric-change">+2pp</div>
+                    </div>
+                    <div class="modal-metric">
+                        <span class="modal-metric-value">693,662</span>
+                        <span class="modal-metric-label">Glance Views</span>
+                        <div class="modal-metric-change">+18%</div>
+                    </div>
+                    <div class="modal-metric">
+                        <span class="modal-metric-value">$24.24</span>
+                        <span class="modal-metric-label">Avg Price</span>
+                        <div class="modal-metric-change">-2%</div>
+                    </div>
+                </div>
+
+                <!-- Screenshots -->
+                <div class="modal-screenshots">
+                    <div class="modal-screenshot">
+                        <img src="vendor-central-revenue-summary.png" alt="Revenue Summary" onerror="this.parentElement.style.display='none'">
+                        <div class="modal-screenshot-label">Ordered Revenue Summary</div>
+                    </div>
+                    <div class="modal-screenshot">
+                        <img src="vendor-central-advertising-performance.png" alt="Advertising Performance" onerror="this.parentElement.style.display='none'">
+                        <div class="modal-screenshot-label">Advertising Performance</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal-section">
+                <h3>The Challenge</h3>
+                <p style="color: #cbd5e1; line-height: 1.7;">Vendor Central brings unique constraints that make conventional PPC strategy ineffective:</p>
+                <ul class="modal-list">
+                    <li><strong>No direct pricing control</strong>—Amazon retail sets prices</li>
+                    <li><strong>Dependence on Amazon retail buy box decisions</strong>—ads fail if buy box is lost</li>
+                    <li><strong>Higher CPCs</strong> driven by competitive retail auctions</li>
+                    <li><strong>Scaling ads without inflating TACoS</strong> across a large catalog</li>
+                </ul>
+                <p style="color: #cbd5e1; line-height: 1.7; margin-top: 20px;">The goal was to grow total ordered revenue, not just ad sales, while keeping advertising efficient at Vendor scale.</p>
+            </div>
+
+            <div class="modal-section">
+                <h3>Vendor-Specific Execution</h3>
+                <ul class="modal-list">
+                    <li>Structured Sponsored Products and Sponsored Brands around retail-ready ASINs with stable buy box and inventory</li>
+                    <li>Prioritized ad spend on ASINs with strong retail conversion and low return rates</li>
+                    <li>Controlled CPC through bid discipline, avoiding aggressive bidding during retail price drops</li>
+                    <li>Used conversion rate as the main scaling filter, not ACoS alone</li>
+                    <li>Reduced wasted spend by actively negating low-intent and research-heavy search terms</li>
+                    <li>Adjusted budgets based on retail performance signals rather than daily ad volatility</li>
+                    <li>Ensured ad scale aligned with Amazon retail availability, preventing spend during constrained inventory periods</li>
+                </ul>
+            </div>
+
+            <div class="modal-highlight">
+                <h4>Why TACoS Stayed at 4.1%</h4>
+                <p>At $3.28M in ordered revenue, most Vendor accounts see TACoS spiral as they scale advertising. This engagement kept TACoS at 4.1% by ensuring advertising supported retail momentum without overpowering it. Ad spend grew strategically, not reactively.</p>
+            </div>
+
+            <div class="modal-section">
+                <h3>Outcome</h3>
+                <p style="font-size: 18px; line-height: 1.8;">The account achieved <strong>$3.28M in ordered revenue</strong> while keeping TACoS at <strong>4.1%</strong>, proving that Vendor Central growth can be scaled responsibly. Advertising supported retail momentum without destabilizing Amazon's retail relationship or profitability.</p>
+            </div>
+
+            <div class="modal-section">
+                <h3>Key Takeaway</h3>
+                <p style="font-size: 18px; line-height: 1.8;"><strong>Vendor Central success is not about pushing ads harder.</strong> It's about aligning advertising with retail readiness, conversion health, and inventory reality. This engagement delivered scale without compromising profitability or Amazon's retail partnership.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 6: US Consumer Brand Case Study -->
+    <div id="modal6" class="modal">
+        <div class="modal-content">
+            <span class="modal-close" onclick="closeModal('modal6')">&times;</span>
+
+            <div class="modal-header">
+                <span class="case-card-tag">US Consumer Brand</span>
+                <h2>+63% Revenue Growth with Buy Box Control</h2>
+                <p class="modal-overview">Scaled a US-based consumer brand by increasing qualified traffic and improving conversion efficiency, resulting in strong revenue and unit growth while maintaining Buy Box stability.</p>
+            </div>
+
+            <div class="modal-section">
+                <h3>Year-Over-Year Results</h3>
+                <div class="modal-metrics-grid">
+                    <div class="modal-metric">
+                        <span class="modal-metric-value">$630,147</span>
+                        <span class="modal-metric-label">Revenue Ordered</span>
+                        <div class="modal-metric-change">+63%</div>
+                    </div>
+                    <div class="modal-metric">
+                        <span class="modal-metric-value">36,821</span>
+                        <span class="modal-metric-label">Ordered Units</span>
+                        <div class="modal-metric-change">+56%</div>
+                    </div>
+                    <div class="modal-metric">
+                        <span class="modal-metric-value">+37%</span>
+                        <span class="modal-metric-label">Sessions</span>
+                        <div class="modal-metric-change">186,764</div>
+                    </div>
+                    <div class="modal-metric">
+                        <span class="modal-metric-value">+33%</span>
+                        <span class="modal-metric-label">Page Views</span>
+                        <div class="modal-metric-change">263,725</div>
+                    </div>
+                    <div class="modal-metric">
+                        <span class="modal-metric-value">14.0%</span>
+                        <span class="modal-metric-label">Conversion Rate</span>
+                        <div class="modal-metric-change">+2pp</div>
+                    </div>
+                    <div class="modal-metric">
+                        <span class="modal-metric-value">89.7%</span>
+                        <span class="modal-metric-label">Buy Box Win Rate</span>
+                        <div class="modal-metric-change">+1pp</div>
+                    </div>
+                    <div class="modal-metric">
+                        <span class="modal-metric-value">$615,583</span>
+                        <span class="modal-metric-label">B2C Sales</span>
+                        <div class="modal-metric-change">+63%</div>
+                    </div>
+                    <div class="modal-metric">
+                        <span class="modal-metric-value">$17</span>
+                        <span class="modal-metric-label">Avg Retail Price</span>
+                        <div class="modal-metric-change">+4%</div>
+                    </div>
+                </div>
+
+                <!-- Screenshots -->
+                <div class="modal-screenshots">
+                    <div class="modal-screenshot">
+                        <img src="us-consumer-brand-traffic-conversion.png" alt="Traffic and Conversion Summary" onerror="this.parentElement.style.display='none'">
+                        <div class="modal-screenshot-label">Traffic & Conversion Summary</div>
+                    </div>
+                    <div class="modal-screenshot">
+                        <img src="us-consumer-brand-advertising-performance.png" alt="Advertising Performance Summary" onerror="this.parentElement.style.display='none'">
+                        <div class="modal-screenshot-label">Advertising Performance (if available)</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal-section">
+                <h3>The Challenge</h3>
+                <p style="color: #cbd5e1; line-height: 1.7;">The brand needed growth without compromising:</p>
+                <ul class="modal-list">
+                    <li>Buy Box ownership</li>
+                    <li>Conversion rate</li>
+                    <li>Traffic quality</li>
+                </ul>
+                <p style="color: #cbd5e1; line-height: 1.7; margin-top: 20px;">The focus was to scale volume and revenue, not just ads, while keeping the retail fundamentals intact.</p>
+            </div>
+
+            <div class="modal-section">
+                <h3>What I Did</h3>
+                <ul class="modal-list">
+                    <li>Focused ad spend on core converting ASINs instead of spreading budgets thin</li>
+                    <li>Expanded high-intent keyword coverage that aligned with existing conversion behavior</li>
+                    <li>Used search term reports to continuously refine traffic and remove low-converting queries</li>
+                    <li>Controlled scaling through budget pacing, increasing spend only where CVR remained stable</li>
+                    <li>Supported growth by aligning ads with retail readiness, Buy Box health, and pricing stability</li>
+                    <li>Allowed session growth while protecting conversion rate through disciplined bid control</li>
+                </ul>
+            </div>
+
+            <div class="modal-highlight">
+                <h4>Buy Box Stability During Growth</h4>
+                <p>While traffic grew +37% and units sold increased +56%, Buy Box win rate actually improved from 88.6% to 89.7%. This demonstrates that disciplined PPC execution can drive massive growth without destabilizing retail fundamentals.</p>
+            </div>
+
+            <div class="modal-section">
+                <h3>Outcome</h3>
+                <p style="font-size: 18px; line-height: 1.8;">The brand scaled meaningfully across traffic, units, and revenue while <strong>improving conversion efficiency</strong> and <strong>maintaining Buy Box strength</strong>. Conversion rate increased from 12.0% to 14.0% (+2pp) even as traffic volume surged.</p>
+            </div>
+
+            <div class="modal-section">
+                <h3>Key Takeaway</h3>
+                <p style="font-size: 18px; line-height: 1.8;"><strong>Consumer brands scale best when traffic growth and conversion health move together.</strong> This case shows that disciplined Amazon PPC execution can drive growth without destabilizing the retail foundation.</p>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Services Section - Interactive Accordion Cards -->
+    <section class="section" id="services">
+        <h2 class="section-title">How I Help You Grow</h2>
+        <p class="section-subtitle">Complete Amazon growth services designed for profitable scaling</p>
+
+        <div class="services-grid">
+            <!-- Service Card 1: Amazon Advertising (PPC) -->
+            <div class="service-card" role="button" tabindex="0" aria-expanded="false" aria-controls="service-content-1">
+                <div class="service-card-header" onclick="toggleService(this.parentElement)">
+                    <div class="service-icon">🎯</div>
+                    <h3>Amazon Advertising (PPC)</h3>
+                    <ul>
+                        <li>Sponsored Products, Brands, Display</li>
+                        <li>Scalable campaign architecture</li>
+                        <li>Brand Analytics driven growth</li>
+                        <li>Keyword and search term mining</li>
+                        <li>KPI benchmarking + action plan</li>
+                    </ul>
+
+                    <div class="service-tooltip">
+                        Brand Analytics led scaling, search term discipline, and KPI driven POAs to grow without losing control of TACOS.
+                    </div>
+
+                    <div class="service-expand-btn">
+                        <span>View Details</span>
+                        <span class="service-expand-icon">▼</span>
+                    </div>
+                </div>
+
+                <div class="service-accordion-content" id="service-content-1">
+                    <div class="service-accordion-inner">
+                        <div class="service-section">
+                            <h4>Build and structure</h4>
+                            <ul>
+                                <li>Rebuild account structure (Branded, Non-Branded, ASIN targeting, category segments)</li>
+                                <li>Separate scale campaigns vs efficiency campaigns to avoid mixed signals</li>
+                                <li>Portfolio and budget guardrails to prevent overspend</li>
+                            </ul>
+                        </div>
+
+                        <div class="service-section">
+                            <h4>Growth and discovery</h4>
+                            <ul>
+                                <li>Brand Analytics deep dive to identify high-opportunity terms and demand shifts</li>
+                                <li>Weekly search term mining, promote winners to exact and phrase</li>
+                                <li>Systematic negative keyword cleanup to reduce waste</li>
+                            </ul>
+                        </div>
+
+                        <div class="service-section">
+                            <h4>Optimization and control</h4>
+                            <ul>
+                                <li>KPI benchmarking (ACOS, TACOS, ROAS, CVR, CPC, CTR) vs targets</li>
+                                <li>Placement optimization, bid tuning, budget pacing based on conversion stability</li>
+                                <li>Weekly plan of action with prioritized fixes (what changed, why, what we do next)</li>
+                            </ul>
+                        </div>
+
+                        <div class="service-section">
+                            <h4>Reporting</h4>
+                            <ul>
+                                <li>Client-friendly reporting that ties actions to results</li>
+                                <li>Clear notes on what scaled, what was cut, and why</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Service Card 2: Listing Optimization -->
+            <div class="service-card" role="button" tabindex="0" aria-expanded="false" aria-controls="service-content-2">
+                <div class="service-card-header" onclick="toggleService(this.parentElement)">
+                    <div class="service-icon">📝</div>
+                    <h3>Listing Optimization</h3>
+                    <ul>
+                        <li>Conversion-focused copy updates</li>
+                        <li>Backend keywords aligned to PPC</li>
+                        <li>A+ content direction</li>
+                        <li>CVR improvement support</li>
+                        <li>Listing readiness checks</li>
+                    </ul>
+
+                    <div class="service-tooltip">
+                        Improve conversion so ad growth sticks, traffic is worthless if the product page does not convert.
+                    </div>
+
+                    <div class="service-expand-btn">
+                        <span>View Details</span>
+                        <span class="service-expand-icon">▼</span>
+                    </div>
+                </div>
+
+                <div class="service-accordion-content" id="service-content-2">
+                    <div class="service-accordion-inner">
+                        <div class="service-section">
+                            <h4>Conversion foundation</h4>
+                            <ul>
+                                <li>Title, bullets, description rewrites focused on buyer objections and clarity</li>
+                                <li>Image and A+ recommendations tied to conversion gaps (not aesthetics)</li>
+                            </ul>
+                        </div>
+
+                        <div class="service-section">
+                            <h4>SEO alignment</h4>
+                            <ul>
+                                <li>Backend search terms optimized using proven PPC search terms</li>
+                                <li>Keyword mapping (primary, secondary, long-tail) across listing sections</li>
+                            </ul>
+                        </div>
+
+                        <div class="service-section">
+                            <h4>Performance checks</h4>
+                            <ul>
+                                <li>Session and conversion review to spot drop-offs</li>
+                                <li>Price, coupon, variation, and buy box checks before scaling ads</li>
+                            </ul>
+                        </div>
+
+                        <div class="service-section">
+                            <h4>Execution support</h4>
+                            <ul>
+                                <li>Clear change list for your designer and copy team</li>
+                                <li>Prioritized recommendations (highest impact first)</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Service Card 3: Strategy and Analytics -->
+            <div class="service-card" role="button" tabindex="0" aria-expanded="false" aria-controls="service-content-3">
+                <div class="service-card-header" onclick="toggleService(this.parentElement)">
+                    <div class="service-icon">📊</div>
+                    <h3>Strategy and Analytics</h3>
+                    <ul>
+                        <li>Weekly performance insights</li>
+                        <li>Scaling rules and guardrails</li>
+                        <li>Profitability tracking</li>
+                        <li>Marketplace strategy (US, UK, CA)</li>
+                        <li>Simple reporting, no noise</li>
+                    </ul>
+
+                    <div class="service-tooltip">
+                        A weekly decision system that turns metrics into actions, scale what works, fix what blocks growth.
+                    </div>
+
+                    <div class="service-expand-btn">
+                        <span>View Details</span>
+                        <span class="service-expand-icon">▼</span>
+                    </div>
+                </div>
+
+                <div class="service-accordion-content" id="service-content-3">
+                    <div class="service-accordion-inner">
+                        <div class="service-section">
+                            <h4>KPI system</h4>
+                            <ul>
+                                <li>Weekly tracking of ACOS, TACOS, CVR, CPC, CTR, ad sales share, and revenue</li>
+                                <li>Trend analysis to separate normal volatility from real issues</li>
+                            </ul>
+                        </div>
+
+                        <div class="service-section">
+                            <h4>Planning</h4>
+                            <ul>
+                                <li>Monthly roadmap with weekly execution priorities</li>
+                                <li>Scaling rules, when to increase budgets, when to pause, when to restructure</li>
+                            </ul>
+                        </div>
+
+                        <div class="service-section">
+                            <h4>Profit focus</h4>
+                            <ul>
+                                <li>Profitability lens, not just ad metrics (efficiency vs growth tradeoffs explained clearly)</li>
+                                <li>SKU prioritization based on what drives sustainable growth</li>
+                            </ul>
+                        </div>
+
+                        <div class="service-section">
+                            <h4>Client communication</h4>
+                            <ul>
+                                <li>Short weekly updates, what changed, why, what is next</li>
+                                <li>Preemptive notes on expected fluctuations (seasonality, promos, inventory)</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Service Card 4: Product Validation, Keyword Research, Category Analysis -->
+            <div class="service-card" role="button" tabindex="0" aria-expanded="false" aria-controls="service-content-4">
+                <div class="service-card-header" onclick="toggleService(this.parentElement)">
+                    <div class="service-icon">🔍</div>
+                    <h3>Product Validation, Keyword Research, Category Analysis</h3>
+                    <ul>
+                        <li>Product validation support</li>
+                        <li>High-intent keyword research</li>
+                        <li>Category and competitor analysis</li>
+                        <li>SKU prioritization</li>
+                        <li>Opportunity sizing</li>
+                    </ul>
+
+                    <div class="service-tooltip">
+                        Validate demand and competition before scaling spend, target keywords that match buying intent.
+                    </div>
+
+                    <div class="service-expand-btn">
+                        <span>View Details</span>
+                        <span class="service-expand-icon">▼</span>
+                    </div>
+                </div>
+
+                <div class="service-accordion-content" id="service-content-4">
+                    <div class="service-accordion-inner">
+                        <div class="service-section">
+                            <h4>Product validation</h4>
+                            <ul>
+                                <li>Demand check using category signals, search behavior, and competitive intensity</li>
+                                <li>Identify pricing pressure and review barriers that impact conversion</li>
+                            </ul>
+                        </div>
+
+                        <div class="service-section">
+                            <h4>Keyword research</h4>
+                            <ul>
+                                <li>Build keyword sets by intent (buying vs research)</li>
+                                <li>Prioritize keywords that match conversion likelihood, not just volume</li>
+                            </ul>
+                        </div>
+
+                        <div class="service-section">
+                            <h4>Category analysis</h4>
+                            <ul>
+                                <li>Competitor review (positioning, price points, reviews, offer strategy)</li>
+                                <li>Identify subcategory pockets where ads can win efficiently</li>
+                            </ul>
+                        </div>
+
+                        <div class="service-section">
+                            <h4>Execution outputs</h4>
+                            <ul>
+                                <li>Keyword map for PPC and listing alignment</li>
+                                <li>Clear priority list, what to launch, what to avoid, where to scale first</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Work With Me Section -->
+    <section class="section">
+        <h2 class="section-title">The Standard I Deliver</h2>
+        <p class="section-subtitle">What sets my approach apart from conventional PPC management</p>
+
+        <div class="standards-grid">
+            <div class="standard-card">
+                <div class="standard-icon">💎</div>
+                <div class="standard-content">
+                    <h3>Margin-Intelligent Growth</h3>
+                    <p>Revenue without profitability is a vanity metric. My strategies are engineered for margin preservation at scale—every campaign structure, bid adjustment, and targeting decision is evaluated through the lens of sustainable unit economics.</p>
+                </div>
+            </div>
+
+            <div class="standard-card">
+                <div class="standard-icon">⚡</div>
+                <div class="standard-content">
+                    <h3>Institutional-Grade Execution</h3>
+                    <p>Access to a specialized team means institutional execution velocity without institutional overhead. Strategic direction, campaign optimization, performance analytics, and reporting—delivered with the precision brands at scale demand.</p>
+                </div>
+            </div>
+
+            <div class="standard-card">
+                <div class="standard-icon">📊</div>
+                <div class="standard-content">
+                    <h3>Framework-Driven Methodology</h3>
+                    <p>Half a decade managing agency portfolios across hundreds of brands has crystallized what works. Recommendations are rooted in empirical data and battle-tested frameworks, not theoretical best practices or platform hype cycles.</p>
+                </div>
+            </div>
+
+            <div class="standard-card">
+                <div class="standard-icon">🎯</div>
+                <div class="standard-content">
+                    <h3>Strategic Partnership Architecture</h3>
+                    <p>The average engagement extends beyond 10 months because clients recognize value compounds over time. This isn't transactional campaign management—it's strategic partnership focused on building durable competitive advantages in your category.</p>
+                </div>
+            </div>
+
+            <div class="standard-card">
+                <div class="standard-icon">🌐</div>
+                <div class="standard-content">
+                    <h3>Cross-Border Proficiency</h3>
+                    <p>Extensive experience orchestrating campaigns across US, UK, and EU marketplaces. International expansion requires understanding regulatory nuances, competitive dynamics, and consumer behavior variations—capabilities most specialists lack.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Ideal Client Section -->
+    <section class="section">
+        <h2 class="section-title">Engagement Criteria</h2>
+        <p class="section-subtitle">Ensuring mutual fit for successful partnerships</p>
+
+        <div class="criteria-grid">
+            <div class="criteria-card good-fit">
+                <h3>
+                    <span>✓</span> Strong Alignment
+                </h3>
+                <ul>
+                    <li>
+                        <span>✓</span>
+                        Monthly revenue exceeding $20,000 on Amazon
+                    </li>
+                    <li>
+                        <span>✓</span>
+                        Commitment to margin-intelligent scaling, not volume chasing
+                    </li>
+                    <li>
+                        <span>✓</span>
+                        Appreciation for empirical methodology over intuition
+                    </li>
+                    <li>
+                        <span>✓</span>
+                        Seeking strategic partnership, not tactical execution
+                    </li>
+                    <li>
+                        <span>✓</span>
+                        Investment orientation toward sustainable competitive advantage
+                    </li>
+                    <li>
+                        <span>✓</span>
+                        Value transparent communication and performance accountability
+                    </li>
+                </ul>
+            </div>
+
+            <div class="criteria-card bad-fit">
+                <h3>
+                    <span>✗</span> Limited Alignment
+                </h3>
+                <ul>
+                    <li>
+                        <span>✗</span>
+                        Pre-launch or sub-$15k monthly revenue stage
+                    </li>
+                    <li>
+                        <span>✗</span>
+                        Seeking tactical ad management without strategic input
+                    </li>
+                    <li>
+                        <span>✗</span>
+                        Primary selection criteria is lowest available rate
+                    </li>
+                    <li>
+                        <span>✗</span>
+                        Preference for granular daily oversight and control
+                    </li>
+                    <li>
+                        <span>✗</span>
+                        Expectations of immediate transformation without testing cycles
+                    </li>
+                    <li>
+                        <span>✗</span>
+                        Hesitation to invest appropriately in advertising excellence
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Additional Disciplines Section -->
+    <section class="section">
+        <h2 class="section-title">Additional Disciplines</h2>
+        <p class="section-subtitle">Outside marketplace optimization, I maintain active engagement in complementary fields that inform strategic thinking and analytical precision.</p>
+
+        <div class="services-grid">
+            <div class="service-card">
+                <div class="service-icon">💊</div>
+                <h3>Nutritional Science</h3>
+                <p>Extensive research into nutritional biochemistry and performance optimization, complemented by applied personal experimentation with a structured 10-supplement daily regimen. This technical foundation provides material advantages when engaging supplement and health brands.</p>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon">💪</div>
+                <h3>Performance Training</h3>
+                <p>Certified fitness professional with client-facing experience in behavioral change and goal achievement. This background delivers authentic insights into wellness buyer psychology—understanding what drives conversion.</p>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon">📈</div>
+                <h3>Financial Markets & Portfolio Strategy</h3>
+                <p>Active participation in financial markets with emphasis on analytical rigor and capital allocation efficiency. I apply identical frameworks to advertising budgets—optimizing for risk-adjusted returns, not superficial growth metrics.</p>
+            </div>
+        </div>
+
+        <p style="text-align: center; color: #94a3b8; font-style: italic; margin-top: 40px; max-width: 900px; margin-left: auto; margin-right: auto;">These cross-disciplinary competencies inform strategic perspective, consumer behavioral analysis, and systematic optimization methodology. They represent why outcomes differ from conventional campaign management.</p>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section" id="contact">
+        <h2>Ready to Scale Your Amazon Business?</h2>
+        <p>If your brand meets the engagement criteria and you're seeking a strategic partner for profitable Amazon expansion, let's discuss your growth objectives.</p>
+
+        <div class="cta-buttons">
+            <a href="mailto:myppcg@gmail.com?subject=Amazon PPC Partnership Inquiry&body=Hi Ikram,%0D%0A%0D%0AI'm interested in discussing how you can help scale my Amazon business.%0D%0A%0D%0A" class="btn-white">
+                <i class="fas fa-envelope" style="margin-right: 8px;"></i>Get Connected via Email
+            </a>
+            <a href="https://www.upwork.com/freelancers/~01b5433f91682047d5" class="btn-outline" target="_blank">View Upwork Profile</a>
+            <a href="https://www.linkedin.com/in/ikram-ullah-9a42b3210" class="btn-outline" target="_blank">Connect on LinkedIn</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p><strong>Ikram Ullah</strong> - Senior Amazon PPC Manager</p>
+        <p>Helping Amazon sellers grow profitably through data-driven strategies</p>
+        <div class="footer-links">
+            <a href="mailto:myppcg@gmail.com">Contact via Email</a>
+            <a href="https://www.upwork.com/freelancers/~01b5433f91682047d5" target="_blank">Upwork</a>
+            <a href="https://www.linkedin.com/in/ikram-ullah-9a42b3210" target="_blank">LinkedIn</a>
+        </div>
+        <p style="margin-top: 30px; font-size: 14px;">© 2026 Ikram Ullah. All rights reserved.</p>
+    </footer>
+
+    <!-- Modal JavaScript -->
+    <script>
+        // Hamburger Menu Functions
+        function toggleMenu() {
+            const nav = document.getElementById('nav');
+            const hamburger = document.querySelector('.hamburger');
+            nav.classList.toggle('active');
+            hamburger.classList.toggle('active');
+
+            // Prevent body scroll when menu is open
+            if (nav.classList.contains('active')) {
+                document.body.style.overflow = 'hidden';
+            } else {
+                document.body.style.overflow = 'auto';
+            }
+        }
+
+        function closeMenu() {
+            const nav = document.getElementById('nav');
+            const hamburger = document.querySelector('.hamburger');
+            nav.classList.remove('active');
+            hamburger.classList.remove('active');
+            document.body.style.overflow = 'auto';
+        }
+
+        // Close menu when clicking outside
+        document.addEventListener('click', function(event) {
+            const nav = document.getElementById('nav');
+            const hamburger = document.querySelector('.hamburger');
+
+            if (nav.classList.contains('active') &&
+                !nav.contains(event.target) &&
+                !hamburger.contains(event.target)) {
+                closeMenu();
+            }
+        });
+
+        // Modal Functions
+        function openModal(modalId) {
+            document.getElementById(modalId).classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeModal(modalId) {
+            document.getElementById(modalId).classList.remove('active');
+            document.body.style.overflow = 'auto';
+        }
+
+        // Close modal when clicking outside
+        window.onclick = function(event) {
+            if (event.target.classList.contains('modal')) {
+                event.target.classList.remove('active');
+                document.body.style.overflow = 'auto';
+            }
+        }
+
+        // Service Accordion Functions
+        function toggleService(card) {
+            const isExpanded = card.getAttribute('aria-expanded') === 'true';
+
+            // Close all other service cards (one-open-at-a-time behavior)
+            document.querySelectorAll('.service-card[aria-expanded="true"]').forEach(otherCard => {
+                if (otherCard !== card) {
+                    otherCard.setAttribute('aria-expanded', 'false');
+                }
+            });
+
+            // Toggle current card
+            card.setAttribute('aria-expanded', !isExpanded);
+        }
+
+        // Keyboard navigation for service cards
+        document.querySelectorAll('.service-card').forEach(card => {
+            card.addEventListener('keydown', function(event) {
+                // Enter or Space to toggle
+                if (event.key === 'Enter' || event.key === ' ') {
+                    event.preventDefault();
+                    toggleService(card);
+                }
+                // Escape to collapse
+                else if (event.key === 'Escape') {
+                    card.setAttribute('aria-expanded', 'false');
+                }
+            });
+
+            // Prevent header click from bubbling when clicking expand button
+            const header = card.querySelector('.service-card-header');
+            const expandBtn = card.querySelector('.service-expand-btn');
+
+            if (expandBtn) {
+                expandBtn.addEventListener('click', function(event) {
+                    event.stopPropagation();
+                });
+            }
+        });
+
+        // Close modal with Escape key
+        document.addEventListener('keydown', function(event) {
+            if (event.key === 'Escape') {
+                // Close modals
+                document.querySelectorAll('.modal.active').forEach(modal => {
+                    modal.classList.remove('active');
+                });
+                // Close expanded service cards
+                document.querySelectorAll('.service-card[aria-expanded="true"]').forEach(card => {
+                    card.setAttribute('aria-expanded', 'false');
+                });
+                // Close menu
+                closeMenu();
+                document.body.style.overflow = 'auto';
+            }
+        });
+    </script>
+
+    <!-- Mobile Progress Bar -->
+    <div class="mobile-progress-bar"></div>
+
+    <!-- Mobile Sticky CTA (only visible on mobile) -->
+    <a href="mailto:myppcg@gmail.com?subject=Amazon PPC Partnership Inquiry&body=Hi Ikram,%0D%0A%0D%0AI'm interested in discussing how you can help scale my Amazon business.%0D%0A%0D%0A" class="sticky-mobile-cta">
+        <i class="fas fa-envelope"></i>
+        <span>Get In Touch</span>
+        <span class="cta-pulse-dot"></span>
+    </a>
+
+    <!-- Mobile tap indicator (auto-hides after a few seconds) -->
+    <div class="mobile-tap-indicator">👆 Scroll to see results</div>
+
+    <style>
+        /* Pulsing dot on CTA for extra attention */
+        .cta-pulse-dot {
+            position: absolute;
+            top: -5px;
+            right: -5px;
+            width: 12px;
+            height: 12px;
+            background: #ef4444;
+            border-radius: 50%;
+            animation: dotPulse 1.5s ease-in-out infinite;
+            box-shadow: 0 0 10px rgba(239, 68, 68, 0.8);
+        }
+
+        @keyframes dotPulse {
+            0%, 100% {
+                transform: scale(1);
+                opacity: 1;
+            }
+            50% {
+                transform: scale(1.3);
+                opacity: 0.7;
+            }
+        }
+
+        /* Desktop: hide mobile-only elements */
+        @media (min-width: 769px) {
+            .sticky-mobile-cta,
+            .mobile-tap-indicator,
+            .mobile-progress-bar {
+                display: none !important;
+            }
+        }
+    </style>
+
+    <script>
+        // Hide mobile tap indicator after 5 seconds
+        setTimeout(function() {
+            var indicator = document.querySelector('.mobile-tap-indicator');
+            if (indicator) {
+                indicator.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+                indicator.style.opacity = '0';
+                indicator.style.transform = 'translateX(200px)';
+                setTimeout(function() {
+                    indicator.style.display = 'none';
+                }, 500);
+            }
+        }, 5000);
+
+        // Show/hide sticky CTA based on scroll (hide when at contact section)
+        // ALSO update progress bar
+        window.addEventListener('scroll', function() {
+            // Sticky CTA visibility
+            var stickyBtn = document.querySelector('.sticky-mobile-cta');
+            var contactSection = document.getElementById('contact');
+            if (stickyBtn && contactSection) {
+                var contactPosition = contactSection.getBoundingClientRect().top;
+                var windowHeight = window.innerHeight;
+
+                if (contactPosition < windowHeight) {
+                    stickyBtn.style.opacity = '0';
+                    stickyBtn.style.pointerEvents = 'none';
+                } else {
+                    stickyBtn.style.opacity = '1';
+                    stickyBtn.style.pointerEvents = 'auto';
+                }
+            }
+
+            // Mobile progress bar
+            var progressBar = document.querySelector('.mobile-progress-bar');
+            if (progressBar && window.innerWidth <= 768) {
+                var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+                var docHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+                var scrollPercent = (scrollTop / docHeight) * 100;
+                progressBar.style.width = scrollPercent + '%';
+            }
+        });
+
+        // Vibrate on mobile CTA tap (if supported)
+        var mobileCta = document.querySelector('.sticky-mobile-cta');
+        if (mobileCta && 'vibrate' in navigator) {
+            mobileCta.addEventListener('click', function() {
+                navigator.vibrate(50); // Short vibration feedback
+            });
+        }
+
+        // Count-up animation for metrics when they come into view
+        function animateValue(element, start, end, duration) {
+            var range = end - start;
+            var current = start;
+            var increment = end > start ? 1 : -1;
+            var stepTime = Math.abs(Math.floor(duration / range));
+            var timer = setInterval(function() {
+                current += increment;
+                element.textContent = current + (element.textContent.includes('%') ? '%' : (element.textContent.includes('M') ? 'M' : 'K'));
+                if (current == end) {
+                    clearInterval(timer);
+                }
+            }, stepTime);
+        }
+
+        // Observe metrics for count-up animation
+        if ('IntersectionObserver' in window && window.innerWidth <= 768) {
+            var metricObserver = new IntersectionObserver(function(entries) {
+                entries.forEach(function(entry) {
+                    if (entry.isIntersecting) {
+                        entry.target.style.animation = 'metricCountUp 0.8s ease-out, metricPulse 3s ease-in-out infinite 1s';
+                        metricObserver.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.5 });
+
+            document.querySelectorAll('.case-card-metric-value').forEach(function(metric) {
+                metricObserver.observe(metric);
+            });
+        }
+    </script>
+</body>
+</html>
